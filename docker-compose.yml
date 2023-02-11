@@ -6,8 +6,6 @@ services:
     restart: always
     ports:
      - 6001:80
-    volumes:
-      - /testconf:/etc/nginx/conf.d/
 
   rap-landing:
     image: landscapedatacommons/rap_landing:1.0.0
