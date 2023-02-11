@@ -1,0 +1,22 @@
+:host {
+    text-align: center;
+}
+
+.actions {
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+}
+.actions button {
+    margin: 5px;
+}
+
+.subtitle {
+    font-size: 14pt;
+    padding: 5px;
+}
+
+.built-for {
+    font-size: 12pt;
+    padding: 5px;
+}

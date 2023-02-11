@@ -1,0 +1,11 @@
+<mat-form-field *ngIf="overlay.overlay_types">
+    <mat-select 
+        [disabled]="!overlay.visible"
+        [value]="overlay.selected_type"
+        (selectionChange)="setOverlayType($event.value)">
+      <mat-option [value]="type" [selected]="type.id === overlay.selected_type?.id"
+                  *ngFor="let type of overlay.overlay_types">
+        {{type.name}}
+      </mat-option>
+    </mat-select>
+</mat-form-field>

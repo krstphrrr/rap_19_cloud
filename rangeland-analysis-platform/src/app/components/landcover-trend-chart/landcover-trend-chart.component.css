@@ -1,0 +1,85 @@
+:host {
+    flex:1;
+    display:block;
+    position: relative;
+    text-align: center;
+    overflow:hidden;
+    min-height: 300px;
+}
+
+plotly-plot {  
+    min-width:370px;  
+}
+.chart_container {
+    flex: 1;
+    display: flex;
+    text-align: center;
+}
+.progress-bar {
+    display:block;
+    height:10px;
+    width:100%;
+}
+.close {
+    cursor: pointer;
+    cursor: hand;
+    font-size: 26px;
+    display:flex;
+    position: aboslute;
+    right: 10px;
+    top: 10px;
+    z-index: 10000;
+}
+.icons {
+    display: block;
+    text-align: center;
+}
+.waiting_msg {
+    display: block;
+    margin: 20px;
+}
+.title {
+    text-align: center;
+    font-size: 16px;
+}
+.icon {
+    display: block;
+    text-align: center;
+    margin: 3px;
+    cursor: pointer;
+    cursor: hand;
+}
+.filters {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.format-label {
+    font-size: 8pt;
+    margin-top: -8px;
+}
+.chart {
+    display: flex;
+    flex: 1;  
+    overflow: hidden;
+}
+i {
+    font-size: 16pt;
+    color: #444;
+}
+
+.expand {
+    display: flex;
+}
+
+div.filter > mat-select {
+    width:60px !important;   
+}
+
+.mat-form-field {
+    max-width: 60px;
+}
+
+div.filter > .mat-form-field-infix {
+    width: 60px !important;
+}

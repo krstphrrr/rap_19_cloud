@@ -1,0 +1,12 @@
+:host {
+    width:60px;
+    display: block;
+    overflow: hidden;
+}
+mat-select {
+    width:60px !important;   
+}
+
+div.mat-form-field-infix {
+    width: 60px !important;
+}

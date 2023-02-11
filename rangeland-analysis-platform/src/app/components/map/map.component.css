@@ -1,0 +1,13 @@
+:host {
+    flex: 1;
+    display: flex;
+}
+#map {
+    flex: 1;
+}
+
+.fade {
+        transition: display 600ms ease-in-out;
+}
+
+#map.pac-item {display: none}

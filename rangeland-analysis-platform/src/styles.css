@@ -1,0 +1,24 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '//fonts.googleapis.com/css?family=Lato';
+@import '//fonts.googleapis.com/css?family=IM+Fell+English';
+@import '//fonts.googleapis.com/icon?family=Material+Icons';
+
+html {
+    min-width: 1080px;
+    min-height: 640px
+}
+ body {
+    height: 100%;
+    width: 100%;
+    margin: 0;    
+}
+
+.material-icons {
+    font-size: 36pt;
+}
+.mat-select-panel {
+    max-height: 300px !important;
+}
+.mat-dialog-container {
+    display: flex !important;
+}

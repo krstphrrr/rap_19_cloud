@@ -1,0 +1,83 @@
+**/node_modules
+rangeland-analysis-platform/.git
+rap-landing-page/.git
+
+# ########### 
+# Vim
+rap-landing-page/*~
+rap-landing-page/*.sw[p_]
+
+# Sublime Text
+rap-landing-page/*.sublime-project
+rap-landing-page/*.sublime-workspace
+
+# Ruby Gem
+rap-landing-page/*.gem
+rap-landing-page/.bundle
+rap-landing-page/Gemfile.lock
+**/vendor/bundle
+
+# Node.js and NPM
+rap-landing-page/node_modules
+rap-landing-page/npm-debug.log*
+rap-landing-page/package-lock.json
+rap-landing-page/codekit-config.json
+
+# macOS
+rap-landing-page/.DS_Store
+
+# Jekyll generated files
+rap-landing-page/.jekyll-cache
+rap-landing-page/.jekyll-metadata
+rap-landing-page/.sass-cache
+rap-landing-page/_asset_bundler_cache
+rap-landing-page/_site
+rap-landing-page/_drafts
+
+rap-landing-page/.firebase/hosting*
+
+############ rangeland-analysis-platform
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+rangeland-analysis-platform/dist
+rangeland-analysis-platform/tmp
+rangeland-analysis-platform/out-tsc
+
+# dependencies
+rangeland-analysis-platform/node_modules
+
+# IDEs and editors
+rangeland-analysis-platform/.idea
+rangeland-analysis-platform/.project
+rangeland-analysis-platform/.classpath
+rangeland-analysis-platform/.c9/
+rangeland-analysis-platform/*.launch
+rangeland-analysis-platform/.settings/
+rangeland-analysis-platform/*.sublime-workspace
+
+# IDE - VSCode
+rangeland-analysis-platform/.vscode/*
+rangeland-analysis-platform/!.vscode/settings.json
+rangeland-analysis-platform/!.vscode/tasks.json
+rangeland-analysis-platform/!.vscode/launch.json
+rangeland-analysis-platform/!.vscode/extensions.json
+
+# misc
+rangeland-analysis-platform/.sass-cache
+rangeland-analysis-platform/connect.lock
+rangeland-analysis-platform/coverage
+rangeland-analysis-platform/libpeerconnection.log
+rangeland-analysis-platform/npm-debug.log
+rangeland-analysis-platform/testem.log
+rangeland-analysis-platform/typings
+
+# e2e
+rangeland-analysis-platform/e2e/*.js
+rangeland-analysis-platform/e2e/*.map
+
+# System Files
+rangeland-analysis-platform/.DS_Store
+rangeland-analysis-platform/Thumbs.db
+

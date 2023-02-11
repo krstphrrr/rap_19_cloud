@@ -1,0 +1,79 @@
+
+<div  class="left panel">
+  <span class="panel-title">Rangeland Analysis Platform</span> <app-control-panel-toggle
+    [(value)]="leftToggle"
+    position="inner-top-right"
+    type="collapse-up"
+    ></app-control-panel-toggle>
+  <div class="panelContent"
+    [ngStyle]="{'max-height' : leftToggle ? 'calc(100vh - 70px)': '0px'}">
+    <mat-tab-group
+      [selectedIndex]="tabIndex"
+      (selectedIndexChange)="tabIndexChanged($event)">
+      <mat-tab label="Vegetation">
+        <ng-template matTabContent>
+          <app-landcover-control ></app-landcover-control>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Sagebrush conservation">
+        <ng-template matTabContent>
+          <app-sagebrush-conservation></app-sagebrush-conservation>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Great Plains conservation">
+        <ng-template matTabContent>
+          <app-great-plains-conservation></app-great-plains-conservation>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+<div *ngIf="analysis.geojson && (analysis.analysis_complete || analysis.analysis_running)"
+  class="right panel">
+  <span class="panel-title"></span> <app-control-panel-toggle
+    [(value)]="rightToggle" position="inner-top-right"></app-control-panel-toggle>
+  <div class="panelContent" [ngStyle]="{
+    'max-height' : rightToggle ? 'calc(100vh - 70px)': '0px'
+  }">
+  <mat-tab-group>
+    <mat-tab label="Cover">
+        <app-landcover-trend-chart
+        width="400"
+        showPopOut="true"
+        showPrint="true"
+        showDownload="true"
+        trend="annual_cover"
+        ></app-landcover-trend-chart>
+    </mat-tab>
+    <mat-tab label="Annual biomass">
+      <app-landcover-trend-chart
+        width="400"
+        showPopOut="true"
+        showPrint="true"
+        showDownload="true"
+        trend="annual_biomass"
+        ></app-landcover-trend-chart></mat-tab>
+     <mat-tab label="16-day biomass">
+          <app-landcover-trend-chart
+            width="400"
+            showPopOut="true"
+            showPrint="true"
+            showDownload="true"
+            filterField="year"
+            trend="biweekly_biomass"
+            defaultFilterValue=2019
+            ></app-landcover-trend-chart></mat-tab>
+  </mat-tab-group>
+
+
+  </div>
+</div>
+<app-short-link tourAnchor="share-map"></app-short-link>
+
+<div class="background">
+  <app-map
+      lat=39
+      lng=-98
+      zoom=5
+      basemap="terrain"></app-map>
+</div>

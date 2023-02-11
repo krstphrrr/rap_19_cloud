@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Rangeland Analysis Platform</h1>
+<div mat-dialog-content>
+  <div class="subtitle">Easily monitor rangelands across space and time.</div>
+  <div class="built-for">Built for Google Chrome, other browsers may not be supported.</div>
+  <div class="actions">
+    <button mat-raised-button (click)="onTourClick()">Take a tour of the application</button>
+    <button mat-raised-button (click)="onAppClick()">Take me to the app</button>
+  </div>
+  <mat-checkbox (click)="onNoShowClick()" [(ngModel)]='data.dontShow'>Do not show in the future.</mat-checkbox>
+</div>

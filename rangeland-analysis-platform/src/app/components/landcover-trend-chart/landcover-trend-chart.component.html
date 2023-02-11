@@ -1,0 +1,50 @@
+<mat-icon class='close' *ngIf="dialog_data" mat-raised-button mat-dialog-close>close</mat-icon>
+<div class="progress-bar">
+        <mat-progress-bar *ngIf="!trend" mode="query"></mat-progress-bar>
+</div>
+<div class="waiting_msg" *ngIf="!trend&&config.waiting_msg">{{config.waiting_msg}}</div>
+<div *ngIf="!loaded && analysis.analysis_error_message" 
+        [innerHTML]="analysis.analysis_error_message">   
+</div>
+
+<div *ngIf="trend" #chart_container class="chart_container">    
+        <div *ngIf="graph" class="icons">
+                <div *ngIf="showDownload" class="icon">
+                        <i class="material-icons" (click)="downloadCsv()">save</i>
+                        <div class="format-label">csv</div>
+                </div>
+                <div *ngIf="showDownload" class="icon">
+                        <i  class="material-icons" (click)="downloadExcel()">save</i>
+                        <div class="format-label">Excel</div>
+                </div>
+                <div *ngIf="showPrint" class="icon">
+                        <i  class="material-icons" (click)="print()">print</i>
+                </div>
+                <div *ngIf="showPopOut" class="icon">
+                        <i  class="material-icons" (click)="expandChart()">open_in_new</i>
+                </div>
+        </div>
+        <div style="flex:1;display: flex; flex-direction: column">
+                <plotly-plot 
+                        [divId] = "graph.divId"
+                        [data]="graph.data" 
+                        [layout]="graph.layout"
+                        [config]="graph.config"></plotly-plot>
+        </div>
+        <div *ngIf="graph" class="filters">
+                <div *ngIf="filterField" class="filter">
+                        <mat-form-field>
+                                <mat-select 
+                                        [ngModel]="filterVal"
+                                        (selectionChange)="updateFilterVal($event)">
+                                        <mat-option 
+                                                [value]="val" 
+                                                *ngFor="let val of filterValues">
+                                                {{ val }}
+                                        </mat-option>
+                                </mat-select>
+                        </mat-form-field>    
+                </div>
+        </div>
+
+</div>

@@ -1,0 +1,7 @@
+<mat-form-field *ngIf="overlay.years" class="year-select">
+    <mat-select  [value]="overlay.year" [disabled]="!overlay.visible" (selectionChange)="setYear($event.value)">
+    <mat-option [value]="year" *ngFor="let year of overlay.years">
+        {{ year }}
+    </mat-option>
+    </mat-select>
+</mat-form-field>

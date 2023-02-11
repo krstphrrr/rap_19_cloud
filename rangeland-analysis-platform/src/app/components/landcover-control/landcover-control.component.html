@@ -1,0 +1,56 @@
+<app-layer-group tourAnchor="select-cover-type" [overlays]="overlays"></app-layer-group>
+<table class="toggles">
+  <tr>
+  <td class="help"></td>
+  <td colspan="3">
+    <mat-slide-toggle  
+      tourAnchor="toggle-rangeland-mask"
+      matTooltip="Masks away pixels that are not rangeland."
+      (change)="updateOverlays()" [(ngModel)]="mask_toggle">Exclude croplands, development, & water
+    </mat-slide-toggle>
+  </td>
+  <td></td>
+ </tr>
+  <!-- <tr>
+    <td><app-popover>
+      Fire boundaries are taken from the Monitoring Trends in Burn Severity project 
+      and include fires greater than 1,000 acres in the western US and 500 acres in 
+      the eastern US.<br>
+      <a target="_info" href="https://www.mtbs.gov/">More information.</a>
+  </app-popover></td>
+  <td class="help">
+    <mat-slide-toggle  
+      (change)="updateFireYear()" 
+      [(ngModel)]="fire_toggle">Display fire boundaries (1984 to 2017).</mat-slide-toggle>
+  </td>
+  <td style="text-align:right">
+    <mat-form-field class="year-select">
+        <mat-select  [(value)]="year" [disabled]="!fire_toggle" 
+        (selectionChange)="updateFireYear()">
+        <mat-option [selected]="fire_year===year" [value]="fire_year" *ngFor="let fire_year of fire_years">
+            {{ fire_year }}
+        </mat-option>
+        </mat-select>
+    </mat-form-field></td>
+    </tr> -->
+</table>
+  <div class="landcover-analysis-buttons" >
+    <button tourAnchor="draw-polygons" mat-raised-button (click)="drawFeatures()">Draw features</button>
+    <button mat-raised-button 
+      *ngIf="analysis.data" 
+    (click)="clearMap()">Clear map</button>
+    <button tourAnchor="upload-shapefile" mat-raised-button (click)="uploadShapefile()">Upload shapefile</button>
+    
+  </div>
+    <!--<button mat-raised-button 
+      tourAnchor="calculate-time-series" 
+      (click)="analysis.calculateAnalysis(mask_toggle)">Calculate time series</button>-->
+    <!--<button mat-raised-button 
+     *ngIf="analysis.geojson" 
+      tourAnchor="generate-report"  
+      (click)="landcoverReport.generateReport()">Generate report</button>
+    </div>-->
+  
+  
+  
+  
