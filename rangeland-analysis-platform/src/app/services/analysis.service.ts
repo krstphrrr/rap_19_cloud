@@ -11,10 +11,19 @@ please try again. If the problem persists, please see
 //const API_URL = `http://localhost:8080/{method}`;
 // const API_URL = 'https://rangeland-analysis-platform.uc.r.appspot.com/{method}';
 const RANGELAND_API_KEY = 'AIzaSyC3e1OYR-d1u3wvxcK8EvrcFCQMvGW2Tzk';
+// usda cloudfun (meteo, cover, prod16d, prodSURGO, prod)
+const usda_meteo: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/coverMeteorologyV3';
+const usda_cover: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/coverV3';
+const usda_prod16d: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/production16dayV3';
+const usda_prodsurgo: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/productionGSSURGO';
+const usda_prod: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/productionV3';
+
+
 
 const TREND_CONFIG = {
     annual_cover: {
-      endpoint: 'https://rap-api-8ubptl6m.uc.gateway.dev/v3/coverMeteorology?key=' + RANGELAND_API_KEY,
+      // endpoint: 'https://us-central1-rap-data-365417.cloudfunctions.net/coverMeteorologyV3?key=' + RANGELAND_API_KEY,
+      endpoint:`${usda_meteo}`,
       propertyResult: 'cover',
       title: '',
       y_axis: 'Cover (%)',
@@ -36,7 +45,8 @@ const TREND_CONFIG = {
       ]
     },
     annual_biomass: {
-      endpoint: 'https://rap-api-8ubptl6m.uc.gateway.dev/v3/production?key=' + RANGELAND_API_KEY,
+      // endpoint: 'https://rap-api-8ubptl6m.uc.gateway.dev/v3/production?key=' + RANGELAND_API_KEY,
+      endpoint: `${usda_prod}`,
       propertyResult: 'production',
       title: '',
       y_axis: 'Biomass (lbs/acre)',
@@ -51,7 +61,8 @@ const TREND_CONFIG = {
       ]
   },
   biweekly_biomass: {
-    endpoint: 'https://rap-api-8ubptl6m.uc.gateway.dev/v3/production16day?key=' + RANGELAND_API_KEY,
+    // endpoint: 'https://rap-api-8ubptl6m.uc.gateway.dev/v3/production16day?key=' + RANGELAND_API_KEY,
+    endpoint: `${usda_prod16d}`,
     propertyResult: 'production16day',
     title: '',
     y_axis: 'Biomass (lbs/acre)',

@@ -29,6 +29,10 @@ import { LegendOptions } from 'app/services/overlays.service';
   animations: [ rollUpDown, spinInOut]
 })
 export class LandcoverControlComponent implements OnInit {
+  // usda google tile layers (biomass, cover)
+  usda_rapbiomass: string = 'https://storage.googleapis.com/usda-rap-tiles-biomass-v3';
+  usda_rapcover: string = 'https://storage.googleapis.com/usda-rap-tiles-cover-v3';
+  
   year: number; // default year
   years = [];
   opacity: number;
@@ -55,7 +59,8 @@ export class LandcoverControlComponent implements OnInit {
       {
         name: 'Perennial forb & grass',
         id: 'pfg',
-        tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/pfg/{year}/{z}/{x}/{y}.png',
+        // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/pfg/{year}/{z}/{x}/{y}.png',
+        tileurl: `${this.usda_rapcover}/{mask}/pfg/{year}/{z}/{x}/{y}.png`,
         legend: new LegendOptions(
           '', '0','100%',
           ['#f7fcf5', '#e5f5e0', '#c7e9c0', '#a1d99b', '#74c476', '#41ab5d', '#238b45', '#006d2c', '#00441b'],
@@ -64,7 +69,8 @@ export class LandcoverControlComponent implements OnInit {
       {
         name: 'Annual forb & grass',
         id: 'afg',
-        tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/afg/{year}/{z}/{x}/{y}.png',
+        // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/afg/{year}/{z}/{x}/{y}.png',
+        tileurl: `${this.usda_rapcover}/{mask}/afg/{year}/{z}/{x}/{y}.png`,
         legend: new LegendOptions(
           '', '0','100%',
           ['#fff7ec', '#fee8c8', '#fdd49e', '#fdbb84', '#fc8d59', '#ef6548', '#d7301f', '#b30000', '#7f0000'],
@@ -73,7 +79,8 @@ export class LandcoverControlComponent implements OnInit {
       {
         name: 'Shrub',
         id: 'shr',
-        tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/shr/{year}/{z}/{x}/{y}.png',
+        // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/shr/{year}/{z}/{x}/{y}.png',
+        tileurl: `${this.usda_rapcover}/{mask}/shr/{year}/{z}/{x}/{y}.png`,
         legend: new LegendOptions(
           '', '0','100%',
           ['#f7fbff', '#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b'],
@@ -82,7 +89,8 @@ export class LandcoverControlComponent implements OnInit {
       {
         name: 'Tree',
         id: 'tre',
-        tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/tre/{year}/{z}/{x}/{y}.png',
+        // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/tre/{year}/{z}/{x}/{y}.png',
+        tileurl: `${this.usda_rapcover}/{mask}/tre/{year}/{z}/{x}/{y}.png`,
         legend: new LegendOptions(
           '', '0','100%',
           ['#fff5eb', '#fee6ce', '#fdd0a2', '#fdae6b', '#fd8d3c', '#f16913', '#d94801', '#a63603', '#7f2704'],
@@ -91,7 +99,8 @@ export class LandcoverControlComponent implements OnInit {
       {
         name: 'Bare ground',
         id: 'bgr',
-        tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/bgr/{year}/{z}/{x}/{y}.png',
+        // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/bgr/{year}/{z}/{x}/{y}.png',
+        tileurl: `${this.usda_rapcover}/{mask}/bgr/{year}/{z}/{x}/{y}.png`,
         legend: new LegendOptions(
           '', '0','100%',
           ['#ffffe5', '#fff7bc', '#fee391', '#fec44f', '#fe9929', '#ec7014', '#cc4c02', '#993404', '#662506'],
@@ -113,7 +122,8 @@ export class LandcoverControlComponent implements OnInit {
       {
         name: 'Herbaceous',
         id: 'herbaceous',
-        tileurl: 'https://storage.googleapis.com/rap-tiles-biomass-v3/{mask}/herbaceous/{year}/{z}/{x}/{y}.png',
+        // tileurl: 'https://storage.googleapis.com/rap-tiles-biomass-v3/{mask}/herbaceous/{year}/{z}/{x}/{y}.png',
+        tileurl: `${this.usda_rapbiomass}/{mask}/herbaceous/{year}/{z}/{x}/{y}.png`,
         legend: new LegendOptions(
             '', '0','>4000 lbs/acre',
             ["#FFE599","#F6DC86","#EDD375","#E3C961","#D9BF4F",
@@ -126,7 +136,8 @@ export class LandcoverControlComponent implements OnInit {
       {
         name: 'Annual forb & grass',
         id: 'afg',
-        tileurl: 'https://storage.googleapis.com/rap-tiles-biomass-v3/{mask}/afg/{year}/{z}/{x}/{y}.png',
+        // tileurl: 'https://storage.googleapis.com/rap-tiles-biomass-v3/{mask}/afg/{year}/{z}/{x}/{y}.png',
+        tileurl: `${this.usda_rapbiomass}/{mask}/afg/{year}/{z}/{x}/{y}.png`,
         legend: new LegendOptions(
           '', '0','>2000 lbs/acre',
           ["#FFFFCC","#FBEC9A","#F4CC68","#ECA855","#E48751","#D2624D",
@@ -136,7 +147,9 @@ export class LandcoverControlComponent implements OnInit {
       {
         name: 'Perennial forb & grass',
         id: 'pfg',
-        tileurl: 'https://storage.googleapis.com/rap-tiles-biomass-v3/{mask}/pfg/{year}/{z}/{x}/{y}.png',
+        // tileurl: 'https://storage.googleapis.com/rap-tiles-biomass-v3/{mask}/pfg/{year}/{z}/{x}/{y}.png',
+        tileurl: `${this.usda_rapbiomass}/{mask}/pfg/{year}/{z}/{x}/{y}.png`,
+
         legend: new LegendOptions(
           '', '0','>4000 lbs/acre',
           ["#FFE599","#F6DC86","#EDD375","#E3C961","#D9BF4F",

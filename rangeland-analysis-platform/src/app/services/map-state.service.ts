@@ -8,6 +8,7 @@ import { DataLayer } from 'app/services/data-layers.service';
 import { stringify } from 'querystring';
 
 const STATIC_MAP_URL = `https://maps.googleapis.com/maps/api/staticmap`;
+const gapi = 'AIzaSyDllQcO2NYJk0KqA1NH80B_sINnAvUNGGA'
 
 @Injectable()
 export class MapStateService {
@@ -74,7 +75,7 @@ export class MapStateService {
       maptype = this.basemapSource.getValue(),
       mapstyle = this.styleConverter.get_static_style(new SimpleBaseMap().style);
 
-    const url = `https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyA2IbdH4K2g-lhlBj9J5DLSRyO9EZ8HZQE&` +
+    const url = `https://maps.googleapis.com/maps/api/staticmap?key=${gapi}&` +
       `center=${lat},${lng}&zoom=${zoom}&scale=2&` +
       `size=${width / 2}x${height / 2}&maptype=${maptype}&${mapstyle}` ;
       return url;

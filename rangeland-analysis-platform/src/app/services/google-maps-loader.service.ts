@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 
+const gapi = 'AIzaSyDllQcO2NYJk0KqA1NH80B_sINnAvUNGGA'
+// const old = 'AIzaSyA2IbdH4K2g-lhlBj9J5DLSRyO9EZ8HZQE'
 const googleMapsApiUrl =
-    'https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyA2IbdH4K2g-lhlBj9J5DLSRyO9EZ8HZQE&libraries=drawing,places';
+    `https://maps.googleapis.com/maps/api/js?v=3&key=${gapi}&libraries=drawing,places`;
 
 @Injectable()
 export class GoogleMapsLoaderService {
