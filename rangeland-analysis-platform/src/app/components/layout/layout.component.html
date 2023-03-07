@@ -5,8 +5,7 @@
     position="inner-top-right"
     type="collapse-up"
     ></app-control-panel-toggle>
-  <div class="panelContent"
-    [ngStyle]="{'max-height' : leftToggle ? 'calc(100vh - 70px)': '0px'}">
+  <div class="panelContent" [ngStyle]="{'max-height' : leftToggle ? 'calc(100vh - 70px)': '0px'}">
     <mat-tab-group
       [selectedIndex]="tabIndex"
       (selectedIndexChange)="tabIndexChanged($event)">

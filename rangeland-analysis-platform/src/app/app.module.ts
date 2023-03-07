@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RoutingModule } from './routing/routing.module';
+import { CommonModule } from '@angular/common';
 
 import {
   MatAutocompleteModule, MatCardModule, MatSelectModule, MatSlideToggleModule,
@@ -91,6 +92,7 @@ export function googleApisLoaderFactory(
   ],
   imports: [
     TourMatMenuModule.forRoot(),
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -116,7 +118,8 @@ export function googleApisLoaderFactory(
     },
     MapStateService, AnalysisStateService,  AnalysisService,  RoutingService],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  exports:[CommonModule],
 })
 export class AppModule {
   constructor() { }
