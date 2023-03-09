@@ -2,7 +2,7 @@
 
 ### rap_app: 1.0.3
 - manually fixed imports on deprecated `ngx-tour-core` and `ngx-tour-md-menu` packages which install with some errors that break compilation/build inside docker container.
-- updated json package to fix circular imports bug when importing geometry.
+- updated `JSON` package to fix circular imports bug when importing geometry.
 - removed `Great Plains Conservation` and `Sagebrush Conservation` components.
 
 ### rap_app: 1.0.2
