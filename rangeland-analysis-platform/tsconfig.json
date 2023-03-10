@@ -18,7 +18,8 @@
     ],
     
   },
-  // "angularCompilerOptions":{
-  //   "enableIvy":false
-  // }
+  "angularCompilerOptions":{
+    // "strictMetadataEmit": true,
+    "enableIvy": false
+  }
 }

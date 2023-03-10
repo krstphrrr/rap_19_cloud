@@ -12,6 +12,7 @@ import * as shp from 'shpjs';
   templateUrl: './great-plains-conservation.component.html',
   styleUrls: ['./great-plains-conservation.component.css']
 })
+
 export class GreatPlainsConservationComponent {
 
     router: Router;

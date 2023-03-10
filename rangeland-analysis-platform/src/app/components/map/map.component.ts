@@ -298,7 +298,6 @@ export class MapComponent implements OnInit {
     }
   }
 
-
   addControl(control: Element, position: google.maps.ControlPosition) {
     this.map.controls[position].push(control);
   }
@@ -328,7 +327,8 @@ export class MapComponent implements OnInit {
     this.mapState.setBasemap(this.map.getMapTypeId());
   }
   ngOnInit() {
-    // console.log('GoogleApisLoader.load.then', res);
+    // this.setCustomControl()
+    console.log('GoogleApisLoader.load.then');
     const self = this, mapProp = {
       center: new google.maps.LatLng(42, -120),
       zoom: 6,
@@ -369,6 +369,23 @@ export class MapComponent implements OnInit {
       locator.onclick = this.setUserLocation.bind(this);
       this.map.controls[google.maps.ControlPosition.LEFT_TOP].push(locator);
     }
+    
+    // controlDiv.style.padding = '5px';
+    // const logo_div = document.createElement('div')
+    const logo_jornada = document.createElement('IMG');
+    logo_jornada.style.padding = '5px';
+    logo_jornada.style.height = '44px';
+    logo_jornada.setAttribute("src",'assets/JER_logo-windmill.png');
+    logo_jornada.style.cursor = 'pointer';
+
+    const logo_usda = document.createElement('IMG')
+    logo_usda.style.padding = '10px';
+    logo_usda.style.height = '44px';
+    logo_usda.setAttribute("src",'assets/ars-color-lockup.png');
+    logo_usda.style.cursor = 'pointer';
+
+    this.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(logo_usda)
+    this.map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(logo_jornada)
 
 
     const input = document.createElement('input');
@@ -447,4 +464,5 @@ export class MapComponent implements OnInit {
 
 
   }
+
 }

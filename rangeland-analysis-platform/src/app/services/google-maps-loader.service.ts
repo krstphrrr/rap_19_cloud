@@ -8,6 +8,8 @@ const googleMapsApiUrl =
 @Injectable()
 export class GoogleMapsLoaderService {
     promise: Promise<boolean>;
+
+    
     load() {
         if (!this.promise) {
             this.promise = new Promise( resolve => {
