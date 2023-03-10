@@ -1,4 +1,7 @@
 ## Updates
+### rap_app: 1.0.4
+- added usda/jornada watermarks to map
+- changed `npm i` to `npm ci`
 
 ### rap_app: 1.0.3
 - manually fixed imports on deprecated `ngx-tour-core` and `ngx-tour-md-menu` packages which install with some errors that break compilation/build inside docker container.
@@ -13,7 +16,7 @@
 note: if using nvm to use deprecated versions of npm/node, be wary of `lockFileVersion` (this app will work with 3, but older npm creates 1 or 2) inside the `package-lock.json` file
 
 ### rap_app: 1.0.1 
-- included url segment in ng build statement within package.json. [commit](https://github.com/Landscape-Data-Commons/rap_stack/blob/166ba8633ffe6413258399210070fd8d8ec41099/rangeland-analysis-platform/package.json#L8])
+- included url segment in ng build statement within package.json. [commit](https://github.com/Landscape-Data-Commons/rap_stack/blob/166ba8633ffe6413258399210070fd8d8ec41099/rangeland-analysis-platform/package.json#L8)
 
 ## Setup 
 
