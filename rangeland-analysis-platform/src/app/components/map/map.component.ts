@@ -43,7 +43,7 @@ export class OverlayMapType implements google.maps.MapType {
     tile.style.width = this.tileSize.width.toString() + 'px';
     tile.style.height = this.tileSize.height.toString() + 'px';
     tile.style.opacity = this.opacity.toString();
-    img.onerror = (event) => {img.src = 'assets/blank.png'};
+    img.onerror = (event) => {img.src = 'blank.png'};
     if (zoom > this.maxNativeZoom) {
 
       const ctx = this.getMaxNativeTileCtx(tileCoord, zoom, this.maxNativeZoom);
@@ -271,7 +271,7 @@ export class MapComponent implements OnInit {
               .replace(/{z}/g, zoom.toString())
               .replace(/{y}/g, coords.y.toString())
               .replace(/{x}/g, coords.x.toString()) :
-            'assets/blank.png';
+            'blank.png';
         },
       });
 
@@ -375,13 +375,17 @@ export class MapComponent implements OnInit {
     const logo_jornada = document.createElement('IMG');
     logo_jornada.style.padding = '5px';
     logo_jornada.style.height = '44px';
-    logo_jornada.setAttribute("src",'assets/JER_logo-windmill.png');
+    logo_jornada.style.userSelect = "none";
+    logo_jornada.style.pointerEvents = "none";
+    logo_jornada.setAttribute("src",'JER_logo-windmill.png');
     logo_jornada.style.cursor = 'pointer';
 
     const logo_usda = document.createElement('IMG')
     logo_usda.style.padding = '10px';
     logo_usda.style.height = '44px';
-    logo_usda.setAttribute("src",'assets/ars-color-lockup.png');
+    logo_usda.style.userSelect = "none";
+    logo_usda.style.pointerEvents = "none";
+    logo_usda.setAttribute("src",'ars-color-lockup.png');
     logo_usda.style.cursor = 'pointer';
 
     this.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(logo_usda)

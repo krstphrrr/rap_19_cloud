@@ -1,4 +1,12 @@
 ## Updates
+
+### rap_app: 1.0.5 
+- added `blank.png` to assets
+- 
+
+### rap_node: 1.0.0 
+- containerized node app that serves the same html templates as the ruby app
+
 ### rap_app: 1.0.4
 - added usda/jornada watermarks to map
 - changed `npm i` to `npm ci`

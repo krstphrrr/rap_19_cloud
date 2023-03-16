@@ -2,11 +2,12 @@ version: '3'
 services:
 
   rap-app:
-    image: landscapedatacommons/rap_app:1.0.3
+    image: landscapedatacommons/rap_app:1.0.5
     restart: always
     ports:
      - 6001:80
 
   rap-landing:
-    image: landscapedatacommons/rap_landing:1.0.0
+    # image: landscapedatacommons/rap_landing:1.0.0
+    image: landscapedatacommons/rap_node:1.0.0
     restart: always

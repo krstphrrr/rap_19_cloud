@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>   
+  <head>
+    <meta charset="utf-8"/>
+    <title>Why is my shapefile not working? - Rangeland Analysis Platform Knowledge Base</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Although a very common format for storing spatial vector information (polygons, lines, points), shapefiles can contain geometry errors or other misinformation t"/>
+    <meta name="author" content="Rangeland Analysis Platform"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Why is my shapefile not working?" />
+    <meta name="twitter:description" content="Although a very common format for storing spatial vector information (polygons, lines, points), shapefiles can contain geometry errors or other misinformation t"/>
+    <link rel="stylesheet" href="/assets/css/support.css">
+    <link rel="apple-touch-icon-precomposed" href="/assets/icons/rapIconSmall.png">
+    <link rel="shortcut icon" type="image/png" href="/assets/icons/rapIconSmall.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNLXMV8TB7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YNLXMV8TB7');
+    </script>
+
+  </head>
+  <body>
+    <header id="mainNav" class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="/support">
+            <span class="brand-logo"><span/>
+          </a>
+        </div><!--/container-->
+      </div><!--/navbar-inner-->
+    </header>
+    <section id="contentArea" class="container-fluid">
+      <div class="row-fluid">
+        <section id="main-content" class="span9">
+          <div class="contentWrapper">
+            <article id="fullArticle">
+              <h1 class="title">Why is my shapefile not working?</h1>
+              <a href="javascript:window.print()" class="printArticle" title="Print this article" aria-label="Print this Article"><i class="icon-print"></i></a>
+              <p> Although a very common format for storing spatial vector information (polygons, lines, points), shapefiles can contain geometry errors or other misinformation that prevents them from functioning properly. If you are using a zipped shapefile and are not returned results, please consider the following:</p>
+              <ul> 
+               <li>The shapefile must be saved as a .zip file and contain the .shp, .shx, and .prj files of the shapefile. Only include one shapefile per .zip file.</li> 
+               <li>Shapefiles may not work with Internet Explorer web browser. Please use Chrome.</li> 
+               <li>3D shapefiles are not supported, please <a href="https://support.esri.com/en/technical-article/000008433">convert to 2D</a>.</li> 
+               <li>Shapefiles can contain geometry errors. Please <a href="http://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm">check and fix the geometries</a> of the shapefile and try again.</li> 
+               <li>Shapefiles with complex geometries (i.e., polygons with many vertices) or many features will result in an error. Please reduce the number of features or <a href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-existing-features/simplifying-a-feature-generalize-.htm">simplify them</a>.</li> 
+               <li>You may only analyze one feature at a time: after loading the shapefile, click on the feature to be analyzed; a popup will appear above the feature with the ability calculate time series for that feature only.</li> 
+               <li><a href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/editing-fundamentals/removing-slivers-or-gaps-between-polygons.htm">Sliver polygons</a> (really, really small polygons that are likely mistakes) will result in an error. Please <a href="http://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/checking-and-repairing-geometries.htm">check and fix the geometries</a> of the shapefile.</li> 
+               <li>Although multipart polygons are compatible with the RAP, singlepart polygons are recommended. <a href="http://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/multipart-to-singlepart.htm">Convert to singlepart polygons</a>.</li> 
+               <li>Only the first 50 features of the shapefile will be loaded; the remaining features will be discarded.</li>
+              </ul>
+            </article>
+            <section class="articleFoot">
+              <time class="lu" datetime=2021-03-02 >Last updated on March 2, 2021</time>
+            </section>
+          </div><!--/contentWrapper-->
+        </section><!--/content-->
+        <aside id="sidebar" class="span3">
+          <h3>Categories</h3>
+          <ul class="nav nav-list">
+            <li><a href="/support">Support home  <i class="icon-arrow"></i></a></li>
+            <li><a href="/support/46-new-to-rap-start-here-landing">New to RAP - Start Here!  <i class="icon-arrow"></i></a></li>
+            <li><a href="/support/47-what-is-rap-landing">What is RAP?  <i class="icon-arrow"></i></a></li>
+            <li><a href="/support/45-using-rap-landing">How to Use RAP  <i class="icon-arrow"></i></a></li>
+            <li class="active"><a href="/support/52-troubleshooting-and-faqs-landing">Troubleshooting and FAQs  <i class="icon-arrow"></i></a></li>
+          </ul>
+        </aside><!--/span-->
+      </div><!--/row-->
+    </section><!--/.fluid-container-->
+    <footer>
+      <p class="footer-text">&copy; <a href="/">Rangeland Analysis Platform</a> 2023.</p>
+    </footer>
+  </body>
+</html>
+
+

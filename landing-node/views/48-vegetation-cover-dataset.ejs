@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Vegetation Cover Dataset - Rangeland Analysis Platform Knowledge Base</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Fundamentally, the vegetation cover model is an observation-based (or empirical) model. This means that the model “learns” the relationships between satellite i"/>
+    <meta name="author" content="Rangeland Analysis Platform"/>
+    <link rel="canonical" href="48-vegetation-cover-dataset"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Vegetation Cover Dataset" />
+    <meta name="twitter:description" content="Fundamentally, the vegetation cover model is an observation-based (or empirical) model. This means that the model “learns” the relationships between satellite i"/>
+    <link rel="stylesheet" href="/assets/css/support.css">
+    <link rel="apple-touch-icon-precomposed" href="assets/icons/rapIconSmall.png">
+    <link rel="shortcut icon" type="image/png" href="assets/icons/rapIconSmall.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNLXMV8TB7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YNLXMV8TB7');
+    </script>
+
+  </head>
+  <body>
+    <header id="mainNav" class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="/support">
+            <span class="brand-logo"><span/>
+          </a>
+        </div><!--/container-->
+      </div><!--/navbar-inner-->
+    </header>
+    <section id="contentArea" class="container-fluid">
+      <div class="row-fluid">
+        <section id="main-content" class="span9">
+          <div class="contentWrapper">
+            <article id="fullArticle">
+              <h1 class="title">Vegetation Cover Dataset</h1>
+              <a href="javascript:window.print()" class="printArticle" title="Print this article" aria-label="Print this Article"><i class="icon-print"></i></a>
+              <iframe width="700" height="393" src="https://www.youtube.com/embed/LE6CzwUuut0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+              <p> <br> Fundamentally, the vegetation cover model is an observation-based (or empirical) model. This means that the model “learns” the relationships between satellite imagery and field data. Once relationships are learned, the model can then predict percent cover of five vegetation functional types available in the dataset:</p>
+              <ul> 
+               <li>Annual forb and grass</li> 
+               <li>Perennial forb and grass</li> 
+               <li>Shrub</li> 
+               <li>Tree</li> 
+               <li>Bare ground</li>
+              </ul>
+              <p> What types of satellite imagery and field data are we talking about? Essentially, the RAP uses:&nbsp;1) satellite imagery from the Landsat program and 2) field vegetation data from the Natural Resources Conservation Service’s Natural Resources Inventory (NRI), Bureau of Land Management’s Assessment, Inventory, and Monitoring (AIM), and&nbsp;National Park Service Northern Colorado Plateau Network (NCPN)&nbsp;programs.</p>
+              <h3>What is Landsat?</h3>
+              <p> Landsat is a satellite program jointly operated by the US Geological Survey and NASA that has been collecting comparable images of the earth continuously since 1984. It collects complete imagery for the globe every 8 or 16 days, and has collected more than 9 million earth images. It is considered a moderate spatial resolution satellite, with 30-meter pixel sizes. This means that each pixel measures about the size of a baseball diamond.&nbsp;</p>
+              <p> <img src="/assets/images/rap-support-48-1.png" style="width: 519px;"></p>
+              <figcaption>
+                Landsat satellite pixels represent a ground-area of 30 meters x 30 meters. This equates to roughly the infield of a baseball field. This figure compares a Landsat image (bottom) to a high-resolution Google Earth image (top). 
+              </figcaption>
+              <p> <br> Since the launch of Landsat 4 in 1984, Landsat’s nearly four-decade history is one of the longest-running satellite programs, making it invaluable for our estimates of vegetation cover.</p>
+              <h3>What are AIM, NRI, and NCPN?</h3>
+              <p> The AIM, NRI, and NCPN programs have collected comparable methods of rangeland vegetation data since 2004 (NRI) and 2011 (AIM). In the vegetation cover models, we use their line-point intercept protocol to calculate values of percent cover for each of our cover classes of interest. With 74,000+ plots collected since 2004, the AIM, NRI, and NCPN datasets make it possible for us to relate satellite data to field vegetation cover.</p>
+              <p> <img src="/assets/images/rap-support-48-2.jpg" style="width: 802px;"></p>
+              <figcaption>
+                The AIM, NRI, NCPN field monitoring programs have been collecting comparable rangeland vegetation data since 2004 (NRI) and 2011 (AIM)&nbsp;totaling more than 74,000 field plots. 
+              </figcaption>
+              <p> &nbsp;</p>
+              <h3>Translating satellite imagery to rangeland vegetation</h3>
+              <p> On their own, Landsat satellites provide us with information about the earth's surface while AIM, NRI, and NCPN datasets provide information about plant communities at specific locations in space and time. To put them together, we built a <a href="http://dx.doi.org/10.1111/2041-210x.13564">model</a> that successfully finds patterns between Landsat imagery and field data. We then use this model to “fill in the gaps”, by predicting vegetation cover continuously across the entire geography and through time. The model recognizes and appropriately handles the relationships between rangeland plant functional types, such as woody expansion and the suppression of herbaceous vegetation.</p>
+              <h3>Technical resources:</h3>
+              <ul> 
+               <li><strong><a href="/products/rapV3/">Description, technical details, and accuracy of the Vegetation Cover product on rangelands.app</a></strong></li> 
+              </ul>
+            </article>
+            <section class="articleFoot">
+              <time class="lu" datetime=2022-01-07 >Last updated on January 7, 2022</time>
+            </section>
+          </div><!--/contentWrapper-->
+        </section><!--/content-->
+        <aside id="sidebar" class="span3">
+          <h3>Categories</h3>
+          <ul class="nav nav-list">
+            <li><a href="/support/">Support home  <i class="icon-arrow"></i></a></li>
+            <li><a href="/support/46-new-to-rap-start-here-landing">New to RAP - Start Here!  <i class="icon-arrow"></i></a></li>
+            <li class="active"><a href="/support/47-what-is-rap-landing">What is RAP?  <i class="icon-arrow"></i></a></li>
+            <li><a href="/support/45-using-rap-landing">How to Use RAP  <i class="icon-arrow"></i></a></li>
+            <li><a href="/support/52-troubleshooting-and-faqs-landing">Troubleshooting and FAQs  <i class="icon-arrow"></i></a></li>
+          </ul>
+        </aside><!--/span-->
+      </div><!--/row-->
+    </section><!--/.fluid-container-->
+    <footer>
+      <p class="footer-text">&copy; <a href="/">Rangeland Analysis Platform</a> 2023.</p>
+    </footer>
+  </body>
+</html>
+
+

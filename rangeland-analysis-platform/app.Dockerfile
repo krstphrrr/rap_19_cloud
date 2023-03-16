@@ -14,3 +14,6 @@ RUN npm run build
 FROM nginx:1.23.2-alpine
 COPY ./rangeland-analysis-platform/nginx.conf /etc/nginx/nginx.conf
 COPY --chown=nginx:nginx --from=build /usr/src/app/dist/* /usr/share/nginx/html
+# RUN mkdir /usr/share/nginx/html/
+# RUN mkdir /usr/share/nginx/html/assets
+# RUN cp /usr/share/nginx/html/blank.png /usr/share/nginx/html/rap/assets/blank.png

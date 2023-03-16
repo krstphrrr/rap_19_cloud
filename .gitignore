@@ -81,3 +81,6 @@ rangeland-analysis-platform/e2e/*.map
 rangeland-analysis-platform/.DS_Store
 rangeland-analysis-platform/Thumbs.db
 
+# Rap-node 
+landing-node/*.txt
+
