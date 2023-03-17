@@ -46,7 +46,7 @@ export class Overlay  {
   public maxnativezoom = 12;
   public data: google.maps.Data;
   public tile_params = [];
-  public year = 2021;
+  public year = 2022;
   public opacity: number;
   public params: any;
   public handlers: {click: Function, mousemove: Function};

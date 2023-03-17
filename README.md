@@ -1,5 +1,11 @@
 ## Updates
 
+### rap_app:1.0.6
+- added default year 2022
+
+### rap_node: 1.0.1
+- added support assets
+
 ### rap_app: 1.0.5 
 - added `blank.png` to assets
 - 
