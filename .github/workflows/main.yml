@@ -19,7 +19,7 @@ jobs:
       - name: Read package.json
         uses: tyankatsu0105/read-package-version-actions@v1
         with:
-          path: "./landing-node/package.json"
+          path: "./landing-node"
         id: package-version
 
     # keeping track of docker image on the hub 
