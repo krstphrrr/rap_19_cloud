@@ -8,6 +8,5 @@ services:
      - 6001:80
 
   rap-landing:
-    # image: landscapedatacommons/rap_landing:1.0.0
-    image: landscapedatacommons/rap_node:1.0.1
+    image: landscapedatacommons/rap_node:1.0.2
     restart: always

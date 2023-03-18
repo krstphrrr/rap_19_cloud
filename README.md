@@ -1,5 +1,9 @@
 ## Updates
 
+
+### rap_node: 1.0.2
+- changes to wording, small tweaks to templates
+
 ### rap_app:1.0.6
 - added default year 2022
 
