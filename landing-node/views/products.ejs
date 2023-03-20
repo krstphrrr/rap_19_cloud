@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Products - Rangeland Analysis Platform</title>
+    <meta name="description" content="Rangeland Analysis Platform geospatial products">
+    <meta name="author" content="Rangeland Analysis Platform">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Rangeland Analysis Platform">
+    <meta property="og:title" content="Products">
+    <meta property="og:url" content="https://rangelands.app/products/">
+    <meta property="og:description" content="Rangeland Analysis Platform geospatial products">
+    <link rel="canonical" href="https://rangelands.app/products/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": null,
+        "url": "https://rangelands.app/"
+      }
+    </script>
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Rangeland Analysis Platform Feed">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNLXMV8TB7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YNLXMV8TB7');
+    </script>
+
+  </head>
+  <body class="layout--single wide">    
+    <%- include('header', {}); %>
+    <div class="initial-content">
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">Toggle menu</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">Vegetation</span>
+                <ul>
+                  <li><a href="/products/#biomass">Biomass</a></li>
+                  <li><a href="/products/#cover">Cover</a></li>
+                  <li><a href="/products/#data-download">Data download</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">Carbon</span>
+                <ul>
+                  <li><a href="/products/#partitioned-npp">Partitioned NPP</a></li>
+                  <li><a href="/products/#npp-data-download">Data download</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="Products">
+          <div class="page__inner-wrap">
+            <header>
+              <h1 id="page-title" class="page__title" itemprop="headline">Products</h1>
+            </header>
+            <section class="page__content" itemprop="text">
+              <h3 id="biomass">Biomass</h3>
+              <p>The Rangeland Analysis Platform’s vegetation biomass product provides annual and
+              16-day aboveground biomass from 1986 to present of: annual forbs and grasses,
+              perennial forbs and grasses, and herbaceous (combination of annual and perennial
+              forbs and grasses). Estimates represent accumulated new biomass throughout the
+              year or 16-day period and do not include biomass accumulation in previous years.
+              Aboveground biomass was calculated by separating net primary production
+              (paritioned by functional group) to aboveground and converting carbon to biomass
+              (Jones et al. 2021, Robinson et al. 2019). Estimates are provided in United
+              States customary units (lbs/acre) to facilitate use. Although these data were
+              produced across a broad region, they are primarily intended for rangeland
+              ecosystems. Biomass estimates may not be suitable in other ecosystems, e.g.,
+              forests., and are not to be used in agricultural lands, i.e., croplands.</p>
+
+              <p><span style="color:red">16-day biomass estimates for the current year are
+              provisional and will be recalculated at the end of the year. Significant land
+              cover changes (e.g., woodland to grassland, shrubland to grassland) during the
+              current year may or may not be reflected in the partitioning of biomass to
+              functional groups. We urge users to critically inspect current year 16-day
+              biomass estimates and interpret appropriately.</span></p>
+
+              <p>Biomass estimates are calculated using a process-based model and therefore
+              traditional error metrics (e.g., MSE, RMSE) are not available. A comparison of
+              biomass estimates to gSSURGO, the <a href="https://www.fuelcast.net/">Rangeland Production Monitoring
+              Service</a>, and 16,591 USDA NRCS NRI on-the-ground
+              estimates is reported in <a href="https://doi.org/10.1016/j.rama.2021.04.003">Jones et al.
+              (2021)</a>.</p>
+
+              <p><img src="/assets/images/rapBiomassNRI.jpg" alt="RAP NRI biomass" /><br />
+              Density scatterplot of RAP herbaceous aboveground biomass (HAGB) and 16,591 USDA
+              NRCS NRI plot-level biomass estimates, 1:1 line (black), and Pearson correlation
+              coefficient (r=0.63). Figure from <a href="https://doi.org/10.1016/j.rama.2021.04.003">Jones et al.
+              (2021)</a>.</p>
+
+              <p><img src="/assets/images/rapBiomassComparison.jpg" alt="RAP biomass comparison" /><br />
+              Differences (a-c) between three gridded rangeland production datasets across
+              western U.S. rangelands using the 50th percentile of annual values (2000-2018)
+              from RAP and RPMS data, and ‘normal’ values from gSSURGO. Scatterplots and
+              Pearson correlation coefficients (d-f) of production values sampled from each
+              data set for 5000 randomly selected rangeland locations. Figure from <a href="https://doi.org/10.1016/j.rama.2021.04.003">Jones et
+              al. (2021)</a>.</p>
+
+              <p>The vegetation biomass data and maps are intended to be used alongside local
+              knowledge and on-the-ground data to inform management actions that improve
+              rangelands and wildlife habitat. They should not be used in isolation to
+              quantify rangeland resources, determine or define thresholds, or evaluate the
+              efficacy of management practices or treatments. Data can be used to evaluate
+              resources in concert with site-specific information about the area under
+              investigation, such as past land management practices, vegetation treatments,
+              conservation efforts, or natural disturbances.</p>
+
+              <p>Jones, M.O., N.P. Robinson, D.E. Naugle, J.D. Maestas, M.C. Reeves, R.W.
+              Lankston, and B.W. Allred. 2021. Annual and 16-day rangeland production
+              estimates for the western United States. Rangeland Ecology &amp; Management
+              77:112–117. <a href="http://dx.doi.org/10.1016/j.rama.2021.04.003">http://dx.doi.org/10.1016/j.rama.2021.04.003</a></p>
+
+              <p>Robinson, N.P., M.O. Jones, A. Moreno, T.A. Erickson, D.E. Naugle, and B.W.
+              Allred. 2019. Rangeland productivity partitioned to sub-pixel plant functional
+              types. Remote Sensing 11:1427. <a href="https://dx.doi.org/10.3390/rs11121427">https://dx.doi.org/10.3390/rs11121427</a></p>
+
+              <h3 id="cover">Cover</h3>
+
+              <p>The Rangeland Analysis Platform’s vegetation cover product provides annual
+              percent cover estimates from 1986 to present of: annual forbs and grasses,
+              perennial forbs and grasses, shrubs, trees, and bare ground. The estimates were
+              produced by combining 75,000 field plots collected by BLM, NPS, and NRCS with
+              the historical Landsat satellite record. Utilizing the power of cloud computing,
+              cover estimates are predicted across the United States at 30m resolution, an
+              area slightly larger than a baseball diamond.</p>
+
+              <p>Vegetation cover estimates are model predictions. When interpreting cover, it is
+              important to consider the model error specific to each functional group. Error
+              metrics measure the average difference between predicted model output and
+              separate on-the-ground measurements. For vegetation cover, 10% (approximately
+              7,500 plots) of the field plot data were withheld from model training and used
+              for evaluation. The error metrics in the table below represent the average
+              accuracy of the model for each functional group:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th style="text-align: center">Vegetation cover</th>
+                    <th style="text-align: center">Annual forbs and grasses</th>
+                    <th style="text-align: center">Perennial forbs and grasses</th>
+                    <th style="text-align: center">Shrubs</th>
+                    <th style="text-align: center">Trees</th>
+                    <th style="text-align: center">Bare ground</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align: center">Mean absolute error (%)</td>
+                    <td style="text-align: center">7.0</td>
+                    <td style="text-align: center">10.2</td>
+                    <td style="text-align: center">6.2</td>
+                    <td style="text-align: center">2.6</td>
+                    <td style="text-align: center">6.5</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center">Root mean square error (%)</td>
+                    <td style="text-align: center">11.0</td>
+                    <td style="text-align: center">14.0</td>
+                    <td style="text-align: center">8.8</td>
+                    <td style="text-align: center">6.7</td>
+                    <td style="text-align: center">9.6</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>These errors provide a general accuracy assessment. For example, across 7,500
+              field plots, the average RAP prediction for annual forb and grass pixel was +/-
+              7.0% (mean absolute error) relative to field plot measurements.</p>
+
+              <p>The vegetation cover data and maps are intended to be used alongside local
+              knowledge and on-the-ground data to inform management actions. They should not
+              be used in isolation to quantify rangeland resources, determine or define cover
+              thresholds, or evaluate the efficacy of management practices or treatments. Data
+              can be used to evaluate resources in concert with site-specific information
+              about the area under investigation, such as past land management practices,
+              vegetation treatments, conservation efforts, or natural disturbances.</p>
+
+              <p>Allred, B.W., B.T. Bestelmeyer, C.S. Boyd, C. Brown, K.W. Davies, M.C. Duniway,
+              L.M. Ellsworth, T.A. Erickson, S.D. Fuhlendorf, T.V. Griffiths, V. Jansen, M.O.
+              Jones, J. Karl, A. Knight, J.D. Maestas, J.J. Maynard, S.E. McCord, D.E. Naugle,
+              H.D. Starns, D. Twidwell, and D.R. Uden. 2021. Improving Landsat predictions of
+              rangeland fractional cover with multitask learning and uncertainty. Methods in
+              Ecology and Evolution. <a href="http://dx.doi.org/10.1111/2041-210x.13564">http://dx.doi.org/10.1111/2041-210x.13564</a></p>
+
+              <h3 id="data-download">Data download</h3>
+
+              <p>Annual biomass data are available in Google Earth Engine (<a href="https://code.earthengine.google.com/e48f56f7d2c16d53e09c4b8246104465">example
+              script</a>)
+              and as GeoTIFFs from
+              <a href="http://rangeland.ntsg.umt.edu/data/rap/rap-vegetation-biomass/">http://rangeland.ntsg.umt.edu/data/rap/rap-vegetation-biomass/</a>.</p>
+
+              <p>Cover data are available in Google Earth Engine (ImageCollection
+              ‘projects/rap-data-365417/assets/vegetation-cover-v3’) and as GeoTIFFs from
+              <a href="http://rangeland.ntsg.umt.edu/data/rap/rap-vegetation-cover/">http://rangeland.ntsg.umt.edu/data/rap/rap-vegetation-cover/</a>.</p>
+              
+              <p><br /></p>
+              <h2 id="carbon">Carbon</h2>
+
+              <h3 id="partitioned-npp">Partitioned NPP</h3>
+
+              <p>The Rangeland Analysis Platform provides net primary productivity (NPP)
+              estimates from 1986 to present. Estimates are partitioned into the following
+              functional groups: annual forb and grass, perennial forb and grass, shrub, and
+              tree. NPP is the net increase (i.e., photosynthesis minus respiration) in total
+              plant carbon, including above and below ground.</p>
+
+              <p>Partitioned NPP cannot be viewed or analyzed in the RAP web application.</p>
+
+              <p>Robinson, N.P., M.O. Jones, A. Moreno, T.A. Erickson, D.E. Naugle, and B.W.
+              Allred. 2019. Rangeland productivity partitioned to sub-pixel plant functional
+              types. Remote Sensing 11:1427. <a href="https://dx.doi.org/10.3390/rs11121427">https://dx.doi.org/10.3390/rs11121427</a></p>
+
+              <h3 id="npp-data-download">NPP data download</h3>
+
+              <p>Partitioned NPP is available as GeoTIFFs from
+              <a href="http://rangeland.ntsg.umt.edu/data/rap/rap-vegetation-npp/">http://rangeland.ntsg.umt.edu/data/rap/rap-vegetation-npp/</a> and in Google Earth
+              Engine (ImageCollection
+              ‘projects/rap-data-365417/assets/npp-partitioned-v3’).</p>
+              <p><br /></p>
+            </section>
+            <footer class="page__meta"></footer>
+          </div>
+        </article>
+      </div>
+    </div>
+    <%- include('footer', {}); %>
+    <script src="/assets/js/main.min.js"></script>
+  </body>
+</html>
