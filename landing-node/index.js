@@ -20,6 +20,10 @@ app.get('/changelog', (req, res) => {
     res.render('changelog');
 });
 
+app.get('/great-basin-fire', (req, res) => {
+    res.render('great-basin-fire');
+});
+
 app.get('/news', (req, res) => {
     res.render('news');
 });
