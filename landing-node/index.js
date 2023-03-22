@@ -36,6 +36,10 @@ app.get('/news/timeline-for-2020', (req, res) => {
     res.render('timeline-for-2020');
 });
 
+app.get('/partner-tools', (req, res) => {
+    res.render('partner-tools');
+});
+
 app.get('/products', (req, res) => {
     res.render('products');
 });
