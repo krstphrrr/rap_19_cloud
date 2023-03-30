@@ -172,4 +172,116 @@ app.get('/support/70-production-explorer', (req, res) => {
     res.render('70-production-explorer');
 });
 
+app.get('/article/support/17-navigating-the-platform', (req, res) => {
+    res.render('17-navigating-the-platform');
+});
+
+app.get('/article/support/18-shapefile-help', (req, res) => {
+    res.render('18-shapefile-help');
+});
+
+app.get('/article/support/19-view-rap-data-in-your-gis', (req, res) => {
+    res.render('19-view-rap-data-in-your-gis');
+});
+
+app.get('/article/support/22-guiding-principles', (req, res) => {
+    res.render('22-guiding-principles');
+});
+
+app.get('/article/support/23-the-map-layers-panel', (req, res) => {
+    res.render('23-the-map-layers-panel');
+});
+
+app.get('/article/support/24-analyzing-your-region-of-interest', (req, res) => {
+    res.render('24-analyzing-your-region-of-interest');
+});
+
+app.get('/article/support/25-the-interactive-map', (req, res) => {
+    res.render('25-the-interactive-map');
+});
+
+app.get('/article/support/26-the-analysis-panel', (req, res) => {
+    res.render('26-the-analysis-panel');
+});
+
+app.get('/article/support/45-using-rap-landing', (req, res) => {
+    res.render('45-using-rap-landing');
+});
+
+app.get('/article/support/46-new-to-rap-start-here-landing', (req, res) => {
+    res.render('46-new-to-rap-start-here-landing');
+});
+
+app.get('/article/support/47-what-is-rap-landing', (req, res) => {
+    res.render('47-what-is-rap-landing');
+});
+
+app.get('/article/support/48-vegetation-cover-dataset', (req, res) => {
+    res.render('48-vegetation-cover-dataset');
+});
+
+app.get('/article/support/49-rangeland-production', (req, res) => {
+    res.render('49-rangeland-production');
+});
+
+app.get('/article/support/52-troubleshooting-and-faqs-landing', (req, res) => {
+    res.render('52-troubleshooting-and-faqs-landing');
+});
+
+app.get('/article/support/53-analyze-rap-data-in-excel', (req, res) => {
+    res.render('53-analyze-rap-data-in-excel');
+});
+
+app.get('/article/support/54-using-rap-in-rangeland-decision-making', (req, res) => {
+    res.render('54-using-rap-in-rangeland-decision-making');
+});
+
+app.get('/article/support/55-multi-scale-rangeland-monitoring', (req, res) => {
+    res.render('55-multi-scale-rangeland-monitoring');
+});
+
+app.get('/article/support/56-known-data-issues', (req, res) => {
+    res.render('56-known-data-issues');
+});
+
+app.get('/article/support/57-agency-points-of-contact', (req, res) => {
+    res.render('57-agency-points-of-contact');
+});
+
+app.get('/article/support/58-publications-and-reports', (req, res) => {
+    res.render('58-publications-and-reports');
+});
+
+app.get('/article/support/59-rap-metadata', (req, res) => {
+    res.render('59-rap-metadata');
+});
+
+app.get('/article/support/60-faqs', (req, res) => {
+    res.render('60-faqs');
+});
+
+app.get('/article/support/61-processing-rap-data-in-google-earth-engine', (req, res) => {
+    res.render('61-processing-rap-data-in-google-earth-engine');
+});
+
+app.get('/article/support/62-export-vegetation-cover-rasters', (req, res) => {
+    res.render('62-export-vegetation-cover-rasters');
+});
+
+app.get('/article/support/63-export-annual-biomass-rasters', (req, res) => {
+    res.render('63-export-annual-biomass-rasters');
+});
+
+app.get('/article/support/64-batch-export-vegetation-cover-csvs', (req, res) => {
+    res.render('64-batch-export-vegetation-cover-csvs');
+});
+
+app.get('/article/support/65-batch-export-herbaceous-biomass-csvs', (req, res) => {
+    res.render('65-batch-export-herbaceous-biomass-csvs');
+});
+
+app.get('/article/support/70-production-explorer', (req, res) => {
+    res.render('70-production-explorer');
+});
+
 app.listen(port, () => {});
