@@ -9,11 +9,8 @@ COPY ./rangeland-analysis-platform/ngx-tour-fix/tour.service.d.ts /usr/src/app/n
 COPY ./rangeland-analysis-platform/ngx-tour-fix/tour-anchor.directive.d.ts /usr/src/app/node_modules/ngx-tour-md-menu/lib/tour-anchor.directive.d.ts
 
 RUN npm run build
-# CMD ["tail", "-f", "/dev/null"]
+
 
 FROM nginx:1.23.2-alpine
 COPY ./rangeland-analysis-platform/nginx.conf /etc/nginx/nginx.conf
 COPY --chown=nginx:nginx --from=build /usr/src/app/dist/* /usr/share/nginx/html
-# RUN mkdir /usr/share/nginx/html/
-# RUN mkdir /usr/share/nginx/html/assets
-# RUN cp /usr/share/nginx/html/blank.png /usr/share/nginx/html/rap/assets/blank.png
