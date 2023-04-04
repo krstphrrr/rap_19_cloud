@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Batch export Vegetation Cover CSVs - Rangeland Analysis Platform Knowledge Base</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Purpose This script exports RAP Vegetation Cover tables (CSV file format) for multiple regions of interest from Google Earth Engine to your personal Google Driv"/>
+    <meta name="author" content="Rangeland Analysis Platform"/>
+    <link rel="canonical" href="64-batch-export-vegetation-cover-csvs"/>
+    <link rel="stylesheet" href="/assets/css/support.css">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Batch export Vegetation Cover CSVs" />
+    <meta name="twitter:description" content="Purpose This script exports RAP Vegetation Cover tables (CSV file format) for multiple regions of interest from Google Earth Engine to your personal Google Driv"/>
+    <link rel="apple-touch-icon-precomposed" href="/assets/icons/rapIconSmall.png">
+    <link rel="shortcut icon" type="image/png" href="/assets/icons/rapIconSmall.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNLXMV8TB7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YNLXMV8TB7');
+    </script>
+
+  </head>
+  <body>
+    <header id="mainNav" class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="/">
+            <span class="brand-logo"><span/>
+          </a>
+        </div><!--/container-->
+      </div><!--/navbar-inner-->
+    </header>
+    <section id="contentArea" class="container-fluid">
+      <div class="row-fluid">
+        <section id="main-content" class="span9">
+          <div class="contentWrapper">
+            <article id="fullArticle">
+              <h1 class="title">Batch export Vegetation Cover CSVs</h1>
+              <a href="javascript:window.print()" class="printArticle" title="Print this article" aria-label="Print this Article"><i class="icon-print"></i></a>
+              <h2> Purpose</h2>
+              <p> This script exports RAP Vegetation Cover tables (CSV file format) for multiple regions of interest from Google Earth Engine to your personal Google Drive</p>
+              <section class="callout-green">
+               <p style="font-size:18px"> <strong><a href="https://code.earthengine.google.com/c01dd968b64a5020384d80c7de0557d5?noload=true" target="_blank">Follow this link to the script!</a></strong></p>
+              </section>
+              <h2> Step-by-step Instructions</h2>
+              <dl> 
+               <dt>
+                 1 
+               </dt> 
+               <dd> 
+                <strong>Upload your shapefile with multiple regions of interest</strong> 
+               </dd> 
+               <dd>
+                 Click on the 
+                <em>Assets</em> tab in the left-side window and then click the 
+                <em>New</em>&nbsp;button and select Shape files. 
+               </dd> 
+               <dd> 
+                <img src="/assets/images/rap-support-64-1.png" style="width: 407px;"> 
+               </dd> 
+               <dd> 
+                <p> A pop-up window will open. Follow these steps: <strong>1)</strong> Click the <em>SELECT</em>&nbsp;button and upload either a zipped shapefile or each of the file extensions separately (a zipped shapefile is usually easiest), <strong>2)</strong> name your new Earth Engine Asset, and <strong>3) </strong>leave the remaining items as default, and click&nbsp;<em style="background-color: initial;">UPLOAD.</em> </p>
+               </dd> 
+               <dd> 
+                <img src="/assets/images/rap-support-64-2.png" style="width: 432px;"> 
+               </dd> 
+               <p style="color:white; font-size:4px;"> _ </p>
+               <dt>
+                 2 
+               </dt> 
+               <dd> 
+                <strong>Wait for the Earth Engine asset to upload</strong> 
+               </dd> 
+               <dd>
+                 Upon initiating the upload, the 
+                <em>Tasks </em>tab in the right-side window will light up yellow, indicating that the upload has started. 
+               </dd> 
+               <dd> 
+                <img src="/assets/images/rap-support-64-3.png" style="width: 382px;"> 
+               </dd> 
+               <dd>
+                 Depending on the complexity of the shapefile geometry and the number of features, it may take several minutes or longer to complete. 
+               </dd> 
+               <dd>
+                 You can refresh the web page to see if it has finished. Once it lights up blue, the upload has completed. 
+               </dd> 
+               <dd> 
+                <img src="/assets/images/rap-support-64-4.png" style="width: 373px;"> 
+               </dd> 
+               <p style="color:white; font-size:4px;"> \ </p>
+               <p style="color:white; font-size:4px;"> </p>
+               <dt>
+                 3 
+               </dt> 
+               <dd> 
+                <strong>Import the new Earth Engine asset into the script</strong> 
+               </dd> 
+               <dd>
+                 Click on the 
+                <em>Assets</em>&nbsp;tab in the left-side window again. This time, find your new asset and click the arrow to import it. 
+               </dd> 
+               <dd> 
+                <img src="/assets/images/rap-support-64-5.png" style="width: 496px;"> 
+               </dd> 
+               <dd>
+                 You will now see a new import 
+                <em>table </em>at the top of your script. The script is now ready to run. 
+               </dd> 
+               <dd> 
+                <img src="/assets/images/rap-support-64-6.png" style="width: 593px;"> 
+               </dd> 
+               <p style="color:white; font-size:4px;"> _ </p>
+               <dt>
+                 4 
+               </dt> 
+               <dd> 
+                <strong>Export your data</strong> 
+               </dd> 
+               <dd>
+                 Simply click "Run" at the top of the script to export your data, which will initiate the export process. 
+               </dd> 
+               <dd> 
+                <p> <img src="/assets/images/rap-support-64-7.png" style="width: 530px;"> </p>
+               </dd> 
+               <dd> 
+                <p> Almost immediately, the "Tasks" tab in the right-side panel will turn yellow indicating that you are ready to export. When you click "Tasks" you will see a list with items for each year of data that you exported. Click "Run" on each of them to begin processing. </p>
+               </dd> 
+               <dd> 
+                <p> <img src="/assets/images/rap-support-64-8.png" style="width: 822px;"> </p>
+               </dd> 
+               <p style="color:white; font-size:4px;"> _ </p>
+               <dt>
+                 5 
+               </dt> 
+               <dd> 
+                <strong>Retrieve your data</strong> 
+               </dd> 
+               <dd>
+                 The export process may take several minutes to complete. However, once you have started the export you can close the Earth Engine tab and it will continue to run. You can always return to the Tasks tab at 
+                <a href="https://code.earthengine.google.com/">code.earthengine.google.com</a> to check on the progress of your export. 
+               </dd> 
+               <dd>
+                 Once your table has finished exporting you will find them in a new "RAP_exports" folder in your Google Drive. It is now available for you to download to your local computer. 
+               </dd>
+              </dl>
+            </article>
+            <section class="articleFoot">
+              <time class="lu" datetime=2022-01-01 >Last updated on January 1, 2022</time>
+            </section>
+          </div><!--/contentWrapper-->
+        </section><!--/content-->
+        <aside id="sidebar" class="span3">
+          <h3>Categories</h3>
+          <ul class="nav nav-list">
+            <li><a href="/support">Support home  <i class="icon-arrow"></i></a></li>
+            <li><a href="/support/46-new-to-rap-start-here-landing">New to RAP - Start Here!  <i class="icon-arrow"></i></a></li>
+            <li><a href="/support/47-what-is-rap-landing">What is RAP?  <i class="icon-arrow"></i></a></li>
+            <li class="active"><a href="/support/45-using-rap-landing">How to Use RAP  <i class="icon-arrow"></i></a></li>
+            <li><a href="/support/52-troubleshooting-and-faqs-landing">Troubleshooting and FAQs  <i class="icon-arrow"></i></a></li>
+          </ul>
+        </aside><!--/span-->
+      </div><!--/row-->
+    </section><!--/.fluid-container-->
+    <footer>
+      <p class="footer-text">&copy; <a href="/">Rangeland Analysis Platform</a> 2023.</p>
+    </footer>
+  </body>
+</html>
+
+
