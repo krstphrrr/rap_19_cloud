@@ -51,7 +51,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -68,7 +68,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -85,7 +85,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -102,7 +102,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -119,7 +119,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -136,7 +136,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -153,7 +153,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -170,7 +170,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -187,7 +187,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -204,7 +204,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -221,7 +221,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -238,7 +238,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -255,7 +255,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -272,7 +272,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -289,7 +289,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -306,7 +306,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -323,7 +323,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -340,7 +340,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -357,7 +357,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -374,7 +374,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -391,7 +391,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -408,7 +408,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -425,7 +425,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -442,7 +442,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -459,7 +459,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -476,7 +476,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -493,7 +493,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -510,7 +510,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -527,7 +527,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -544,7 +544,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -561,7 +561,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -578,7 +578,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -595,7 +595,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -612,7 +612,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -629,7 +629,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -646,7 +646,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/afg/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -663,7 +663,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -680,7 +680,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -697,7 +697,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -714,7 +714,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -731,7 +731,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -748,7 +748,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -765,7 +765,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -782,7 +782,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -799,7 +799,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -816,7 +816,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -833,7 +833,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -850,7 +850,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -867,7 +867,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -884,7 +884,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -901,7 +901,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -918,7 +918,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -935,7 +935,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -952,7 +952,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -969,7 +969,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -986,7 +986,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1003,7 +1003,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1020,7 +1020,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1037,7 +1037,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1054,7 +1054,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1071,7 +1071,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1088,7 +1088,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1105,7 +1105,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1122,7 +1122,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1139,7 +1139,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1156,7 +1156,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1173,7 +1173,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1190,7 +1190,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1207,7 +1207,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1224,7 +1224,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1241,7 +1241,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1258,7 +1258,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/pfg/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1275,7 +1275,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1292,7 +1292,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1309,7 +1309,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1326,7 +1326,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1343,7 +1343,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1360,7 +1360,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1377,7 +1377,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1394,7 +1394,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1411,7 +1411,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1428,7 +1428,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1445,7 +1445,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1462,7 +1462,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1479,7 +1479,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1496,7 +1496,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1513,7 +1513,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1530,7 +1530,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1547,7 +1547,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1564,7 +1564,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1581,7 +1581,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1598,7 +1598,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1615,7 +1615,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1632,7 +1632,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1649,7 +1649,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1666,7 +1666,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1683,7 +1683,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1700,7 +1700,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1717,7 +1717,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1734,7 +1734,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1751,7 +1751,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1768,7 +1768,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1785,7 +1785,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1802,7 +1802,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1819,7 +1819,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1836,7 +1836,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1853,7 +1853,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1870,7 +1870,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/shr/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1887,7 +1887,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1904,7 +1904,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1921,7 +1921,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1938,7 +1938,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1955,7 +1955,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1972,7 +1972,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1989,7 +1989,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2006,7 +2006,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2023,7 +2023,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2040,7 +2040,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2057,7 +2057,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2074,7 +2074,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2091,7 +2091,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2108,7 +2108,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2125,7 +2125,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2142,7 +2142,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2159,7 +2159,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2176,7 +2176,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2193,7 +2193,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2210,7 +2210,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2227,7 +2227,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2244,7 +2244,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2261,7 +2261,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2278,7 +2278,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2295,7 +2295,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2312,7 +2312,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2329,7 +2329,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2346,7 +2346,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2363,7 +2363,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2380,7 +2380,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2397,7 +2397,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2414,7 +2414,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2431,7 +2431,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2448,7 +2448,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2465,7 +2465,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2482,7 +2482,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/tre/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2499,7 +2499,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2516,7 +2516,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2533,7 +2533,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2550,7 +2550,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2567,7 +2567,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2584,7 +2584,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2601,7 +2601,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2618,7 +2618,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2635,7 +2635,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2652,7 +2652,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2669,7 +2669,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2686,7 +2686,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2703,7 +2703,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2720,7 +2720,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2737,7 +2737,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2754,7 +2754,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2771,7 +2771,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2788,7 +2788,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2805,7 +2805,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2822,7 +2822,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2839,7 +2839,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2856,7 +2856,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2873,7 +2873,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2890,7 +2890,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2907,7 +2907,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2924,7 +2924,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2941,7 +2941,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2958,7 +2958,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2975,7 +2975,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2992,7 +2992,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3009,7 +3009,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3026,7 +3026,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3043,7 +3043,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3060,7 +3060,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3077,7 +3077,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3094,7 +3094,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-cover-v3/unmasked/bgr/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3111,7 +3111,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3128,7 +3128,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3145,7 +3145,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3162,7 +3162,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3179,7 +3179,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3196,7 +3196,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3213,7 +3213,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3230,7 +3230,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3247,7 +3247,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3264,7 +3264,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3281,7 +3281,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3298,7 +3298,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3315,7 +3315,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3332,7 +3332,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3349,7 +3349,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3366,7 +3366,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3383,7 +3383,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3400,7 +3400,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3417,7 +3417,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3434,7 +3434,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3451,7 +3451,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3468,7 +3468,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3485,7 +3485,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3502,7 +3502,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3519,7 +3519,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3536,7 +3536,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3553,7 +3553,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3570,7 +3570,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3587,7 +3587,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3604,7 +3604,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3621,7 +3621,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3638,7 +3638,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3655,7 +3655,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3672,7 +3672,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3689,7 +3689,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3706,7 +3706,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/afg/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3723,7 +3723,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3740,7 +3740,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3757,7 +3757,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3774,7 +3774,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3791,7 +3791,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3808,7 +3808,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3825,7 +3825,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3842,7 +3842,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3859,7 +3859,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3876,7 +3876,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3893,7 +3893,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3910,7 +3910,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3927,7 +3927,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3944,7 +3944,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3961,7 +3961,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3978,7 +3978,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3995,7 +3995,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4012,7 +4012,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4029,7 +4029,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4046,7 +4046,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4063,7 +4063,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4080,7 +4080,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4097,7 +4097,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4114,7 +4114,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4131,7 +4131,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4148,7 +4148,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4165,7 +4165,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4182,7 +4182,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4199,7 +4199,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4216,7 +4216,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4233,7 +4233,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4250,7 +4250,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4267,7 +4267,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4284,7 +4284,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4301,7 +4301,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4318,7 +4318,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/pfg/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4335,7 +4335,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2021/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4352,7 +4352,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2020/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4369,7 +4369,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2019/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4386,7 +4386,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2018/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4403,7 +4403,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2017/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4420,7 +4420,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2016/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4437,7 +4437,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2015/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4454,7 +4454,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2014/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4471,7 +4471,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2013/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4488,7 +4488,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2012/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4505,7 +4505,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2011/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4522,7 +4522,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2010/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4539,7 +4539,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2009/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4556,7 +4556,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2008/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4573,7 +4573,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2007/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4590,7 +4590,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2006/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4607,7 +4607,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2005/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4624,7 +4624,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2004/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4641,7 +4641,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2003/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4658,7 +4658,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2002/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4675,7 +4675,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2001/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4692,7 +4692,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2000/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4709,7 +4709,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1999/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4726,7 +4726,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1998/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4743,7 +4743,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1997/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4760,7 +4760,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1996/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4777,7 +4777,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1995/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4794,7 +4794,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1994/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4811,7 +4811,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1993/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4828,7 +4828,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1992/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4845,7 +4845,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1991/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4862,7 +4862,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1990/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4879,7 +4879,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1989/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4896,7 +4896,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1988/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4913,7 +4913,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1987/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -4930,7 +4930,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/rap-tiles-biomass-v3/unmasked/herbaceous/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
 
