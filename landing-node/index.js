@@ -11,6 +11,7 @@ const port = 3000;
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 app.use("/assets", express.static(__dirname + '/assets'));
+app.use("/wmts", express.static(__dirname + '/wmts'));
 
 app.get('/', (req, res) => {
     res.render('landing');
