@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ShortLinkComponent } from './short-link.component';
 
@@ -6,7 +6,7 @@ describe('ShortLinkComponent', () => {
   let component: ShortLinkComponent;
   let fixture: ComponentFixture<ShortLinkComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ShortLinkComponent ]
     })

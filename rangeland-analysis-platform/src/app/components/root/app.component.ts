@@ -1,8 +1,8 @@
 import { Component, OnInit} from '@angular/core';
-import { TourService } from 'ngx-tour-md-menu';
+import { TourService } from 'ngx-ui-tour-md-menu';
 import { RoutingService } from '../../services/routing.service';
 import { TourConfig } from 'app/config';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { SplashDialogComponent } from '../splash-dialog/splash-dialog.component';
 
 

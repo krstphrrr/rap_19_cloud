@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { OverlayToggleControlComponent } from './overlay-toggle-control.component';
 
@@ -6,7 +6,7 @@ describe('OverlayToggleControlComponent', () => {
   let component: OverlayToggleControlComponent;
   let fixture: ComponentFixture<OverlayToggleControlComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ OverlayToggleControlComponent ]
     })

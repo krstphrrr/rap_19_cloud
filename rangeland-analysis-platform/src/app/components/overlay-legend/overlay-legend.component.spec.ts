@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { OverlayLegendComponent } from './overlay-legend.component';
 
@@ -6,7 +6,7 @@ describe('OverlayLegendComponent', () => {
   let component: OverlayLegendComponent;
   let fixture: ComponentFixture<OverlayLegendComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ OverlayLegendComponent ]
     })

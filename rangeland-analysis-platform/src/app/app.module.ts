@@ -6,19 +6,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RoutingModule } from './routing/routing.module';
 import { CommonModule } from '@angular/common';
 
-import {
-  MatAutocompleteModule, MatCardModule, MatSelectModule, MatSlideToggleModule,
-  MatListModule, MatInputModule, MatTooltipModule, MatMenuModule,
-  MatSliderModule, MatProgressSpinnerModule, MatButtonModule,
-  MatButtonToggleModule, MatCheckboxModule, MatDialogModule,
-  MatSnackBarModule, MatIconModule, MatTabsModule, MatProgressBarModule
-} from '@angular/material';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import * as PlotlyJS from 'plotly.js/dist/plotly.js';
 import { PlotlyModule } from 'angular-plotly.js';
 PlotlyModule.plotlyjs = PlotlyJS;
-
-import 'hammerjs';
 
 import { AppComponent } from './components/root/app.component';
 import { MapComponent } from './components/map/map.component';
@@ -29,7 +38,7 @@ import { LandcoverControlComponent } from './components/landcover-control/landco
 
 import { AnalysisService } from './services/analysis.service';
 import { RoutingService } from './services/routing.service';
-import { TourMatMenuModule } from 'ngx-tour-md-menu';
+import { TourMatMenuModule } from 'ngx-ui-tour-md-menu';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LandcoverReferenceComponent } from './components/landcover-reference/landcover-reference.component';
 import { MapStateService } from './services/map-state.service';

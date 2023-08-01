@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ControlPanelToggleComponent } from './control-panel-toggle.component';
 
@@ -6,7 +6,7 @@ describe('ControlPanelToggleComponent', () => {
   let component: ControlPanelToggleComponent;
   let fixture: ComponentFixture<ControlPanelToggleComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ControlPanelToggleComponent ]
     })

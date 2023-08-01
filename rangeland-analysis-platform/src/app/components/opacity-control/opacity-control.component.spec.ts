@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { OpacityControlComponent } from './opacity-control.component';
 
@@ -6,7 +6,7 @@ describe('OpacityControlComponent', () => {
   let component: OpacityControlComponent;
   let fixture: ComponentFixture<OpacityControlComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ OpacityControlComponent ]
     })

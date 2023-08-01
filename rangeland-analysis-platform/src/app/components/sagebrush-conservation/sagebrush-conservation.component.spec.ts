@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SagebrushConservationComponent } from './sagebrush-conservation.component';
 
@@ -6,7 +6,7 @@ describe('SagebrushConservationComponent', () => {
   let component: SagebrushConservationComponent;
   let fixture: ComponentFixture<SagebrushConservationComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SagebrushConservationComponent ]
     })

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {
   rollUpDown, OnInit, MapStateService, AnalysisStateService, Router
 } from 'app/components';
-import {MatSnackBar} from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Overlay } from '../../services/overlays.service';
 import { HttpClient } from '@angular/common/http';
 

@@ -38,23 +38,6 @@
   <Contents>
 
     <Layer>
-      <ows:Title>Annual forb and grass cover 2022</ows:Title>
-      <ows:Identifier>afg2022</ows:Identifier>
-      <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
-        <ows:LowerCorner>-124.76975514486658 24.51406344243852</ows:LowerCorner>
-        <ows:UpperCorner>-66.93652153957034 49.3935983693073</ows:UpperCorner>
-      </ows:WGS84BoundingBox>
-      <Style isDefault="true">
-        <ows:Identifier>default</ows:Identifier>
-      </Style>
-      <Format>image/png</Format>
-      <TileMatrixSetLink>
-        <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
-      </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/2022/{TileMatrix}/{TileCol}/{TileRow}.png"/>
-    </Layer>
-
-    <Layer>
       <ows:Title>Annual forb and grass cover 2021</ows:Title>
       <ows:Identifier>afg2021</ows:Identifier>
       <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
@@ -664,23 +647,6 @@
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
       <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/afg/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
-    </Layer>
-
-    <Layer>
-      <ows:Title>Perennial forb and grass cover 2022</ows:Title>
-      <ows:Identifier>pfg2022</ows:Identifier>
-      <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
-        <ows:LowerCorner>-124.76975514486658 24.51406344243852</ows:LowerCorner>
-        <ows:UpperCorner>-66.93652153957034 49.3935983693073</ows:UpperCorner>
-      </ows:WGS84BoundingBox>
-      <Style isDefault="true">
-        <ows:Identifier>default</ows:Identifier>
-      </Style>
-      <Format>image/png</Format>
-      <TileMatrixSetLink>
-        <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
-      </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/pfg/2022/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -1296,23 +1262,6 @@
     </Layer>
 
     <Layer>
-      <ows:Title>Shrub cover 2022</ows:Title>
-      <ows:Identifier>shr2022</ows:Identifier>
-      <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
-        <ows:LowerCorner>-124.76975514486658 24.51406344243852</ows:LowerCorner>
-        <ows:UpperCorner>-66.93652153957034 49.3935983693073</ows:UpperCorner>
-      </ows:WGS84BoundingBox>
-      <Style isDefault="true">
-        <ows:Identifier>default</ows:Identifier>
-      </Style>
-      <Format>image/png</Format>
-      <TileMatrixSetLink>
-        <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
-      </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/2022/{TileMatrix}/{TileCol}/{TileRow}.png"/>
-    </Layer>
-
-    <Layer>
       <ows:Title>Shrub cover 2021</ows:Title>
       <ows:Identifier>shr2021</ows:Identifier>
       <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
@@ -1922,23 +1871,6 @@
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
       <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/shr/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
-    </Layer>
-
-    <Layer>
-      <ows:Title>Tree cover 2022</ows:Title>
-      <ows:Identifier>tree2022</ows:Identifier>
-      <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
-        <ows:LowerCorner>-124.76975514486658 24.51406344243852</ows:LowerCorner>
-        <ows:UpperCorner>-66.93652153957034 49.3935983693073</ows:UpperCorner>
-      </ows:WGS84BoundingBox>
-      <Style isDefault="true">
-        <ows:Identifier>default</ows:Identifier>
-      </Style>
-      <Format>image/png</Format>
-      <TileMatrixSetLink>
-        <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
-      </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/tre/2022/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -2554,23 +2486,6 @@
     </Layer>
 
     <Layer>
-      <ows:Title>Bare ground cover 2022</ows:Title>
-      <ows:Identifier>bgr2022</ows:Identifier>
-      <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
-        <ows:LowerCorner>-124.76975514486658 24.51406344243852</ows:LowerCorner>
-        <ows:UpperCorner>-66.93652153957034 49.3935983693073</ows:UpperCorner>
-      </ows:WGS84BoundingBox>
-      <Style isDefault="true">
-        <ows:Identifier>default</ows:Identifier>
-      </Style>
-      <Format>image/png</Format>
-      <TileMatrixSetLink>
-        <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
-      </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/2022/{TileMatrix}/{TileCol}/{TileRow}.png"/>
-    </Layer>
-
-    <Layer>
       <ows:Title>Bare ground cover 2021</ows:Title>
       <ows:Identifier>bgr2021</ows:Identifier>
       <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
@@ -3180,23 +3095,6 @@
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
       <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-cover-v3/unmasked/bgr/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
-    </Layer>
-
-    <Layer>
-      <ows:Title>Annual forb and grass biomass 2022</ows:Title>
-      <ows:Identifier>afgB2022</ows:Identifier>
-      <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
-        <ows:LowerCorner>-124.76975514486658 24.51406344243852</ows:LowerCorner>
-        <ows:UpperCorner>-66.93652153957034 49.3935983693073</ows:UpperCorner>
-      </ows:WGS84BoundingBox>
-      <Style isDefault="true">
-        <ows:Identifier>default</ows:Identifier>
-      </Style>
-      <Format>image/png</Format>
-      <TileMatrixSetLink>
-        <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
-      </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/afg/2022/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>
@@ -3812,23 +3710,6 @@
     </Layer>
 
     <Layer>
-      <ows:Title>Perennial forb and grass biomass 2022</ows:Title>
-      <ows:Identifier>pfgB2022</ows:Identifier>
-      <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
-        <ows:LowerCorner>-124.76975514486658 24.51406344243852</ows:LowerCorner>
-        <ows:UpperCorner>-66.93652153957034 49.3935983693073</ows:UpperCorner>
-      </ows:WGS84BoundingBox>
-      <Style isDefault="true">
-        <ows:Identifier>default</ows:Identifier>
-      </Style>
-      <Format>image/png</Format>
-      <TileMatrixSetLink>
-        <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
-      </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/2022/{TileMatrix}/{TileCol}/{TileRow}.png"/>
-    </Layer>
-
-    <Layer>
       <ows:Title>Perennial forb and grass biomass 2021</ows:Title>
       <ows:Identifier>pfgB2021</ows:Identifier>
       <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
@@ -4438,23 +4319,6 @@
         <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
       </TileMatrixSetLink>
       <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/pfg/1986/{TileMatrix}/{TileCol}/{TileRow}.png"/>
-    </Layer>
-
-    <Layer>
-      <ows:Title>Herbaceous biomass 2022</ows:Title>
-      <ows:Identifier>herbaceous2022</ows:Identifier>
-      <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
-        <ows:LowerCorner>-124.76975514486658 24.51406344243852</ows:LowerCorner>
-        <ows:UpperCorner>-66.93652153957034 49.3935983693073</ows:UpperCorner>
-      </ows:WGS84BoundingBox>
-      <Style isDefault="true">
-        <ows:Identifier>default</ows:Identifier>
-      </Style>
-      <Format>image/png</Format>
-      <TileMatrixSetLink>
-        <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
-      </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile" template="https://storage.googleapis.com/usda-rap-tiles-biomass-v3/unmasked/herbaceous/2022/{TileMatrix}/{TileCol}/{TileRow}.png"/>
     </Layer>
 
     <Layer>

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SplashDialogComponent } from './splash-dialog.component';
 
@@ -6,7 +6,7 @@ describe('SplashDialogComponent', () => {
   let component: SplashDialogComponent;
   let fixture: ComponentFixture<SplashDialogComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SplashDialogComponent ]
     })

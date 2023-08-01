@@ -15,7 +15,7 @@ export class DialogComponent {
   @HostListener('document:keyup', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     if (event.key === 'Escape') {
-      this.router.navigate(['../'], {preserveQueryParams: true, relativeTo: this.route});
+      this.router.navigate(['../'], { relativeTo: this.route, queryParamsHandling: 'preserve' });
     }
   }
   constructor(router: Router, route: ActivatedRoute) {

@@ -1,5 +1,6 @@
 import { Optional, Inject, Input, Component, OnInit, AfterViewInit } from '@angular/core';
-import { MatDialog, MatSelectChange } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSelectChange } from '@angular/material/select';
 import { AnalysisService } from 'app/services/analysis.service';
 import * as  XLSX from 'xlsx';
 import { saveAs } from 'file-saver';

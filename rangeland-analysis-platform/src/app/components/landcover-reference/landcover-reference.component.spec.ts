@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MesicReferenceComponent } from './mesic-reference.component';
 
@@ -6,7 +6,7 @@ describe('MesicReferenceComponent', () => {
   let component: MesicReferenceComponent;
   let fixture: ComponentFixture<MesicReferenceComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MesicReferenceComponent ]
     })
