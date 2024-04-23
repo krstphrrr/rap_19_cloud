@@ -1,11 +1,11 @@
 import { Optional, Inject, Input, Component, OnInit, AfterViewInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { MatSelectChange } from '@angular/material/select';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatLegacySelectChange as MatSelectChange } from '@angular/material/legacy-select';
 import { AnalysisService } from 'app/services/analysis.service';
 import * as  XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
 import { PlotlyService } from 'angular-plotly.js';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
 import { Plotly } from 'angular-plotly.js/src/app/shared/plotly.interface';
 
 
