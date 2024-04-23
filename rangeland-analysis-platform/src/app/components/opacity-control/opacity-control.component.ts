@@ -15,9 +15,10 @@ export class OpacityControlComponent implements OnInit {
 
   constructor(private router: Router, private routing: RoutingService, private mapState: MapStateService) { }
 
-  public setOpacity(event: any) {
-    if (event.value >= 0) {
-      this.overlay.opacity = event.value / 100;
+  public setOpacity(value:number) {
+    // console.log(value)
+    if (value >= 0) {
+      this.overlay.opacity = value / 100;
       const params = {};
       params[this.overlay.id + '_o'] = this.overlay.opacity;
       if (this.overlay.visible) {
@@ -27,6 +28,7 @@ export class OpacityControlComponent implements OnInit {
       this.routing.updateUrlParams(params);
     }
   }
+
 
   ngOnInit() {
     const params = this.router.parseUrl(this.router.url).queryParams
