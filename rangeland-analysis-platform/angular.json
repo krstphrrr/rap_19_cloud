@@ -130,7 +130,6 @@
       }
     }
   },
-  "defaultProject": "rap",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

@@ -71,64 +71,64 @@ export function googleApisLoaderFactory(
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MapComponent,
-    HeaderComponent,
-    FooterComponent,
-    MapComponent,
-    LandcoverTrendChartComponent,
-    LandcoverReferenceComponent,
-    ControlPanelComponent,
-    DialogComponent,
-    LayoutComponent,
-    UrlResolverComponent,
-    // ShortLinkComponent,
-    HighlightPipe,
-    PopoverComponent,
-    SplashDialogComponent,
-    LandcoverControlComponent,
-    ControlPanelToggleComponent,
-    HelpComponent,
-    GreatPlainsConservationComponent,
-    SagebrushConservationComponent,
-    YearSelectorComponent,
-    OpacityControlComponent,
-    OverlayToggleControlComponent,
-    OverlayLegendComponent,
-    LayerGroupComponent,
-    OverlayTypeSelectComponent
-  ],
-  imports: [
-    TourMatMenuModule.forRoot(),
-    CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    RoutingModule,
-    HttpClientModule,
-    HttpClientJsonpModule,
-    ReactiveFormsModule,
-    MatMenuModule, MatDialogModule, MatSnackBarModule, MatCardModule,
-    MatSelectModule, MatSlideToggleModule, MatListModule, MatInputModule,
-    MatTooltipModule, MatButtonModule, MatProgressSpinnerModule,
-    MatSliderModule, MatButtonToggleModule, MatCheckboxModule,
-    MatAutocompleteModule, MatIconModule, MatTabsModule, MatProgressBarModule,
-    PlotlyModule
-  ],
-  entryComponents: [AppComponent, LandcoverTrendChartComponent, SplashDialogComponent], // LandcoverReportOptionsComponent
-  providers: [
-    GoogleMapsLoaderService,
-    {
-      provide: APP_INITIALIZER,
-      useFactory: googleApisLoaderFactory,
-      deps: [GoogleMapsLoaderService],
-      multi: true
-    },
-    MapStateService, AnalysisStateService,  AnalysisService,  RoutingService],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  exports:[CommonModule],
+    declarations: [
+        AppComponent,
+        MapComponent,
+        HeaderComponent,
+        FooterComponent,
+        MapComponent,
+        LandcoverTrendChartComponent,
+        LandcoverReferenceComponent,
+        ControlPanelComponent,
+        DialogComponent,
+        LayoutComponent,
+        UrlResolverComponent,
+        // ShortLinkComponent,
+        HighlightPipe,
+        PopoverComponent,
+        SplashDialogComponent,
+        LandcoverControlComponent,
+        ControlPanelToggleComponent,
+        HelpComponent,
+        GreatPlainsConservationComponent,
+        SagebrushConservationComponent,
+        YearSelectorComponent,
+        OpacityControlComponent,
+        OverlayToggleControlComponent,
+        OverlayLegendComponent,
+        LayerGroupComponent,
+        OverlayTypeSelectComponent
+    ],
+    imports: [
+        TourMatMenuModule.forRoot(),
+        CommonModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        RoutingModule,
+        HttpClientModule,
+        HttpClientJsonpModule,
+        ReactiveFormsModule,
+        MatMenuModule, MatDialogModule, MatSnackBarModule, MatCardModule,
+        MatSelectModule, MatSlideToggleModule, MatListModule, MatInputModule,
+        MatTooltipModule, MatButtonModule, MatProgressSpinnerModule,
+        MatSliderModule, MatButtonToggleModule, MatCheckboxModule,
+        MatAutocompleteModule, MatIconModule, MatTabsModule, MatProgressBarModule,
+        PlotlyModule
+    ],
+    providers: [
+        GoogleMapsLoaderService,
+        {
+            provide: APP_INITIALIZER,
+            useFactory: googleApisLoaderFactory,
+            deps: [GoogleMapsLoaderService],
+            multi: true
+        },
+        MapStateService, AnalysisStateService, AnalysisService, RoutingService
+    ],
+    bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    exports: [CommonModule]
 })
 export class AppModule {
   constructor() { }
