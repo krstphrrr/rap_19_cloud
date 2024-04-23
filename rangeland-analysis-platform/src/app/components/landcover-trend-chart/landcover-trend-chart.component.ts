@@ -1,12 +1,18 @@
 import { Optional, Inject, Input, Component, OnInit, AfterViewInit } from '@angular/core';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
-import { MatLegacySelectChange as MatSelectChange } from '@angular/material/legacy-select';
+// import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import {MatDialog} from '@angular/material/dialog';
+
+// import { MatLegacySelectChange as MatSelectChange } from '@angular/material/legacy-select';
+import {MatSelectChange} from '@angular/material/select';
+
 import { AnalysisService } from 'app/services/analysis.service';
 import * as  XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
 import { PlotlyService } from 'angular-plotly.js';
-import { MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
-import { Plotly } from 'angular-plotly.js/src/app/shared/plotly.interface';
+// import { MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+import { Plotly } from 'angular-plotly.js/lib/plotly.interface';
 
 
 
@@ -73,9 +79,10 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
 
   }
 
-  public getImage(width: number, height: number): string {
+  public async getImage(width: number, height: number): Promise<any> {
     const graphDiv = this.plotly.getInstanceByDivId(this.graph.divId);
-    return this.plotly.getPlotly().toImage(
+    const plotly = await this.plotly.getPlotly()
+    return plotly.Image(
       graphDiv, { format: 'png', width: width || 1280, height: height || 720, filename: this.trend_name });
   }
 
@@ -172,10 +179,11 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
     this.initialized = true;
   }
 
-  print() {
+  async print() {
     const graphDiv = this.plotly.getInstanceByDivId(this.graph.divId),
       iframe = document.createElement('IFRAME') as HTMLIFrameElement;
-    this.plotly.getPlotly().toImage(
+    let plotly = await this.plotly.getPlotly()
+    plotly.toImage(
       graphDiv, { format: 'png', width: 1280, height: 720, filename: this.trend_name }).then(
         (img: string) => {
           const html = `

@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import {
   rollUpDown, OnInit, MapStateService, AnalysisStateService, Router
 } from 'app/components';
-import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
+// import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
 import { Overlay } from '../../services/overlays.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -14,9 +16,11 @@ import * as shp from 'shpjs';
 import * as geobuf from 'geobuf';
 import * as Pbf from 'pbf';
 import { Helpers } from 'app/classes/helpers';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/observable/throw';
+// import 'rxjs/add/operator/catch';
+// import 'rxjs/add/operator/map';
+import { map, catchError } from 'rxjs/operators';
+// import 'rxjs/add/observable/throw';
+import { throwError } from 'rxjs';
 import { spinInOut } from '../../constants/animations';
 import { LegendOptions } from 'app/services/overlays.service';
 
@@ -218,8 +222,8 @@ export class LandcoverControlComponent implements OnInit {
 
       this.http.get(
         `https://storage.googleapis.com/rap-mtbs/years/${this.year}.pbf`,
-        { responseType: 'arraybuffer' })
-        .map(r => geobuf.decode(new Pbf(r)))
+        { responseType: 'arraybuffer' }).pipe
+        (map(r => geobuf.decode(new Pbf(r))))
         .subscribe((g) => {
           const data = new google.maps.Data();
           data.setStyle({

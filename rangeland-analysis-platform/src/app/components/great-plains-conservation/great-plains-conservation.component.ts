@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import {MapStateService, Router, DataLayer, LegendOptions} from 'app/components';
-import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
+
+// import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
 import { HttpClient } from '@angular/common/http';
 import { Overlay } from 'app/services/overlays.service';
 import { RoutingService } from 'app/services/routing.service';
