@@ -114,7 +114,7 @@ export class LandcoverControlComponent implements OnInit {
     bounds: new google.maps.LatLngBounds(
       new google.maps.LatLng( 24.51406344243852 ,  -124.76975514486658 ),
       new google.maps.LatLng( 49.3935983693073 ,  -66.93652153957034 )),
-    years: Helpers.range(1986, 2024).reverse()
+    years: Helpers.range(1986, 2025).reverse()
   }), new Overlay({
     id: 'biomass',
     name: 'Biomass',
@@ -168,7 +168,7 @@ export class LandcoverControlComponent implements OnInit {
       new google.maps.LatLng( 24.51406344243852 ,  -124.76975514486658 ),
       new google.maps.LatLng( 49.3935983693073 ,  -66.93652153957034 )),
     visible: false,
-    years: Helpers.range(1986, 2024).reverse()
+    years: Helpers.range(1986, 2025).reverse()
   })]
 
   constructor(
@@ -311,12 +311,12 @@ export class LandcoverControlComponent implements OnInit {
       const self = this;
       this.shapefile = event.target.files[0];
       this.file_input.value = '';
-      reader.onload = function (e: any) {
+      reader.onload = async function (e: any) {
 
-        const geojson = shp.parseZip(e.target.result),
+        const geojson = await shp.parseZip(e.target.result),
               data = new google.maps.Data();
         let geo: GeojsonService;
-
+        console.log(geojson)
         if (geojson['features'].length > 1000) {
           geojson['features'] = geojson['features'].slice(0, 1000);
           self.snackBar.open('Shapefile uploads are limited to 1000 features.',
