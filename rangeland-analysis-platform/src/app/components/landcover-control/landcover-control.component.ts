@@ -396,7 +396,10 @@ export class LandcoverControlComponent implements OnInit {
   drawFeatures() {
     this.analysis.resetAnalysis(true);
     this.mapState.setDrawingMode([
-      'Polygon', 'Point', 'LineString']);
+      google.maps.drawing.OverlayType.POLYGON,
+      google.maps.drawing.OverlayType.MARKER,
+      google.maps.drawing.OverlayType.POLYLINE
+    ]);
     this.mapState.setDrawHandler((d: google.maps.Data) => {
       d.toGeoJson((g: GeoJSON.FeatureCollection) => {
         this.analysis.geojson = g.features[0];

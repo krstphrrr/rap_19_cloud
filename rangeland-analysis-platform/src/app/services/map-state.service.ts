@@ -40,7 +40,7 @@ export class MapStateService {
   private drawSource = new Subject<Function>();
   draw = this.drawSource.asObservable();
 
-  private drawingModeSource = new Subject<google.maps.DrawingMode[]>();
+  private drawingModeSource = new Subject<google.maps.drawing.OverlayType[]>();
   drawingMode = this.drawingModeSource.asObservable();
 
   private mousemoveSource = new Subject<Function>();
@@ -148,7 +148,7 @@ export class MapStateService {
   setZoom(zoom: number) { this.zoomSource.next(zoom); }
   setBounds(bounds: google.maps.LatLngBounds) { this.boundsSource.next(bounds); }
   setCenter(center: google.maps.LatLng) { this.centerSource.next(center); }
-  setDrawingMode(mode: google.maps.DrawingMode[]) { this.drawingModeSource.next(mode); }
+  setDrawingMode(mode: google.maps.drawing.OverlayType[]) { this.drawingModeSource.next(mode); }
   openWindow(window: google.maps.InfoWindow) {
     this.infoWindowSource.next(window)
   }

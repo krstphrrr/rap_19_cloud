@@ -25,6 +25,11 @@ export class OverlayMapType implements google.maps.MapType {
   public maxZoom: number
   public maxNativeZoom: number;
   public tileSize: google.maps.Size;
+  public alt = 'Overlay map';                    // ✅ Required
+  public name = 'Custom Overlay';                // ✅ Required
+  public projection: google.maps.Projection | null = null; // ✅ Required
+  public radius = 6378137;                       // ✅ Required (Earth’s radius in meters)
+
   private tiles: HTMLElement[] = [];
   private getTileUrl: (tileCoord: google.maps.Point, zoom: number) => string;
   public releaseTile = (tile: HTMLElement) => {
@@ -136,7 +141,7 @@ export class MapComponent implements OnInit {
     this.lat = this.lat || 38.8633;
   }
 
-  setDrawingMode(mode: google.maps.DrawingMode[]) {
+  setDrawingMode(mode: google.maps.drawing.OverlayType[]) {
     if (this.map) {
       if (!mode) {
         this.data.setControls(null);
@@ -299,7 +304,7 @@ export class MapComponent implements OnInit {
     }
   }
 
-  addControl(control: Element, position: google.maps.ControlPosition) {
+  addControl(control: HTMLElement, position: google.maps.ControlPosition) {
     this.map.controls[position].push(control);
   }
 
