@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, APP_INITIALIZER } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withJsonpSupport } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RoutingModule } from './routing/routing.module';
 import { CommonModule } from '@angular/common';
@@ -104,8 +104,7 @@ export function googleApisLoaderFactory(
   return () => googleMapsApi.load();
 }
 
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AppComponent,
         MapComponent,
         HeaderComponent,
@@ -133,24 +132,21 @@ export function googleApisLoaderFactory(
         LayerGroupComponent,
         OverlayTypeSelectComponent
     ],
-    imports: [
-        TourMatMenuModule,
+    bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    exports: [CommonModule], imports: [TourMatMenuModule,
         CommonModule,
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
         RoutingModule,
-        HttpClientModule,
-        HttpClientJsonpModule,
         ReactiveFormsModule,
         MatMenuModule, MatDialogModule, MatSnackBarModule, MatCardModule,
         MatSelectModule, MatSlideToggleModule, MatListModule, MatInputModule,
         MatTooltipModule, MatButtonModule, MatProgressSpinnerModule,
         MatSliderModule, MatButtonToggleModule, MatCheckboxModule,
         MatAutocompleteModule, MatIconModule, MatTabsModule, MatProgressBarModule,
-        PlotlyModule
-    ],
-    providers: [
+        PlotlyModule], providers: [
         GoogleMapsLoaderService,
         {
             provide: APP_INITIALIZER,
@@ -158,12 +154,9 @@ export function googleApisLoaderFactory(
             deps: [GoogleMapsLoaderService],
             multi: true
         },
-        MapStateService, AnalysisStateService, AnalysisService, RoutingService
-    ],
-    bootstrap: [AppComponent],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    exports: [CommonModule]
-})
+        MapStateService, AnalysisStateService, AnalysisService, RoutingService,
+        provideHttpClient(withInterceptorsFromDi(), withJsonpSupport())
+    ] })
 export class AppModule {
   constructor() { }
 }
