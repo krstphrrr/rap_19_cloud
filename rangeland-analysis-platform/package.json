@@ -46,8 +46,8 @@
     "geojson-polyline": "^1.0.3",
     "image-to-base64": "^2.0.1",
     "JSON": "^1.0.0",
-    "ngx-ui-tour-core": "^12.0.1",
-    "ngx-ui-tour-md-menu": "^12.0.2",
+    "ngx-ui-tour-core": "^13.0.0",
+    "ngx-ui-tour-md-menu": "^13.0.0",
     "pbf": "^3.2.1",
     "plotly.js": "^2.31.1",
     "rxjs": "^7.8.1",
@@ -60,8 +60,8 @@
     "zone.js": "~0.14.10"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.3.5",
-    "@angular/cli": "^17.3.5",
+    "@angular-devkit/build-angular": "^18.2.16",
+    "@angular/cli": "^18.2.16",
     "@angular/compiler-cli": "^18.2.13",
     "@angular/language-service": "^18.2.13",
     "@types/estree": "^1.0.0",
