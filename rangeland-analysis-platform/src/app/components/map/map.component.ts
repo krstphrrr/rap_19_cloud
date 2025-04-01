@@ -43,7 +43,7 @@ export class OverlayMapType implements google.maps.MapType {
     tile.style.width = this.tileSize.width.toString() + 'px';
     tile.style.height = this.tileSize.height.toString() + 'px';
     tile.style.opacity = this.opacity.toString();
-    img.onerror = (event) => {img.src = 'blank.png'};
+    img.onerror = (event) => {img.src = 'assets/blank.png'};
     if (zoom > this.maxNativeZoom) {
 
       const ctx = this.getMaxNativeTileCtx(tileCoord, zoom, this.maxNativeZoom);
@@ -271,7 +271,7 @@ export class MapComponent implements OnInit {
               .replace(/{z}/g, zoom.toString())
               .replace(/{y}/g, coords.y.toString())
               .replace(/{x}/g, coords.x.toString()) :
-            'blank.png';
+            'assets/blank.png';
         },
       });
 

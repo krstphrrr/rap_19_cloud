@@ -14,7 +14,7 @@ import { RoutingService } from 'app/services/routing.service';
 
 import * as shp from 'shpjs';
 import * as geobuf from 'geobuf';
-import * as Pbf from 'pbf';
+import Pbf from 'pbf';
 import { Helpers } from 'app/classes/helpers';
 // import 'rxjs/add/operator/catch';
 // import 'rxjs/add/operator/map';
