@@ -5,9 +5,10 @@ import { DataLayer } from 'app/services/data-layers.service';
 
 
 @Component({
-  selector: 'app-sagebrush-conservation',
-  templateUrl: './sagebrush-conservation.component.html',
-  styleUrls: ['./sagebrush-conservation.component.css']
+    selector: 'app-sagebrush-conservation',
+    templateUrl: './sagebrush-conservation.component.html',
+    styleUrls: ['./sagebrush-conservation.component.css'],
+    standalone: false
 })
 export class SagebrushConservationComponent implements OnInit {
   overlays = [

@@ -2,9 +2,10 @@ import { Component, OnInit, EventEmitter, Input, Output} from '@angular/core';
 import { RoutingService, Router, Overlay, OverlayType, MapStateService} from 'app/components'
 
 @Component({
-  selector: 'app-overlay-type-select',
-  templateUrl: './overlay-type-select.component.html',
-  styleUrls: ['./overlay-type-select.component.css']
+    selector: 'app-overlay-type-select',
+    templateUrl: './overlay-type-select.component.html',
+    styleUrls: ['./overlay-type-select.component.css'],
+    standalone: false
 })
 export class OverlayTypeSelectComponent implements OnInit {
 

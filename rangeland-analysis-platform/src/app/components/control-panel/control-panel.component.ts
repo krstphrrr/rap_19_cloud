@@ -3,9 +3,10 @@ import { Router } from '@angular/router';
 import { flyInOut } from '../../constants/animations';
 
 @Component({
-  selector: 'app-control-panel',
-  templateUrl: './control-panel.component.html',
-  styleUrls: ['./control-panel.component.css']
+    selector: 'app-control-panel',
+    templateUrl: './control-panel.component.html',
+    styleUrls: ['./control-panel.component.css'],
+    standalone: false
 })
 
 @Injectable()

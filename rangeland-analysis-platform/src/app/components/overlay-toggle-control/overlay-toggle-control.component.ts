@@ -3,9 +3,10 @@ import { Overlay, DataLayer, Router, MapStateService, RoutingService } from 'app
 import { OverlayType } from 'app/services/overlays.service';
 
 @Component({
-  selector: 'app-overlay-toggle-control',
-  templateUrl: './overlay-toggle-control.component.html',
-  styleUrls: ['./overlay-toggle-control.component.css']
+    selector: 'app-overlay-toggle-control',
+    templateUrl: './overlay-toggle-control.component.html',
+    styleUrls: ['./overlay-toggle-control.component.css'],
+    standalone: false
 })
 export class OverlayToggleControlComponent implements OnInit {
 

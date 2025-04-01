@@ -4,11 +4,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { fadeInOut } from 'app/constants/animations';
 
 @Component({
-  selector: 'app-landcover-reference',
-  templateUrl: './landcover-reference.component.html',
-  styleUrls: ['../dialog/dialog.component.css', './landcover-reference.component.css'],
-  animations: [ fadeInOut ]
-
+    selector: 'app-landcover-reference',
+    templateUrl: './landcover-reference.component.html',
+    styleUrls: ['../dialog/dialog.component.css', './landcover-reference.component.css'],
+    animations: [fadeInOut],
+    standalone: false
 })
 export class LandcoverReferenceComponent extends DialogComponent {
 

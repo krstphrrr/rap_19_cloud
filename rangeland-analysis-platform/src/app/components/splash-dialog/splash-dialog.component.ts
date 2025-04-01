@@ -4,9 +4,10 @@ import { Component, Inject} from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-splash-dialog',
-  templateUrl: './splash-dialog.component.html',
-  styleUrls: ['./splash-dialog.component.css']
+    selector: 'app-splash-dialog',
+    templateUrl: './splash-dialog.component.html',
+    styleUrls: ['./splash-dialog.component.css'],
+    standalone: false
 })
 export class SplashDialogComponent {
 

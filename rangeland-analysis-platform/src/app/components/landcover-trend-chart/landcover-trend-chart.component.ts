@@ -17,9 +17,10 @@ import { Plotly } from 'angular-plotly.js/lib/plotly.interface';
 
 
 @Component({
-  selector: 'app-landcover-trend-chart',
-  templateUrl: './landcover-trend-chart.component.html',
-  styleUrls: ['./landcover-trend-chart.component.css']
+    selector: 'app-landcover-trend-chart',
+    templateUrl: './landcover-trend-chart.component.html',
+    styleUrls: ['./landcover-trend-chart.component.css'],
+    standalone: false
 })
 export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
 

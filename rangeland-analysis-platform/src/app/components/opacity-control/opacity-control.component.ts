@@ -4,9 +4,10 @@ import { RoutingService } from 'app/services/routing.service';
 import { MapStateService } from 'app/services/map-state.service';
 
 @Component({
-  selector: 'app-opacity-control',
-  templateUrl: './opacity-control.component.html',
-  styleUrls: ['./opacity-control.component.css']
+    selector: 'app-opacity-control',
+    templateUrl: './opacity-control.component.html',
+    styleUrls: ['./opacity-control.component.css'],
+    standalone: false
 })
 export class OpacityControlComponent implements OnInit {
 

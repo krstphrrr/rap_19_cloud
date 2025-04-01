@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA, APP_INITIALIZER } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, inject, provideAppInitializer } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient, withInterceptorsFromDi, withJsonpSupport } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -148,12 +148,10 @@ export function googleApisLoaderFactory(
         MatAutocompleteModule, MatIconModule, MatTabsModule, MatProgressBarModule,
         PlotlyModule], providers: [
         GoogleMapsLoaderService,
-        {
-            provide: APP_INITIALIZER,
-            useFactory: googleApisLoaderFactory,
-            deps: [GoogleMapsLoaderService],
-            multi: true
-        },
+        provideAppInitializer(() => {
+        const initializerFn = (googleApisLoaderFactory)(inject(GoogleMapsLoaderService));
+        return initializerFn();
+      }),
         MapStateService, AnalysisStateService, AnalysisService, RoutingService,
         provideHttpClient(withInterceptorsFromDi(), withJsonpSupport())
     ] })

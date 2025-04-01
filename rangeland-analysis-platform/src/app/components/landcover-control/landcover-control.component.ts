@@ -27,10 +27,11 @@ import { LegendOptions } from 'app/services/overlays.service';
 
 
 @Component({
-  selector: 'app-landcover-control',
-  templateUrl: './landcover-control.component.html',
-  styleUrls: ['./landcover-control.component.css'],
-  animations: [ rollUpDown, spinInOut]
+    selector: 'app-landcover-control',
+    templateUrl: './landcover-control.component.html',
+    styleUrls: ['./landcover-control.component.css'],
+    animations: [rollUpDown, spinInOut],
+    standalone: false
 })
 export class LandcoverControlComponent implements OnInit {
   // usda google tile layers (biomass, cover)

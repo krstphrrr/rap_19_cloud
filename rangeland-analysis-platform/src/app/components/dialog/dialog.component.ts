@@ -3,10 +3,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { fadeInOut } from 'app/constants/animations'
 
 @Component({
-  selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.css'],
-  animations: [fadeInOut]
+    selector: 'app-dialog',
+    templateUrl: './dialog.component.html',
+    styleUrls: ['./dialog.component.css'],
+    animations: [fadeInOut],
+    standalone: false
 })
 export class DialogComponent {
   router: Router;

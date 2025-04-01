@@ -9,9 +9,10 @@ import { HttpClient } from '@angular/common/http';
 
 
 @Component({
-  selector: 'app-url-resolver',
-  templateUrl: './url-resolver.component.html',
-  styleUrls: ['./url-resolver.component.css']
+    selector: 'app-url-resolver',
+    templateUrl: './url-resolver.component.html',
+    styleUrls: ['./url-resolver.component.css'],
+    standalone: false
 })
 export class UrlResolverComponent implements OnInit {
   urlResolver: UrlService;

@@ -11,9 +11,10 @@ import { Helpers } from 'app/classes/helpers';
 import * as shp from 'shpjs';
 
 @Component({
-  selector: 'app-great-plains-conservation',
-  templateUrl: './great-plains-conservation.component.html',
-  styleUrls: ['./great-plains-conservation.component.css']
+    selector: 'app-great-plains-conservation',
+    templateUrl: './great-plains-conservation.component.html',
+    styleUrls: ['./great-plains-conservation.component.css'],
+    standalone: false
 })
 
 export class GreatPlainsConservationComponent {

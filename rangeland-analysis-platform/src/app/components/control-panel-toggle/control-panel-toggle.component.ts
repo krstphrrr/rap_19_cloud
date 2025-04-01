@@ -1,9 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-control-panel-toggle',
-  templateUrl: './control-panel-toggle.component.html',
-  styleUrls: ['./control-panel-toggle.component.css']
+    selector: 'app-control-panel-toggle',
+    templateUrl: './control-panel-toggle.component.html',
+    styleUrls: ['./control-panel-toggle.component.css'],
+    standalone: false
 })
 export class ControlPanelToggleComponent implements OnInit {
 

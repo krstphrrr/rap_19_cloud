@@ -2,9 +2,10 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Router, RoutingService, MapStateService, Overlay} from 'app/components';
 
 @Component({
-  selector: 'app-year-selector',
-  templateUrl: './year-selector.component.html',
-  styleUrls: ['./year-selector.component.css']
+    selector: 'app-year-selector',
+    templateUrl: './year-selector.component.html',
+    styleUrls: ['./year-selector.component.css'],
+    standalone: false
 })
 export class YearSelectorComponent implements OnInit {
 

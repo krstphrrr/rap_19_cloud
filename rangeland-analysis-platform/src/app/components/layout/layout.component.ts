@@ -5,9 +5,10 @@ import { AnalysisService } from 'app/services/analysis.service';
 import { MapStateService } from 'app/services/map-state.service';
 
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.css'],
+    selector: 'app-layout',
+    templateUrl: './layout.component.html',
+    styleUrls: ['./layout.component.css'],
+    standalone: false
 })
 
 export class LayoutComponent  {
