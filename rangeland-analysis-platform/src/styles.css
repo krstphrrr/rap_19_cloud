@@ -1,7 +1,8 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
-@import '//fonts.googleapis.com/css?family=Lato';
-@import '//fonts.googleapis.com/css?family=IM+Fell+English';
-@import '//fonts.googleapis.com/icon?family=Material+Icons';
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 
 html {
     min-width: 1080px;
