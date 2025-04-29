@@ -1,6 +1,6 @@
 {
   "name": "rangeland-analysis-platform",
-  "version": "1.0.8",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
