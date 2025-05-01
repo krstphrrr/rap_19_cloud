@@ -405,10 +405,12 @@ export class MapComponent implements OnInit {
     // const logo_div = document.createElement('div')
     const logo_jornada = document.createElement('IMG');
     logo_jornada.style.padding = '5px';
-    logo_jornada.style.height = '44px';
+    // logo_jornada.style.height = '44px';
+    logo_jornada.setAttribute("width", "auto");
+    logo_jornada.setAttribute("height", "44");
     logo_jornada.style.userSelect = "none";
     logo_jornada.style.pointerEvents = "none";
-    logo_jornada.setAttribute("src",'JER_logo-windmill.png');
+    logo_jornada.setAttribute("src",'assets/JER_logo-windmill.png');
     logo_jornada.style.cursor = 'pointer';
 
     const logo_usda = document.createElement('IMG')
@@ -416,7 +418,7 @@ export class MapComponent implements OnInit {
     logo_usda.style.height = '44px';
     logo_usda.style.userSelect = "none";
     logo_usda.style.pointerEvents = "none";
-    logo_usda.setAttribute("src",'ars-color-lockup.png');
+    logo_usda.setAttribute("src",'assets/ars-color-lockup.png');
     logo_usda.style.cursor = 'pointer';
 
     this.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(logo_usda)
