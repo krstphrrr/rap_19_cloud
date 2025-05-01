@@ -1,12 +1,11 @@
 ## Updates
 ### api update
-I was able to create the map tiles for vegetation-cover-10m, invasive-annual-grass-10m, pj-cover-10m, and sagebrush-cover-10m. I also created new run function endpoints for all of the 10m data.
+> I was able to create the map tiles for vegetation-cover-10m, invasive-annual-grass-10m, pj-cover-10m, and sagebrush-cover-10m. I also created new run function endpoints for all of the 10m data.
 
-The web app can access the new map tiles and timeseries data just like it does the existing resources. 
+> The web app can access the new map tiles and timeseries data just like it does the existing resources. 
 
-The path to map tiles is 'usda-rap-tiles-cover-10m/{masked|unmasked}/{cover-class}'. The new timeseries endpoints are 'cover10m', 'coverMeteorology10m', 'gapCover10m', 'invasiveAnnualGrassCover10m', 'pjCover10m', and 'sagebrushCover10m'.
+> The path to map tiles is 'usda-rap-tiles-cover-10m/{masked|unmasked}/{cover-class}'. The new timeseries endpoints are 'cover10m', 'coverMeteorology10m', 'gapCover10m', 'invasiveAnnualGrassCover10m', 'pjCover10m', and 'sagebrushCover10m'.
 
-I ran out of time to create map tiles for gap-cover-10m. The scripts have been made; we will need to decide upon a color scheme for the different size classes.
 ### rap_node: 1.0.2
 - changes to wording, small tweaks to templates
 
