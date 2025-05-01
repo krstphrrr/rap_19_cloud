@@ -90,12 +90,31 @@ export class MapStateService {
     }
     this.dataLayersSource.next(this.dataLayerArr);
   }
-  removeDataLayer(id: string) {
-    this.dataLayerArr.filter(l => l.get('id') === id).map(l => l.setMap(null));
-    this.dataLayerArr = this.dataLayerArr.filter(l => l.get('id') !==id);
-    this.dataLayersSource.next(this.dataLayerArr);
-  }
+  // removeDataLayer(id: string) {
+  //   this.dataLayerArr.filter(l => l.get('id') === id).map(l => l.setMap(null));
+  //   this.dataLayerArr = this.dataLayerArr.filter(l => l.get('id') !==id);
+  //   this.dataLayersSource.next(this.dataLayerArr);
+  // }
 
+  removeDataLayer(id?: string) {
+    if (!id) {
+      while (this.dataLayerArr.length > 0) {
+        const layer = this.dataLayerArr.pop();
+        if (layer) {
+          layer.setMap(null);
+        }
+      }
+    } else {
+      this.dataLayerArr = this.dataLayerArr.filter(layer => {
+        if (layer && layer['id'] === id) {
+          layer.setMap(null);
+          return false;
+        }
+        return true;
+      });
+    }
+  }
+  
   clearMap() {
     this.dataLayerArr.forEach(l => this.removeDataLayer(l.get('id')) )
     this.overlaysSource.next([])

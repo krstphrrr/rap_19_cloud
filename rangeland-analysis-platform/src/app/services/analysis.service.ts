@@ -18,6 +18,13 @@ const usda_prod16d: string = 'https://us-central1-rap-data-365417.cloudfunctions
 const usda_prodsurgo: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/productionGSSURGO';
 const usda_prod: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/productionV3';
 
+const usda_cover_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/cover10m';
+const usda_meteo_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/coverMeteorology10m';
+const usda_gapcover_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/gapCover10m';
+const usda_invasive_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/invasiveAnnualGrassCover10m';
+const usda_pjcover_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/pjCover10m';
+const usda_sagebrush_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/sagebrushCover10m';
+
 
 
 const TREND_CONFIG = {

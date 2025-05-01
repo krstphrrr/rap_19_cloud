@@ -125,6 +125,7 @@ export class MapComponent implements OnInit {
   private data_layers: google.maps.Data[] = [];
   private onDrawHandler: Function;
   private activeInfoWindow: google.maps.InfoWindow;
+  private drawingManager: google.maps.drawing.DrawingManager;
 
   @Input() lat;
   @Input() lng;
@@ -142,27 +143,45 @@ export class MapComponent implements OnInit {
   }
 
   setDrawingMode(mode: google.maps.drawing.OverlayType[]) {
-    if (this.map) {
+    if (this.map && this.drawingManager) {
       if (!mode) {
-        this.data.setControls(null);
-        this.data.setDrawingMode(null);
-        this.data.setStyle({
-          editable: false,
-          draggable: false
-        });
+        this.drawingManager.setDrawingMode(null);
+        this.drawingManager.setOptions({drawingControl: false});
+
       } else {
-        this.data.setControls(mode);
-        this.data.setDrawingMode(mode[0]);
-        this.data.setStyle({
-          editable: true,
-          draggable: true
+        this.drawingManager.setDrawingMode(mode[0]);
+        this.drawingManager.setOptions({
+          drawingControl: true,
+          drawingControlOptions: {
+            drawingModes: [mode[0]]
+          }
         });
         this.data.setMap(this.map);
         this.setDataListeners();
       }
     }
+    // if (this.map) {
+    //   if (!mode) {
+    //     this.data.setControls(null);
+    //     this.data.setDrawingMode(null);
+    //     this.data.setStyle({
+    //       editable: false,
+    //       draggable: false
+    //     });
+    //   } else {
+    //     console.log('Drawing mode:', mode);
+    //     this.data.setControls([mode]);
+    //     this.data.setDrawingMode(mode);
+    //     this.data.setStyle({
+    //       editable: true,
+    //       draggable: true
+    //     });
+    //     this.data.setMap(this.map);
+    //     this.setDataListeners();
+    //   }
+    // }
   }
-
+// 
 
   public clearGeojson() {
     if (this.map && this.data) {
@@ -355,6 +374,12 @@ export class MapComponent implements OnInit {
     this.data = this.map.data;
     this.ready = true;
 
+    this.drawingManager = new google.maps.drawing.DrawingManager({
+      drawingMode: null,
+      drawingControl: false,
+    });
+    this.drawingManager.setMap(this.map);
+
     if (!!navigator.geolocation && location.protocol === 'https:' || location.hostname === 'localhost') {
       const locator = document.createElement('div');
       locator.className = 'gmnoprint locate-button';
@@ -469,6 +494,39 @@ export class MapComponent implements OnInit {
       if (this.activeInfoWindow) { this.activeInfoWindow.close() }
       this.activeInfoWindow = w;
       w.open(this.map);
+    });
+
+    this.drawingManager.addListener('overlaycomplete', (event) => {
+      // Remove the drawn overlay from the DrawingManager
+      event.overlay.setMap(null);
+    
+      // Convert the overlay to GeoJSON and add to this.data
+      let feature;
+      if (event.type === 'polygon') {
+        const path = event.overlay.getPath().getArray().map(latlng => [latlng.lng(), latlng.lat()]);
+        // Close the polygon if not already closed
+        if (path.length && (path[0][0] !== path[path.length - 1][0] || path[0][1] !== path[path.length - 1][1])) {
+          path.push(path[0]);
+        }
+        feature = {
+          type: 'Feature',
+          geometry: {
+            type: 'Polygon',
+            coordinates: [path]
+          },
+          properties: {}
+        };
+        this.data.addGeoJson(feature);
+      }
+      // Add similar logic for other types if needed
+    
+      // Show the data layer and set listeners
+      this.data.setMap(this.map);
+      this.setDataListeners();
+    
+      // Optionally, turn off drawing mode
+      this.drawingManager.setDrawingMode(null);
+      this.drawingManager.setOptions({ drawingControl: false });
     });
 
 

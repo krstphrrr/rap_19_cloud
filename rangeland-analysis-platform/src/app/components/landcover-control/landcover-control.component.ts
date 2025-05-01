@@ -37,6 +37,7 @@ export class LandcoverControlComponent implements OnInit {
   // usda google tile layers (biomass, cover)
   usda_rapbiomass: string = 'https://storage.googleapis.com/usda-rap-tiles-biomass-v3';
   usda_rapcover: string = 'https://storage.googleapis.com/usda-rap-tiles-cover-v3';
+  usda_rap_10m: string = 'https://storage.googleapis.com/usda-rap-tiles-cover-10m';
   
   year: number; // default year
   years = [];
@@ -54,12 +55,13 @@ export class LandcoverControlComponent implements OnInit {
   analysis_error_message = '';
   featureLayers = {};
 
-  overlays = [new Overlay({
-    id: 'landcover',
-    name: 'Cover',
-    opacity: 1.0,
-    visible: true,
-    help: 'Percent cover of annual forbs and grasses, perennial forbs and grasses, shrubs, trees, and bare ground. 30m resolution.',
+  overlays = [
+    new Overlay({
+      id: 'landcover',
+      name: 'Cover',
+      opacity: 1.0,
+      visible: false,
+      help: 'Percent cover of annual forbs and grasses, perennial forbs and grasses, shrubs, trees, and bare ground. 30m resolution.',
     overlay_types: [
       {
         name: 'Perennial forb & grass',
@@ -116,7 +118,8 @@ export class LandcoverControlComponent implements OnInit {
       new google.maps.LatLng( 24.51406344243852 ,  -124.76975514486658 ),
       new google.maps.LatLng( 49.3935983693073 ,  -66.93652153957034 )),
     years: Helpers.range(1986, 2025).reverse()
-  }), new Overlay({
+  }), 
+  new Overlay({
     id: 'biomass',
     name: 'Biomass',
     opacity: 1.0,
@@ -170,7 +173,71 @@ export class LandcoverControlComponent implements OnInit {
       new google.maps.LatLng( 49.3935983693073 ,  -66.93652153957034 )),
     visible: false,
     years: Helpers.range(1986, 2025).reverse()
-  })]
+  }),
+  new Overlay({
+    id: 'landcover',
+    name: 'Cover 10m',
+    opacity: 1.0,
+    visible: true,
+    help: 'Percent cover of annual forbs and grasses, perennial forbs and grasses, shrubs, trees, and bare ground. 10m resolution.',
+  overlay_types: [
+    {
+      name: 'Perennial forb & grass',
+      id: 'pfg',
+      // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/pfg/{year}/{z}/{x}/{y}.png',
+      tileurl: `${this.usda_rap_10m}/{mask}/pfg/{year}/{z}/{x}/{y}.png`,
+      legend: new LegendOptions(
+        '', '0','100%',
+        ['#f7fcf5', '#e5f5e0', '#c7e9c0', '#a1d99b', '#74c476', '#41ab5d', '#238b45', '#006d2c', '#00441b'],
+        null)
+    },
+    {
+      name: 'Annual forb & grass',
+      id: 'afg',
+      // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/afg/{year}/{z}/{x}/{y}.png',
+      tileurl: `${this.usda_rap_10m}/{mask}/afg/{year}/{z}/{x}/{y}.png`,
+      legend: new LegendOptions(
+        '', '0','100%',
+        ['#fff7ec', '#fee8c8', '#fdd49e', '#fdbb84', '#fc8d59', '#ef6548', '#d7301f', '#b30000', '#7f0000'],
+        null)
+    },
+    {
+      name: 'Shrub',
+      id: 'shr',
+      // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/shr/{year}/{z}/{x}/{y}.png',
+      tileurl: `${this.usda_rap_10m}/{mask}/shr/{year}/{z}/{x}/{y}.png`,
+      legend: new LegendOptions(
+        '', '0','100%',
+        ['#f7fbff', '#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b'],
+        null)
+    },
+    {
+      name: 'Tree',
+      id: 'tre',
+      // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/tre/{year}/{z}/{x}/{y}.png',
+      tileurl: `${this.usda_rap_10m}/{mask}/tre/{year}/{z}/{x}/{y}.png`,
+      legend: new LegendOptions(
+        '', '0','100%',
+        ['#fff5eb', '#fee6ce', '#fdd0a2', '#fdae6b', '#fd8d3c', '#f16913', '#d94801', '#a63603', '#7f2704'],
+        null)
+    },
+    {
+      name: 'Bare ground',
+      id: 'bgr',
+      // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/bgr/{year}/{z}/{x}/{y}.png',
+      tileurl: `${this.usda_rap_10m}/{mask}/bgr/{year}/{z}/{x}/{y}.png`,
+      legend: new LegendOptions(
+        '', '0','100%',
+        ['#ffffe5', '#fff7bc', '#fee391', '#fec44f', '#fe9929', '#ec7014', '#cc4c02', '#993404', '#662506'],
+        null)
+    },
+  ],
+  bounds: new google.maps.LatLngBounds(
+    new google.maps.LatLng( 24.51406344243852 ,  -124.76975514486658 ),
+    new google.maps.LatLng( 49.3935983693073 ,  -66.93652153957034 )),
+  years: Helpers.range(1986, 2025).reverse()
+})
+]
 
   constructor(
     private router: Router,
