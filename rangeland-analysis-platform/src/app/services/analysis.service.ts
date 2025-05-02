@@ -88,7 +88,30 @@ const TREND_CONFIG = {
       { name: 'Herbaceous biomass', id: 'her', color: '#08306b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '' }, visible: true }
 
     ]
-}
+},
+  // meteo_10: {
+  //   // endpoint: 'https://us-central1-rap-data-365417.cloudfunctions.net/coverMeteorologyV3?key=' + RANGELAND_API_KEY,
+  //   endpoint:`${usda_pjcover_10m}`,
+  //   propertyResult: 'cover',
+  //   title: '',
+  //   y_axis: 'Cover (%)',
+  //   series: [
+  //     // tslint:disable-next-line:max-line-length
+  //     { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+  //     // tslint:disable-next-line:max-line-length
+  //     { name: 'Perennial forb & grass cover', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+  //     // tslint:disable-next-line:max-line-length
+  //     { name: 'Shrub cover', id: 'shr', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+  //     // tslint:disable-next-line:max-line-length
+  //     { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+  //     // tslint:disable-next-line:max-line-length
+  //     { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+  //     // tslint:disable-next-line:max-line-length
+  //     { name: 'Mean annual temp', id: 'annualtemp', color: '#ED44A1', opacity: 0, type: 'bar',  visibleInLegend: false,  format: { prefix: '',pattern: '#0', suffix: '°F' }, visible: false },
+  //     // tslint:disable-next-line:max-line-length
+  //     { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }
+  //   ]
+  // },
 }
 
 @Injectable()

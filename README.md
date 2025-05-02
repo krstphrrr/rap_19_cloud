@@ -58,4 +58,4 @@ to run:
 ```sh
 docker stack deploy %name-of-stack% --compose-file ~./docker-compose.yml
 ```
-
+V[l%sYs(U6|557

@@ -37,7 +37,13 @@ export class LandcoverControlComponent implements OnInit {
   // usda google tile layers (biomass, cover)
   usda_rapbiomass: string = 'https://storage.googleapis.com/usda-rap-tiles-biomass-v3';
   usda_rapcover: string = 'https://storage.googleapis.com/usda-rap-tiles-cover-v3';
+  
   usda_rap_10m: string = 'https://storage.googleapis.com/usda-rap-tiles-cover-10m';
+  usda_veg_cover_10m: string = 'https://storage.googleapis.com/vegetation-cover-10m';
+  usda_invasive_annual_grass_10m: string = 'https://storage.googleapis.com/invasive-annual-grass-10m';
+  usda_pj_cover_10m: string = 'https://storage.googleapis.com/pj-cover-10m';
+  usda_sagebrush_cover_10m: string = 'https://storage.googleapis.com/sagebrush-cover-10m';
+  usda_gap_cover_10m: string = 'https://storage.googleapis.com/gap-cover-10m';
   
   year: number; // default year
   years = [];
@@ -175,7 +181,7 @@ export class LandcoverControlComponent implements OnInit {
     years: Helpers.range(1986, 2025).reverse()
   }),
   new Overlay({
-    id: 'landcover',
+    id: 'landcover10m',
     name: 'Cover 10m',
     opacity: 1.0,
     visible: true,
@@ -226,6 +232,16 @@ export class LandcoverControlComponent implements OnInit {
       id: 'bgr',
       // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/bgr/{year}/{z}/{x}/{y}.png',
       tileurl: `${this.usda_rap_10m}/{mask}/bgr/{year}/{z}/{x}/{y}.png`,
+      legend: new LegendOptions(
+        '', '0','100%',
+        ['#ffffe5', '#fff7bc', '#fee391', '#fec44f', '#fe9929', '#ec7014', '#cc4c02', '#993404', '#662506'],
+        null)
+    },
+    {
+      name: 'Vegetation cover 10m',
+      id: 'vegetation-cover-10m',
+      // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/bgr/{year}/{z}/{x}/{y}.png',
+      tileurl: `${this.usda_pj_cover_10m}/{mask}/bgr/{year}/{z}/{x}/{y}.png`,
       legend: new LegendOptions(
         '', '0','100%',
         ['#ffffe5', '#fff7bc', '#fee391', '#fec44f', '#fe9929', '#ec7014', '#cc4c02', '#993404', '#662506'],
