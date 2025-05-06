@@ -37,7 +37,7 @@ jobs:
         id: build-image
         uses: docker/build-push-action@v6.15.0
         with:
-          context: .
+          context: ./rangeland-analysis-platform/
           push: true
           tags: |
             ${{ steps.login-ecr.outputs.registry }}/rapmap-cloud-ecr:${{ steps.package-version.outputs.version }}
