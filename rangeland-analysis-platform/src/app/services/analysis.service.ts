@@ -35,19 +35,19 @@ const TREND_CONFIG = {
     title: '',
     y_axis: 'Cover (%)',
     series: [
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'Perennial forb & grass cover', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'Shrub cover', id: 'shr', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'Mean annual temp', id: 'annualtemp', color: '#ED44A1', opacity: 0, type: 'bar',  visibleInLegend: false,  format: { prefix: '',pattern: '#0', suffix: '°F' }, visible: false },
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }
     ]
   },
@@ -58,11 +58,11 @@ const TREND_CONFIG = {
       title: '',
       y_axis: 'Biomass (lbs/acre)',
       series: [
-        // tslint:disable-next-line:max-line-length
+        // eslint-disable-next-line max-len
         { name: 'Annual forb & grass biomass', id: 'afg', color: '#67000d', type: 'line',  format: {  prefix: '', pattern: '#0', suffix: '' }, visible: true },
-        // tslint:disable-next-line:max-line-length
+        // eslint-disable-next-line max-len
         { name: 'Perennial forb & grass biomass', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '' }, visible: true },
-        // tslint:disable-next-line:max-line-length
+        // eslint-disable-next-line max-len
         { name: 'Herbaceous biomass', id: 'her', color: '#08306b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '' }, visible: true }
 
       ]
@@ -78,13 +78,13 @@ const TREND_CONFIG = {
     group_by: 'doy',
     waiting_msg: '16-day biomass charts may take up to a minute to generate',
     series: [
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'Annual forb & grass biomass', id: 'afg', color: '#67000d', type: 'line',  format: {  prefix: '', pattern: '#0', suffix: '' }, visible: true },
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'Annual forb & grass biomass', id: 'afg', color: '#67000d', type: 'line',  format: {  prefix: '', pattern: '#0', suffix: '' }, visible: true },
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'Perennial forb & grass biomass', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '' }, visible: true },
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'Herbaceous biomass', id: 'her', color: '#08306b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '' }, visible: true }
 
     ]
@@ -96,19 +96,19 @@ const TREND_CONFIG = {
     title: '',
     y_axis: 'Cover (%)',
     series: [
-        // tslint:disable-next-line:max-line-length
+        // eslint-disable-next-line max-len
         { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-        // tslint:disable-next-line:max-line-length
+        // eslint-disable-next-line max-len
         { name: 'Perennial forb & grass cover', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-        // tslint:disable-next-line:max-line-length
+        // eslint-disable-next-line max-len
         { name: 'Shrub cover', id: 'shr', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-        // tslint:disable-next-line:max-line-length
+        // eslint-disable-next-line max-len
         { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-        // tslint:disable-next-line:max-line-length
+        // eslint-disable-next-line max-len
         { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-        // tslint:disable-next-line:max-line-length
+        // eslint-disable-next-line max-len
         { name: 'Mean annual temp', id: 'annualtemp', color: '#ED44A1', opacity: 0, type: 'bar',  visibleInLegend: false,  format: { prefix: '',pattern: '#0', suffix: '°F' }, visible: false },
-        // tslint:disable-next-line:max-line-length
+        // eslint-disable-next-line max-len
         { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }
       ]
   },
@@ -118,15 +118,15 @@ const TREND_CONFIG = {
   //   title: '',
   //   y_axis: 'Cover (%)',
   //   series: [
-  //     // tslint:disable-next-line:max-line-length
+  //     // eslint-disable-next-line max-len
   //     { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //     // tslint:disable-next-line:max-line-length
+  //     // eslint-disable-next-line max-len
   //     { name: 'Perennial forb & grass cover', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //     // tslint:disable-next-line:max-line-length
+  //     // eslint-disable-next-line max-len
   //     { name: 'Shrub cover', id: 'shr', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //     // tslint:disable-next-line:max-line-length
+  //     // eslint-disable-next-line max-len
   //     { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //     // tslint:disable-next-line:max-line-length
+  //     // eslint-disable-next-line max-len
   //     { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
   //   ]
   // }, 
@@ -136,13 +136,13 @@ const TREND_CONFIG = {
     title: '',
     y_axis: 'Cover (%)',
     series: [
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'gap 25-100', id: 'G25_50', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'gap 51-100', id: 'G51_100', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'gap 101-200', id: 'G101_200', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      // tslint:disable-next-line:max-line-length
+      // eslint-disable-next-line max-len
       { name: 'gap 200+', id: 'G200_plus', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
     ]
   },
