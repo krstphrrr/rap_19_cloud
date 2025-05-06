@@ -64,7 +64,7 @@ export class LandcoverControlComponent implements OnInit {
   overlays = [
     new Overlay({
       id: 'landcover',
-      name: 'Cover',
+      name: 'Cover 30m',
       opacity: 1.0,
       visible: false,
       help: 'Percent cover of annual forbs and grasses, perennial forbs and grasses, shrubs, trees, and bare ground. 30m resolution.',
@@ -126,61 +126,6 @@ export class LandcoverControlComponent implements OnInit {
     years: Helpers.range(1986, 2025).reverse()
   }), 
   new Overlay({
-    id: 'biomass',
-    name: 'Biomass',
-    opacity: 1.0,
-    help: `Annual accumulation of new aboveground biomass for annual forbs and grasses,
-           perennial forbs and grasses, and herbaceous (annual and perennial
-           combined). 30m resolution.`,
-    overlay_types: [
-      {
-        name: 'Herbaceous',
-        id: 'herbaceous',
-        // tileurl: 'https://storage.googleapis.com/rap-tiles-biomass-v3/{mask}/herbaceous/{year}/{z}/{x}/{y}.png',
-        tileurl: `${this.usda_rapbiomass}/{mask}/herbaceous/{year}/{z}/{x}/{y}.png`,
-        legend: new LegendOptions(
-            '', '0','>4000 lbs/acre',
-            ["#FFE599","#F6DC86","#EDD375","#E3C961","#D9BF4F",
-             "#CBB33A","#B9A525","#A89A14","#969206","#878E03",
-             "#7A8B06","#6C840E","#617E14","#56771A","#4C7020",
-             "#436A25","#3A652A","#325F2F","#2B5A34","#235538",
-             "#1C513C","#154C41","#0F4845","#084449","#00404D"],
-            null)
-      },
-      {
-        name: 'Annual forb & grass',
-        id: 'afg',
-        // tileurl: 'https://storage.googleapis.com/rap-tiles-biomass-v3/{mask}/afg/{year}/{z}/{x}/{y}.png',
-        tileurl: `${this.usda_rapbiomass}/{mask}/afg/{year}/{z}/{x}/{y}.png`,
-        legend: new LegendOptions(
-          '', '0','>2000 lbs/acre',
-          ["#FFFFCC","#FBEC9A","#F4CC68","#ECA855","#E48751","#D2624D",
-          "#A54742","#73382F","#422818","#1A1A01"],
-          null)
-      },
-      {
-        name: 'Perennial forb & grass',
-        id: 'pfg',
-        // tileurl: 'https://storage.googleapis.com/rap-tiles-biomass-v3/{mask}/pfg/{year}/{z}/{x}/{y}.png',
-        tileurl: `${this.usda_rapbiomass}/{mask}/pfg/{year}/{z}/{x}/{y}.png`,
-
-        legend: new LegendOptions(
-          '', '0','>4000 lbs/acre',
-          ["#FFE599","#F6DC86","#EDD375","#E3C961","#D9BF4F",
-           "#CBB33A","#B9A525","#A89A14","#969206","#878E03",
-           "#7A8B06","#6C840E","#617E14","#56771A","#4C7020",
-           "#436A25","#3A652A","#325F2F","#2B5A34","#235538",
-           "#1C513C","#154C41","#0F4845","#084449","#00404D"],
-          null)
-      }
-    ],
-    bounds: new google.maps.LatLngBounds(
-      new google.maps.LatLng( 24.51406344243852 ,  -124.76975514486658 ),
-      new google.maps.LatLng( 49.3935983693073 ,  -66.93652153957034 )),
-    visible: false,
-    years: Helpers.range(1986, 2025).reverse()
-  }),
-  new Overlay({
     id: 'landcover10m',
     name: 'Cover 10m',
     opacity: 1.0,
@@ -238,7 +183,7 @@ export class LandcoverControlComponent implements OnInit {
         null)
     },
     {
-      name: 'Invasive annual grass cover 10m',
+      name: 'Invasive annual grass cover',
       id: 'iag',
       // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/bgr/{year}/{z}/{x}/{y}.png',
       tileurl: `${this.usda_rap_10m}/{mask}/iag/{year}/{z}/{x}/{y}.png`,
@@ -248,7 +193,7 @@ export class LandcoverControlComponent implements OnInit {
         null)
     },
     {
-      name: 'pj cover 10m',
+      name: 'PJ cover',
       id: 'pj',
       // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/bgr/{year}/{z}/{x}/{y}.png',
       tileurl: `${this.usda_rap_10m}/{mask}/pj/{year}/{z}/{x}/{y}.png`,
@@ -258,7 +203,7 @@ export class LandcoverControlComponent implements OnInit {
         null)
     },
     {
-      name: 'Sagebrush cover 10m',
+      name: 'Sagebrush cover',
       id: 'artr',
       // tileurl: 'https://storage.googleapis.com/rap-tiles-cover-v3/{mask}/bgr/{year}/{z}/{x}/{y}.png',
       tileurl: `${this.usda_rap_10m}/{mask}/arte/{year}/{z}/{x}/{y}.png`,
@@ -273,6 +218,62 @@ export class LandcoverControlComponent implements OnInit {
     new google.maps.LatLng( 49.3935983693073 ,  -66.93652153957034 )),
   years: Helpers.range(1986, 2025).reverse()
 }),
+  new Overlay({
+    id: 'biomass',
+    name: 'Biomass',
+    opacity: 1.0,
+    help: `Annual accumulation of new aboveground biomass for annual forbs and grasses,
+           perennial forbs and grasses, and herbaceous (annual and perennial
+           combined). 30m resolution.`,
+    overlay_types: [
+      {
+        name: 'Herbaceous',
+        id: 'herbaceous',
+        // tileurl: 'https://storage.googleapis.com/rap-tiles-biomass-v3/{mask}/herbaceous/{year}/{z}/{x}/{y}.png',
+        tileurl: `${this.usda_rapbiomass}/{mask}/herbaceous/{year}/{z}/{x}/{y}.png`,
+        legend: new LegendOptions(
+            '', '0','>4000 lbs/acre',
+            ["#FFE599","#F6DC86","#EDD375","#E3C961","#D9BF4F",
+             "#CBB33A","#B9A525","#A89A14","#969206","#878E03",
+             "#7A8B06","#6C840E","#617E14","#56771A","#4C7020",
+             "#436A25","#3A652A","#325F2F","#2B5A34","#235538",
+             "#1C513C","#154C41","#0F4845","#084449","#00404D"],
+            null)
+      },
+      {
+        name: 'Annual forb & grass',
+        id: 'afg',
+        // tileurl: 'https://storage.googleapis.com/rap-tiles-biomass-v3/{mask}/afg/{year}/{z}/{x}/{y}.png',
+        tileurl: `${this.usda_rapbiomass}/{mask}/afg/{year}/{z}/{x}/{y}.png`,
+        legend: new LegendOptions(
+          '', '0','>2000 lbs/acre',
+          ["#FFFFCC","#FBEC9A","#F4CC68","#ECA855","#E48751","#D2624D",
+          "#A54742","#73382F","#422818","#1A1A01"],
+          null)
+      },
+      {
+        name: 'Perennial forb & grass',
+        id: 'pfg',
+        // tileurl: 'https://storage.googleapis.com/rap-tiles-biomass-v3/{mask}/pfg/{year}/{z}/{x}/{y}.png',
+        tileurl: `${this.usda_rapbiomass}/{mask}/pfg/{year}/{z}/{x}/{y}.png`,
+
+        legend: new LegendOptions(
+          '', '0','>4000 lbs/acre',
+          ["#FFE599","#F6DC86","#EDD375","#E3C961","#D9BF4F",
+           "#CBB33A","#B9A525","#A89A14","#969206","#878E03",
+           "#7A8B06","#6C840E","#617E14","#56771A","#4C7020",
+           "#436A25","#3A652A","#325F2F","#2B5A34","#235538",
+           "#1C513C","#154C41","#0F4845","#084449","#00404D"],
+          null)
+      }
+    ],
+    bounds: new google.maps.LatLngBounds(
+      new google.maps.LatLng( 24.51406344243852 ,  -124.76975514486658 ),
+      new google.maps.LatLng( 49.3935983693073 ,  -66.93652153957034 )),
+    visible: false,
+    years: Helpers.range(1986, 2025).reverse()
+  }),
+
 // new Overlay({
 //   id: 'landcover10m',
 //   name: 'Cover 10m',

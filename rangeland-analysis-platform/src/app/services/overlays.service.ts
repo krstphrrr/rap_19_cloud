@@ -43,7 +43,7 @@ export class Overlay  {
   public overlay_types: OverlayType[];
   public minzoom = 4;
   public maxzoom = 20;
-  public maxnativezoom = 12;
+  public maxnativezoom = 20;
   public data: google.maps.Data;
   public tile_params = [];
   public year = 2024;
