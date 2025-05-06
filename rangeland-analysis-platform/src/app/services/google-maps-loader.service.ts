@@ -1,26 +1,36 @@
 import { Injectable } from '@angular/core';
+import { Loader } from '@googlemaps/js-api-loader';
 
 const gapi = 'AIzaSyDllQcO2NYJk0KqA1NH80B_sINnAvUNGGA'
-const old = 'AIzaSyA2IbdH4K2g-lhlBj9J5DLSRyO9EZ8HZQE'
+
 const googleMapsApiUrl =
     `https://maps.googleapis.com/maps/api/js?v=3&key=${gapi}&libraries=drawing,places`;
 
 @Injectable()
 export class GoogleMapsLoaderService {
-    promise: Promise<boolean>;
+    private loader: Loader;
+    private loadPromise: Promise<typeof google>;
 
+    constructor() {
+        this.loader = new Loader({
+            apiKey: gapi,
+            version: '3',
+            libraries: ['drawing', 'places']
+        });
+    }
     
-    load() {
-        if (!this.promise) {
-            this.promise = new Promise( resolve => {
-                const node = document.createElement('script');
-                node.src = googleMapsApiUrl;
-                node.type = 'text/javascript';
-                node.onload =  (ev) => resolve(true);
-                console.log('Maps loaded');
-                document.getElementsByTagName('head')[0].appendChild(node);
-            });
+    load(): Promise<typeof google> {
+        if (!this.loadPromise) {
+            this.loadPromise = this.loader.load()
+                .then(() => {
+                    console.log('Maps loaded');
+                    return google;
+                })
+                .catch(err => {
+                    console.error('Error loading Google Maps:', err);
+                    throw err;
+                });
         }
-        return this.promise;
+        return this.loadPromise;
     }
 }
