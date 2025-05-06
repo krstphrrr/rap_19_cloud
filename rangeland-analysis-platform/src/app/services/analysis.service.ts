@@ -28,30 +28,30 @@ const usda_sagebrush_10m: string = 'https://us-central1-rap-data-365417.cloudfun
 
 
 const TREND_CONFIG = {
-    annual_cover: {
-      // endpoint: 'https://us-central1-rap-data-365417.cloudfunctions.net/coverMeteorologyV3?key=' + RANGELAND_API_KEY,
-      endpoint:`${usda_meteo}`,
-      propertyResult: 'cover',
-      title: '',
-      y_axis: 'Cover (%)',
-      series: [
-        // tslint:disable-next-line:max-line-length
-        { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-        // tslint:disable-next-line:max-line-length
-        { name: 'Perennial forb & grass cover', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-        // tslint:disable-next-line:max-line-length
-        { name: 'Shrub cover', id: 'shr', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-        // tslint:disable-next-line:max-line-length
-        { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-        // tslint:disable-next-line:max-line-length
-        { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-        // tslint:disable-next-line:max-line-length
-        { name: 'Mean annual temp', id: 'annualtemp', color: '#ED44A1', opacity: 0, type: 'bar',  visibleInLegend: false,  format: { prefix: '',pattern: '#0', suffix: '°F' }, visible: false },
-        // tslint:disable-next-line:max-line-length
-        { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }
-      ]
-    },
-    annual_biomass: {
+  annual_cover: {
+    // endpoint: 'https://us-central1-rap-data-365417.cloudfunctions.net/coverMeteorologyV3?key=' + RANGELAND_API_KEY,
+    endpoint:`${usda_meteo}`,
+    propertyResult: 'cover',
+    title: '',
+    y_axis: 'Cover (%)',
+    series: [
+      // tslint:disable-next-line:max-line-length
+      { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // tslint:disable-next-line:max-line-length
+      { name: 'Perennial forb & grass cover', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // tslint:disable-next-line:max-line-length
+      { name: 'Shrub cover', id: 'shr', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // tslint:disable-next-line:max-line-length
+      { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // tslint:disable-next-line:max-line-length
+      { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // tslint:disable-next-line:max-line-length
+      { name: 'Mean annual temp', id: 'annualtemp', color: '#ED44A1', opacity: 0, type: 'bar',  visibleInLegend: false,  format: { prefix: '',pattern: '#0', suffix: '°F' }, visible: false },
+      // tslint:disable-next-line:max-line-length
+      { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }
+    ]
+  },
+  annual_biomass: {
       // endpoint: 'https://rap-api-8ubptl6m.uc.gateway.dev/v3/production?key=' + RANGELAND_API_KEY,
       endpoint: `${usda_prod}`,
       propertyResult: 'production',
@@ -88,11 +88,33 @@ const TREND_CONFIG = {
       { name: 'Herbaceous biomass', id: 'her', color: '#08306b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '' }, visible: true }
 
     ]
-},
-  // meteo_10: {
-  //   // endpoint: 'https://us-central1-rap-data-365417.cloudfunctions.net/coverMeteorologyV3?key=' + RANGELAND_API_KEY,
-  //   endpoint:`${usda_pjcover_10m}`,
-  //   propertyResult: 'cover',
+  },
+  meteo_10: {
+    // endpoint: 'https://us-central1-rap-data-365417.cloudfunctions.net/coverMeteorologyV3?key=' + RANGELAND_API_KEY,
+    endpoint:`${usda_meteo_10m}`,
+    propertyResult: 'cover',
+    title: '',
+    y_axis: 'Cover (%)',
+    series: [
+        // tslint:disable-next-line:max-line-length
+        { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+        // tslint:disable-next-line:max-line-length
+        { name: 'Perennial forb & grass cover', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+        // tslint:disable-next-line:max-line-length
+        { name: 'Shrub cover', id: 'shr', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+        // tslint:disable-next-line:max-line-length
+        { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+        // tslint:disable-next-line:max-line-length
+        { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+        // tslint:disable-next-line:max-line-length
+        { name: 'Mean annual temp', id: 'annualtemp', color: '#ED44A1', opacity: 0, type: 'bar',  visibleInLegend: false,  format: { prefix: '',pattern: '#0', suffix: '°F' }, visible: false },
+        // tslint:disable-next-line:max-line-length
+        { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }
+      ]
+  },
+  // cover_10: {
+  //   endpoint:`${usda_cover_10m}`,
+  //   propertyResult: 'cover10',
   //   title: '',
   //   y_axis: 'Cover (%)',
   //   series: [
@@ -106,11 +128,32 @@ const TREND_CONFIG = {
   //     { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
   //     // tslint:disable-next-line:max-line-length
   //     { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //     // tslint:disable-next-line:max-line-length
-  //     { name: 'Mean annual temp', id: 'annualtemp', color: '#ED44A1', opacity: 0, type: 'bar',  visibleInLegend: false,  format: { prefix: '',pattern: '#0', suffix: '°F' }, visible: false },
-  //     // tslint:disable-next-line:max-line-length
-  //     { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }
   //   ]
+  // }, 
+  gap_cover_10: {
+    endpoint:`${usda_gapcover_10m}`,
+    propertyResult: 'cover',
+    title: '',
+    y_axis: 'Cover (%)',
+    series: [
+      // tslint:disable-next-line:max-line-length
+      { name: 'gap 25-100', id: 'G25_50', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // tslint:disable-next-line:max-line-length
+      { name: 'gap 51-100', id: 'G51_100', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // tslint:disable-next-line:max-line-length
+      { name: 'gap 101-200', id: 'G101_200', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // tslint:disable-next-line:max-line-length
+      { name: 'gap 200+', id: 'G200_plus', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+    ]
+  },
+  // invasive_cover_10: {
+
+  // },
+  // pj_cover_10: {
+
+  // },
+  // sagebrush_cover_10: {
+
   // },
 }
 
@@ -185,6 +228,8 @@ export class AnalysisService {
       const options = {
         headers: new HttpHeaders({'Content-Type': 'application/json; charset=UTF-8'}),
       };
+      console.log("GEOJSON PROPERTIES: ", this.geojson )
+      console.log("MASK: ", mask)
 
       this.geojson['properties'] = {
         mask: mask
@@ -194,17 +239,37 @@ export class AnalysisService {
       this.setPolygon(this.geojson);
 
       Object.keys(TREND_CONFIG)
+              // .forEach(trend_type => this.http.post<{result: [][]}>(
+              //   TREND_CONFIG[trend_type].endpoint, JSON.stringify(payload), options)
+              //     .subscribe(
+              //       r => {
+              //         console.log('TREND_TYPE:', trend_type, 'RESPONSE:', r);
+              //         // if (trend_type == 'annual_cover') {
+              //         //   r['properties'] = {};
+              //         //   r['properties']['cover'] = r.result;
+              //         // } 
+              //         this.results[trend_type].next(r['properties'][TREND_CONFIG[trend_type].propertyResult])
+              //       })
+              //     );
               .forEach(trend_type => this.http.post<{result: [][]}>(
                 TREND_CONFIG[trend_type].endpoint, JSON.stringify(payload), options)
                   .subscribe(
                     r => {
-                      // if (trend_type == 'annual_cover') {
-                      //   r['properties'] = {};
-                      //   r['properties']['cover'] = r.result;
-                      // } 
-                      this.results[trend_type].next(r['properties'][TREND_CONFIG[trend_type].propertyResult])
-                    })
-                  );
+                      console.log('TREND_TYPE:', trend_type, 'RAW RESPONSE:', r);
+                      if (r && r['properties'] && TREND_CONFIG[trend_type].propertyResult in r['properties']) {
+                        this.results[trend_type].next(r['properties'][TREND_CONFIG[trend_type].propertyResult]);
+                      } else {
+                        this.results[trend_type].next(null);
+                        console.error(`No properties found for trend_type: ${trend_type}`, r);
+                      }
+                    },
+                    error => {
+                      this.results[trend_type].next(null);
+                      this.analysis_error_message = 'Analysis failed: ' + (error.message || error.statusText);
+                      console.error('HTTP ERROR for trend_type:', trend_type, error);
+                    }
+                  )
+                )
 
     }
   }
