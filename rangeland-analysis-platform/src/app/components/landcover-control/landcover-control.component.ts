@@ -216,7 +216,7 @@ export class LandcoverControlComponent implements OnInit {
   bounds: new google.maps.LatLngBounds(
     new google.maps.LatLng( 24.51406344243852 ,  -124.76975514486658 ),
     new google.maps.LatLng( 49.3935983693073 ,  -66.93652153957034 )),
-  years: Helpers.range(1986, 2025).reverse()
+  years: Helpers.range(2018, 2025).reverse()
 }),
   new Overlay({
     id: 'biomass',
