@@ -8,7 +8,7 @@
   "containerDefinitions": [
     {
       "name": "rapmap",
-      "image": "${{ steps.login-ecr.outputs.registry }}/rapmap-cloud-ecr:__VERSION__",
+      "image": "723326838091.dkr.ecr.us-east-1.amazonaws.com/rapmap-cloud-ecr:__VERSION__",
       "essential": true,
       "portMappings": [
         {
