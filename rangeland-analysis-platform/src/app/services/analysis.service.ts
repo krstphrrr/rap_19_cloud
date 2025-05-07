@@ -21,7 +21,7 @@ const usda_prod: string = 'https://us-central1-rap-data-365417.cloudfunctions.ne
 const usda_cover_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/cover10m';
 const usda_meteo_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/coverMeteorology10m';
 const usda_gapcover_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/gapCover10m';
-const usda_invasive_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/invasiveAnnualGrassCover10m';
+const usda_invasive_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/invasiveAnnualGrassCover10m'; //done, tho analysis needs to fit more neatly in window
 const usda_pjcover_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/pjCover10m';
 const usda_sagebrush_10m: string = 'https://us-central1-rap-data-365417.cloudfunctions.net/sagebrushCover10m';
 
@@ -153,17 +153,29 @@ const TREND_CONFIG = {
     y_axis: 'Cover (%)',
     series: [
       // eslint-disable-next-line max-len
-      { name: 'Invasive annual grass', id: 'iag', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      // eslint-disable-next-line max-len
-    
+      { name: 'Invasive annual grass cover', id: 'iag', color: '#67000d', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
     ]
   },
-  // pj_cover_10: {
-
-  // },
-  // sagebrush_cover_10: {
-
-  // },
+  pj_cover_10: {
+    endpoint:`${usda_pjcover_10m}`,
+    propertyResult: 'cover',
+    title: '',
+    y_axis: 'Cover (%)',
+    series: [
+      // eslint-disable-next-line max-len
+      { name: 'PJ cover', id: 'pj', color: '#08306b', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+    ]
+  },
+  sagebrush_cover_10: {
+    endpoint:`${usda_sagebrush_10m}`,
+    propertyResult: 'cover',
+    title: '',
+    y_axis: 'Cover (%)',
+    series: [
+      // eslint-disable-next-line max-len
+      { name: 'Sagebrush cover', id: 'artr', color: '#08306b', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+    ]
+  },
 }
 
 @Injectable()
