@@ -35,7 +35,7 @@
     'max-height' : rightToggle ? 'calc(100vh - 70px)': '0px'
   }">
   <mat-tab-group>
-    <mat-tab label="Cover">
+    <mat-tab label="Cover 30m">
         <app-landcover-trend-chart
         width="400"
         showPopOut="true"
@@ -43,6 +43,15 @@
         showDownload="true"
         trend="annual_cover"
         ></app-landcover-trend-chart>
+    </mat-tab>
+    <mat-tab label="Cover 10m">
+      <app-landcover-trend-chart
+      width="400"
+      showPopOut="true"
+      showPrint="true"
+      showDownload="true"
+      trend="meteo_10"
+      ></app-landcover-trend-chart>
     </mat-tab>
     <mat-tab label="Annual biomass">
       <app-landcover-trend-chart
@@ -61,16 +70,18 @@
             filterField="year"
             trend="biweekly_biomass"
             defaultFilterValue=2019
-            ></app-landcover-trend-chart></mat-tab>
-      <mat-tab label="Cover Meteo 10m">
+        ></app-landcover-trend-chart>
+      </mat-tab>
+      <mat-tab label="Invasive annual grass cover 10m">
         <app-landcover-trend-chart
         width="400"
         showPopOut="true"
         showPrint="true"
         showDownload="true"
-        trend="meteo_10"
+        trend="invasive_cover_10"
         ></app-landcover-trend-chart>
     </mat-tab>
+      
 
     <!-- <mat-tab label="Cover 10m">
       <app-landcover-trend-chart
