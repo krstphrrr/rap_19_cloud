@@ -2,7 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1] - 2025-05-07
+
+### Added
+
 ## [1.2.0] - 2025-05-06
+- added PJ cover, invasive grass cover and sagebrush cover to trend component
 
 ### Added
 - Added new endpoints for the 10m images:
