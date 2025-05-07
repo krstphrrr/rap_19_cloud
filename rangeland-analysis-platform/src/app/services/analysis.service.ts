@@ -3,6 +3,7 @@ import {throwError as observableThrowError,  BehaviorSubject ,  Observable } fro
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MapStateService } from 'app/services/map-state.service';
+import { forkJoin } from 'rxjs';
 
 
 const errMsg = `There was an error in the analysis,
@@ -146,6 +147,18 @@ const TREND_CONFIG = {
   //     { name: 'gap 200+', id: 'G200_plus', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
   //   ]
   // },
+  combined_cover_10: {
+    endpoint: null, // Not used, handled specially
+    propertyResult: 'cover',
+    title: '',
+    y_axis: 'Cover (%)',
+    series: [
+      { name: 'Invasive annual grass cover', id: 'iag', color: '#67000d', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      { name: 'PJ cover', id: 'pj', color: '#08306b', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      { name: 'Sagebrush cover', id: 'arte', color: '#08306b', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // Add additional trend lines from new enpoints here (after adding in trend config)
+    ]
+  },
   invasive_cover_10: {
     endpoint:`${usda_invasive_10m}`,
     propertyResult: 'cover',
@@ -260,38 +273,83 @@ export class AnalysisService {
       const payload = this.geojson;
       this.setPolygon(this.geojson);
 
-      Object.keys(TREND_CONFIG)
-              // .forEach(trend_type => this.http.post<{result: [][]}>(
-              //   TREND_CONFIG[trend_type].endpoint, JSON.stringify(payload), options)
-              //     .subscribe(
-              //       r => {
-              //         console.log('TREND_TYPE:', trend_type, 'RESPONSE:', r);
-              //         // if (trend_type == 'annual_cover') {
-              //         //   r['properties'] = {};
-              //         //   r['properties']['cover'] = r.result;
-              //         // } 
-              //         this.results[trend_type].next(r['properties'][TREND_CONFIG[trend_type].propertyResult])
-              //       })
-              //     );
-              .forEach(trend_type => this.http.post<{result: [][]}>(
-                TREND_CONFIG[trend_type].endpoint, JSON.stringify(payload), options)
-                  .subscribe(
-                    r => {
-                      console.log('TREND_TYPE:', trend_type, 'RAW RESPONSE:', r);
-                      if (r && r['properties'] && TREND_CONFIG[trend_type].propertyResult in r['properties']) {
-                        this.results[trend_type].next(r['properties'][TREND_CONFIG[trend_type].propertyResult]);
-                      } else {
-                        this.results[trend_type].next(null);
-                        console.error(`No properties found for trend_type: ${trend_type}`, r);
-                      }
-                    },
-                    error => {
-                      this.results[trend_type].next(null);
-                      this.analysis_error_message = 'Analysis failed: ' + (error.message || error.statusText);
-                      console.error('HTTP ERROR for trend_type:', trend_type, error);
-                    }
-                  )
-                )
+      // Object.keys(TREND_CONFIG)
+      //         // .forEach(trend_type => this.http.post<{result: [][]}>(
+      //         //   TREND_CONFIG[trend_type].endpoint, JSON.stringify(payload), options)
+      //         //     .subscribe(
+      //         //       r => {
+      //         //         console.log('TREND_TYPE:', trend_type, 'RESPONSE:', r);
+      //         //         // if (trend_type == 'annual_cover') {
+      //         //         //   r['properties'] = {};
+      //         //         //   r['properties']['cover'] = r.result;
+      //         //         // } 
+      //         //         this.results[trend_type].next(r['properties'][TREND_CONFIG[trend_type].propertyResult])
+      //         //       })
+      //         //     );
+      //         .forEach(trend_type => this.http.post<{result: [][]}>(
+      //           TREND_CONFIG[trend_type].endpoint, JSON.stringify(payload), options)
+      //             .subscribe(
+      //               r => {
+      //                 console.log('TREND_TYPE:', trend_type, 'RAW RESPONSE:', r);
+      //                 if (r && r['properties'] && TREND_CONFIG[trend_type].propertyResult in r['properties']) {
+      //                   this.results[trend_type].next(r['properties'][TREND_CONFIG[trend_type].propertyResult]);
+      //                 } else {
+      //                   this.results[trend_type].next(null);
+      //                   console.error(`No properties found for trend_type: ${trend_type}`, r);
+      //                 }
+      //               },
+      //               error => {
+      //                 this.results[trend_type].next(null);
+      //                 this.analysis_error_message = 'Analysis failed: ' + (error.message || error.statusText);
+      //                 console.error('HTTP ERROR for trend_type:', trend_type, error);
+      //               }
+      //             )
+      //           )
+      Object.keys(TREND_CONFIG).forEach(trend_type => {
+        if (trend_type === 'combined_cover_10') {
+          // Special handling for combined chart
+          forkJoin([
+            this.http.post<any>(TREND_CONFIG['invasive_cover_10'].endpoint, JSON.stringify(payload), options),
+            this.http.post<any>(TREND_CONFIG['pj_cover_10'].endpoint, JSON.stringify(payload), options),
+            this.http.post<any>(TREND_CONFIG['sagebrush_cover_10'].endpoint, JSON.stringify(payload), options)
+            // Add new endpoint here
+          ]).subscribe({
+            next: ([invasive, pj, sagebrush]) => {
+              const combined = {
+                invasive: invasive?.properties?.cover ?? [],
+                pj: pj?.properties?.cover ?? [],
+                sagebrush: sagebrush?.properties?.cover ?? []
+                //  Add new endpoint here
+              };
+              this.results['combined_cover_10'].next(combined);
+            },
+            error: (error) => {
+              this.results['combined_cover_10'].next(null);
+              this.analysis_error_message = 'Analysis failed: ' + (error.message || error.statusText);
+              console.error('HTTP ERROR for trend_type: combined_cover_10', error);
+            }
+          });
+        } else if (TREND_CONFIG[trend_type].endpoint) {
+          // Only process if endpoint is defined
+          this.http.post<any>(
+            TREND_CONFIG[trend_type].endpoint, JSON.stringify(payload), options
+          ).subscribe(
+            r => {
+              if (r && r['properties'] && TREND_CONFIG[trend_type].propertyResult in r['properties']) {
+                this.results[trend_type].next(r['properties'][TREND_CONFIG[trend_type].propertyResult]);
+              } else {
+                this.results[trend_type].next(null);
+                console.error(`No properties found for trend_type: ${trend_type}`, r);
+              }
+            },
+            error => {
+              this.results[trend_type].next(null);
+              this.analysis_error_message = 'Analysis failed: ' + (error.message || error.statusText);
+              console.error('HTTP ERROR for trend_type:', trend_type, error);
+            }
+          );
+        }
+      });
 
     }
   }

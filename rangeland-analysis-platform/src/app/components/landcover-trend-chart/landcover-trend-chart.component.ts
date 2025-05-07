@@ -107,24 +107,77 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
     }
     this.trend = this.analysis.results[this.trend_name].value;
     if (!this.trend) {
-      return
+      return;
     }
+  
+    // Special handling for combined_cover_10
+    if (
+      this.trend_name === 'combined_cover_10' &&
+      typeof this.trend === 'object' &&
+      !Array.isArray(this.trend)
+    ) {
+      this.loaded = true;
+      const traces = [];
+      const configSeries = this.analysis.config[this.trend_name].series;
+  
+      // Map keys to series IDs
+      const keyToId = {
+        invasive: 'iag',
+        pj: 'pj',
+        sagebrush: 'arte'
+      // Add new cover classes to combined here
+      };
+  
+      Object.entries(this.trend).forEach(([key, arr]) => {
+        if (Array.isArray(arr) && arr.length > 1) {
+          const headers = arr[0];
+          const yearIdx = headers.indexOf('year');
+          const valueIdx = 1;
+          const series = configSeries.find(s => s.id === keyToId[key]);
+          if (series) {
+            traces.push({
+              x: arr.slice(1).map(row => row[yearIdx]),
+              y: arr.slice(1).map(row => row[valueIdx]),
+              name: series.name,
+              type: series.type,
+              marker: { color: series.color },
+              visible: series.visible,
+              showlegend: series.visibleInLegend,
+              hovertemplate: '%{x}: ' + (series.format?.prefix ?? '') + '%{y:.1f}' + (series.format?.suffix ?? '')
+            });
+          }
+        }
+      });
+  
+      this.graph.data = traces;
+  
+      // Dynamically set y-axis max after data is built
+      const allYValues = this.graph.data
+        .flatMap(trace => Array.isArray(trace.y) ? trace.y : [])
+        .filter(v => typeof v === 'number' && !isNaN(v));
+      const maxY = allYValues.length ? Math.max(...allYValues) : 1;
+      this.graph.layout.yaxis.range = [0, Math.ceil(maxY * 1.1)];
+  
+      return; 
+    }
+  
+    // --- Original logic for all other trend types below ---
     this.loaded = true;
     let x: number[];
-
+  
     const columns: string[] = this.trend[0];
     const filterColIdx = columns.indexOf(this.filterField);
-
+  
     if (this.filterField && filterColIdx >= 0 && this.filterVal) {
       x = this.trend.slice(1).filter((row: any[]) => row[filterColIdx] === this.filterVal).map(a => a[0]);
     } else {
       x = this.trend.slice(1).map(a => a[0]);
     }
-
+  
     this.graph.data = columns.slice(1).map((col: string, idx: number) => {
       const series = this.analysis.config[this.trend_name].series.find(t => t.id === col.toLowerCase());
       let config = {}, series_data: number[], visible: boolean | string;
-
+  
       if (this.graph.data && series && series.name) {
         this.graph.data.forEach(t => {
           if (series.name === t.name) {
@@ -132,18 +185,17 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
           }
         });
       }
-
+  
       if (series && series !== this.filterField) {
         if (filterColIdx >= 0 && this.filterVal) {
           series_data = this.trend.slice(1)
             .filter(r => r[filterColIdx] === this.filterVal)
             .map(a => a[idx + 1])
             .map((v => v === -99 ? null : v));
-
         } else {
           series_data = this.trend.slice(1)
             .map(a => a[idx + 1])
-            .map((v => v === -99 ? null : v))
+            .map((v => v === -99 ? null : v));
         }
         if (!this.initialized && this.graph) {
           this.graph.layout.yaxis.range[1] = Math.max(
@@ -162,15 +214,15 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
             'opacity': series && series.opacity
           },
           'name': series && series.name
-        }
+        };
       }
-
+  
       if (col === this.filterField && this.trend.slice) {
         const vals = {};
         this.trend.slice(1).map(a => vals[a[idx + 1]] = true);
         this.filterValues = Object.keys(vals).sort().map(v => parseInt(v, 10)).reverse();
       }
-
+  
       return config;
     });
     const allYValues = this.graph.data
@@ -178,8 +230,7 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
       .filter(v => typeof v === 'number' && !isNaN(v));
     const maxY = allYValues.length ? Math.max(...allYValues) : 1;
     this.graph.layout.yaxis.range = [0, Math.ceil(maxY * 1.1)];
-
-
+  
     // if (this.filterValues && this.filterValues && !this.filterVal) {
     //   this.filterVal = parseInt(this.filterValues[0], 10);
     //   this.loadData();
@@ -253,7 +304,9 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
     this.graph = {
       divId: `${this.trend_name}-chart`,
       layout: {
+        // autosize: true,
         width: this.width ? this.width : null,
+        // width: null,
         legend: { 'orientation': 'h', xanchor: 'center', x: 0.5, standoff: 20 },
         title: this.analysis.config[this.trend_name].title,
         hovermode: 'closest',
