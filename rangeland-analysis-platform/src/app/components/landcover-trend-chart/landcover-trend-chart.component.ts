@@ -173,11 +173,18 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
 
       return config;
     });
-    if (this.filterValues && this.filterValues && !this.filterVal) {
-      this.filterVal = parseInt(this.filterValues[0], 10);
-      this.loadData();
-    }
-    this.initialized = true;
+    const allYValues = this.graph.data
+      .flatMap(trace => Array.isArray(trace.y) ? trace.y : [])
+      .filter(v => typeof v === 'number' && !isNaN(v));
+    const maxY = allYValues.length ? Math.max(...allYValues) : 1;
+    this.graph.layout.yaxis.range = [0, Math.ceil(maxY * 1.1)];
+
+
+    // if (this.filterValues && this.filterValues && !this.filterVal) {
+    //   this.filterVal = parseInt(this.filterValues[0], 10);
+    //   this.loadData();
+    // }
+    // this.initialized = true;
   }
 
   async print() {

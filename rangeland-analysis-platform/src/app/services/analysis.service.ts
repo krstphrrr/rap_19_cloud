@@ -173,7 +173,7 @@ const TREND_CONFIG = {
     y_axis: 'Cover (%)',
     series: [
       // eslint-disable-next-line max-len
-      { name: 'Sagebrush cover', id: 'artr', color: '#08306b', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      { name: 'Sagebrush cover', id: 'arte', color: '#08306b', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
     ]
   },
 }
@@ -253,6 +253,7 @@ export class AnalysisService {
       console.log("MASK: ", mask)
 
       this.geojson['properties'] = {
+        ...this.geojson['properties'],
         mask: mask
       }
 
