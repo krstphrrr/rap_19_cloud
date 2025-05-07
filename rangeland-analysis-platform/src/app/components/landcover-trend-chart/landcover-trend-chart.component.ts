@@ -124,8 +124,13 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
       const keyToId = {
         invasive: 'iag',
         pj: 'pj',
-        sagebrush: 'arte'
+        sagebrush: 'arte',
       // Add new cover classes to combined here
+        afg: 'afg',
+        pfg: 'pfg',
+        shr: 'shr',
+        tre: 'tre',
+        bgr: 'bgr'
       };
   
       Object.entries(this.trend).forEach(([key, arr]) => {

@@ -113,24 +113,24 @@ const TREND_CONFIG = {
         { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }
       ]
   },
-  // cover_10: {
-  //   endpoint:`${usda_cover_10m}`,
-  //   propertyResult: 'cover10',
-  //   title: '',
-  //   y_axis: 'Cover (%)',
-  //   series: [
-  //     // eslint-disable-next-line max-len
-  //     { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //     // eslint-disable-next-line max-len
-  //     { name: 'Perennial forb & grass cover', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //     // eslint-disable-next-line max-len
-  //     { name: 'Shrub cover', id: 'shr', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //     // eslint-disable-next-line max-len
-  //     { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //     // eslint-disable-next-line max-len
-  //     { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //   ]
-  // }, 
+  cover_10: {
+    endpoint:`${usda_cover_10m}`,
+    propertyResult: 'cover',
+    title: '',
+    y_axis: 'Cover (%)',
+    series: [
+
+      { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+  
+      { name: 'Perennial forb & grass cover', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+
+      { name: 'Shrub cover', id: 'shr', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+
+      { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+
+      { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+    ]
+  }, 
   // gap_cover_10: {
   //   endpoint:`${usda_gapcover_10m}`,
   //   propertyResult: 'cover',
@@ -156,7 +156,16 @@ const TREND_CONFIG = {
       { name: 'Invasive annual grass cover', id: 'iag', color: '#67000d', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
       { name: 'PJ cover', id: 'pj', color: '#08306b', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
       { name: 'Sagebrush cover', id: 'arte', color: '#08306b', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      // Add additional trend lines from new enpoints here (after adding in trend config)
+      // FROM COVER10m
+      { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+  
+      { name: 'Perennial forb & grass cover', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+
+      { name: 'Shrub cover', id: 'shr', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+
+      { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+
+      { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
     ]
   },
   invasive_cover_10: {
@@ -311,15 +320,34 @@ export class AnalysisService {
           forkJoin([
             this.http.post<any>(TREND_CONFIG['invasive_cover_10'].endpoint, JSON.stringify(payload), options),
             this.http.post<any>(TREND_CONFIG['pj_cover_10'].endpoint, JSON.stringify(payload), options),
-            this.http.post<any>(TREND_CONFIG['sagebrush_cover_10'].endpoint, JSON.stringify(payload), options)
+            this.http.post<any>(TREND_CONFIG['sagebrush_cover_10'].endpoint, JSON.stringify(payload), options),
+            this.http.post<any>(TREND_CONFIG['cover_10'].endpoint, JSON.stringify(payload), options),
             // Add new endpoint here
           ]).subscribe({
-            next: ([invasive, pj, sagebrush]) => {
+            next: ([invasive, pj, sagebrush, cover10]) => {
+              const coverArr = cover10?.properties?.cover ?? [];
+              const headers = coverArr[0] || [];
+              const yearIdx = headers.indexOf('year');
+              const afgIdx = headers.indexOf('AFG');
+              const pfgIdx = headers.indexOf('PFG');
+              const shrIdx = headers.indexOf('SHR');
+              const treIdx = headers.indexOf('TRE');
+              const bgrIdx = headers.indexOf('BGR');
+
+              function extractBand(idx: number) {
+                if (idx < 0) return [];
+                return [ ['year', headers[idx]], ...coverArr.slice(1).map(row => [row[yearIdx], row[idx]]) ];
+              }
+            
               const combined = {
                 invasive: invasive?.properties?.cover ?? [],
                 pj: pj?.properties?.cover ?? [],
-                sagebrush: sagebrush?.properties?.cover ?? []
-                //  Add new endpoint here
+                sagebrush: sagebrush?.properties?.cover ?? [],
+                afg: extractBand(afgIdx),
+                pfg: extractBand(pfgIdx),
+                shr: extractBand(shrIdx),
+                tre: extractBand(treIdx),
+                bgr: extractBand(bgrIdx)
               };
               this.results['combined_cover_10'].next(combined);
             },
