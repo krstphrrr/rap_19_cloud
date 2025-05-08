@@ -131,6 +131,7 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
         shr: 'shr',
         tre: 'tre',
         bgr: 'bgr',
+        annualtemp: 'annualtemp',
         annualprecip: 'annualprecip'
       };
       const displayOrder = [

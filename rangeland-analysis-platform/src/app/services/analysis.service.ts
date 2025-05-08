@@ -167,6 +167,7 @@ const TREND_CONFIG = {
       { name: 'Invasive annual grass cover', id: 'iag', color: '#ff0000', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
       { name: 'PJ cover', id: 'pj', color: '#ff9900', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
       { name: 'Sagebrush cover', id: 'arte', color: '#0066cc', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      { name: 'Mean annual temp', id: 'annualtemp', color: '#ED44A1', opacity: 0, type: 'bar',  visibleInLegend: false,  format: { prefix: '',pattern: '#0', suffix: '°F' }, visible: false },
       { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }
 
     ]
@@ -349,11 +350,16 @@ export class AnalysisService {
               const meteoHeaders = meteoArr[0] || [];
               const meteoYearIdx = meteoHeaders.indexOf('year');
               const precipIdx = meteoHeaders.indexOf('annualPrecip');
+              const annualTempIdx = meteoHeaders.indexOf('annualTemp');
 
-              console.log("METEO HEADERS: ", meteoHeaders)
-              console.log("PRECIP IDX: ", precipIdx)
+              console.log("ANNUAL TEMP IDX: ", annualTempIdx)
 
               function extractPrecip(idx: number){
+                if (idx < 0) return [];
+                return [ ['year', meteoHeaders[idx]], ...meteoArr.slice(1).map(row => [row[meteoYearIdx], row[idx]]) ];
+              }
+
+              function extractTemp(idx: number){
                 if (idx < 0) return [];
                 return [ ['year', meteoHeaders[idx]], ...meteoArr.slice(1).map(row => [row[meteoYearIdx], row[idx]]) ];
               }
@@ -367,6 +373,7 @@ export class AnalysisService {
                 shr: extractBand(shrIdx),
                 tre: extractBand(treIdx),
                 bgr: extractBand(bgrIdx),
+                annualtemp: extractTemp(annualTempIdx),
                 annualprecip: extractPrecip(precipIdx),
                 // Add more bands as needed
               };
