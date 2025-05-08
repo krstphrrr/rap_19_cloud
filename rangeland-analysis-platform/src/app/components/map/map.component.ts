@@ -101,8 +101,8 @@ export class OverlayMapType implements google.maps.MapType {
 
   constructor(private config: OverlayMapTypeOptions) {
     this.minZoom = config.minZoom || 0;
-    this.maxNativeZoom = config.maxNativeZoom || 12;
-    this.maxZoom = config.maxZoom || 12;
+    this.maxNativeZoom = config.maxNativeZoom || 20;
+    this.maxZoom = config.maxZoom || 20;
     this.getTileUrl = config.getTileUrl;
     this.opacity = config.opacity;
     this.tileSize = config.tileSize || new google.maps.Size(256, 256);

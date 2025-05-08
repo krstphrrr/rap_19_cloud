@@ -11,7 +11,7 @@ export class  DataLayer {
   public bounds: google.maps.LatLngBounds;
   public id: number;
   public minzoom = 4;
-  public maxzoom = 17;
+  public maxzoom = 20;
   public name?: string;
   public visible?: boolean;
   public url?: string;
