@@ -329,7 +329,6 @@ export class AnalysisService {
             // Add new endpoint here
           ]).subscribe({
             next: ([invasive, pj, sagebrush, cover10, meteo10]) => {
-
               // extract cover data from cover10
               const coverArr = cover10?.properties?.cover ?? [];
               const headers = coverArr[0] || [];
@@ -360,9 +359,9 @@ export class AnalysisService {
               }
             
               const combined = {
-                invasive: invasive?.properties?.cover ?? [],
+                iag: invasive?.properties?.cover ?? [],
                 pj: pj?.properties?.cover ?? [],
-                sagebrush: sagebrush?.properties?.cover ?? [],
+                arte: sagebrush?.properties?.cover ?? [],
                 afg: extractBand(afgIdx),
                 pfg: extractBand(pfgIdx),
                 shr: extractBand(shrIdx),

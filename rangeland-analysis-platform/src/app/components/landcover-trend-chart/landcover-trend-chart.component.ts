@@ -122,9 +122,9 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
   
       // Map keys to series IDs
       const keyToId = {
-        invasive: 'iag',
+        iag: 'iag',
         pj: 'pj',
-        sagebrush: 'arte',
+        arte: 'arte',
       // Add new cover classes to combined here
         afg: 'afg',
         pfg: 'pfg',
@@ -294,15 +294,70 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
   }
 
   formatData() {
-    return this.trend.map((cols) => cols.map((cell => {
-      if (typeof cell !== 'string') {
-        return (cell.toString().indexOf('.') >= 0) ? Math.round(cell * 100 + Number.EPSILON) / 100 : cell;
-      } else {
-        return `${cell}`;
+  // special handling for combined_cover_10
+  if (
+    this.trend_name === 'combined_cover_10' &&
+    typeof this.trend === 'object' &&
+    !Array.isArray(this.trend)
+  ) {
+    // get the order and ids from the config
+    const configSeries = this.analysis.config[this.trend_name].series;
+    const seriesIds = configSeries.map(s => s.id);
+
+    // collect all years
+    const allYears = new Set<number>();
+    const seriesData = {};
+
+    // build a map for each series: year -> value
+    seriesIds.forEach(id => {
+      const arr = this.trend[id];
+      if (Array.isArray(arr) && arr.length > 1) {
+        const headers = arr[0];
+        const yearIdx = headers.indexOf('year');
+        const valueIdx = 1;
+        arr.slice(1).forEach(row => {
+          const year = row[yearIdx];
+          allYears.add(year);
+          if (!seriesData[id]) seriesData[id] = {};
+          seriesData[id][year] = row[valueIdx];
+        });
       }
-    })))
+    });
+
+    // sort years
+    const years = Array.from(allYears).sort();
+
+    // build header row: use band ids
+    const header = ['year', ...seriesIds];
+
+    // build data rows
+    const rows = years.map(year => [
+  year,
+  ...seriesIds.map(id => {
+    const val = seriesData[id]?.[year];
+    // return (typeof val === 'number')
+    //   ? Math.round(val * 100) / 100
+    //   : (val ?? '');
+    return (typeof val === 'number')
+    ? (val.toString().indexOf('.') >= 0
+        ? Math.round(val * 100) / 100
+        : val)
+    : (val ?? '');
+  })
+]);
+
+    return [header, ...rows];
   }
 
+  // default: original logic
+  return this.trend.map((cols) => cols.map((cell => {
+    if (typeof cell !== 'string') {
+      return (cell.toString().indexOf('.') >= 0) ? Math.round(cell * 100 + Number.EPSILON) / 100 : cell;
+    } else {
+      return `${cell}`;
+    }
+  })));
+}
   downloadCsv() {
     const csv = this.formatData().map((r) => r.join(',')).join('\n'),
       blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
