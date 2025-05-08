@@ -133,15 +133,24 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
         bgr: 'bgr',
         annualprecip: 'annualprecip'
       };
+      const displayOrder = [
+        'afg', 'pfg', 'shr', 'tre', 'bgr',  
+        'iag', 'pj', 'arte',                
+        'annualprecip'                      
+      ];
+
+      const tracesByKey = {};
   
       Object.entries(this.trend).forEach(([key, arr]) => {
         if (Array.isArray(arr) && arr.length > 1) {
           const headers = arr[0];
           const yearIdx = headers.indexOf('year');
           const valueIdx = 1;
-          const series = configSeries.find(s => s.id === keyToId[key]);
+          const seriesId = keyToId[key];
+          const series = configSeries.find(s => s.id === seriesId);
+          
           if (series) {
-            traces.push({
+            tracesByKey[seriesId] = {
               x: arr.slice(1).map(row => row[yearIdx]),
               y: arr.slice(1).map(row => row[valueIdx]),
               name: series.name,
@@ -151,8 +160,14 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
               showlegend: series.visibleInLegend,
               hovertemplate: '%{x}: ' + (series.format?.prefix ?? '') + '%{y:.1f}' + (series.format?.suffix ?? ''),
               line: series.dash ? { color: series.color, dash: series.dash } : { color: series.color }
-            });
+            };
           }
+        }
+      });
+      
+      displayOrder.forEach(id => {
+        if (tracesByKey[id]) {
+          traces.push(tracesByKey[id]);
         }
       });
   
