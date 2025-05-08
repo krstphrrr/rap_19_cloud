@@ -153,20 +153,20 @@ const TREND_CONFIG = {
     title: '',
     y_axis: 'Cover (%)',
     series: [
+      // FROM COVER10m
+      { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      
+      { name: 'Perennial forb & grass cover', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      
+      { name: 'Shrub cover', id: 'shr', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      
+      { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      
+      { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      
       { name: 'Invasive annual grass cover', id: 'iag', color: '#ff0000', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
       { name: 'PJ cover', id: 'pj', color: '#ff9900', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
       { name: 'Sagebrush cover', id: 'arte', color: '#0066cc', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      // FROM COVER10m
-      { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  
-      { name: 'Perennial forb & grass cover', id: 'pfg', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-
-      { name: 'Shrub cover', id: 'shr', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-
-      { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-
-      { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-
       { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }
 
     ]
