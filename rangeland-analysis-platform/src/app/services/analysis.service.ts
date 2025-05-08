@@ -153,9 +153,9 @@ const TREND_CONFIG = {
     title: '',
     y_axis: 'Cover (%)',
     series: [
-      { name: 'Invasive annual grass cover', id: 'iag', color: '#67000d', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      { name: 'PJ cover', id: 'pj', color: '#08306b', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      { name: 'Sagebrush cover', id: 'arte', color: '#08306b', type: 'line', visibleInLegend: true,  format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      { name: 'Invasive annual grass cover', id: 'iag', color: '#ff0000', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      { name: 'PJ cover', id: 'pj', color: '#ff9900', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      { name: 'Sagebrush cover', id: 'arte', color: '#0066cc', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
       // FROM COVER10m
       { name: 'Annual forb & grass cover', id: 'afg', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
   
@@ -166,6 +166,9 @@ const TREND_CONFIG = {
       { name: 'Tree cover', id: 'tre', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
 
       { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+
+      { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }
+
     ]
   },
   invasive_cover_10: {
@@ -322,9 +325,12 @@ export class AnalysisService {
             this.http.post<any>(TREND_CONFIG['pj_cover_10'].endpoint, JSON.stringify(payload), options),
             this.http.post<any>(TREND_CONFIG['sagebrush_cover_10'].endpoint, JSON.stringify(payload), options),
             this.http.post<any>(TREND_CONFIG['cover_10'].endpoint, JSON.stringify(payload), options),
+            this.http.post<any>(TREND_CONFIG['meteo_10'].endpoint, JSON.stringify(payload), options), // Add new endpoint here
             // Add new endpoint here
           ]).subscribe({
-            next: ([invasive, pj, sagebrush, cover10]) => {
+            next: ([invasive, pj, sagebrush, cover10, meteo10]) => {
+
+              // extract cover data from cover10
               const coverArr = cover10?.properties?.cover ?? [];
               const headers = coverArr[0] || [];
               const yearIdx = headers.indexOf('year');
@@ -338,6 +344,20 @@ export class AnalysisService {
                 if (idx < 0) return [];
                 return [ ['year', headers[idx]], ...coverArr.slice(1).map(row => [row[yearIdx], row[idx]]) ];
               }
+
+              // extract precipitation data from meteo10
+              const meteoArr = meteo10?.properties?.cover ?? [];
+              const meteoHeaders = meteoArr[0] || [];
+              const meteoYearIdx = meteoHeaders.indexOf('year');
+              const precipIdx = meteoHeaders.indexOf('annualPrecip');
+
+              console.log("METEO HEADERS: ", meteoHeaders)
+              console.log("PRECIP IDX: ", precipIdx)
+
+              function extractPrecip(idx: number){
+                if (idx < 0) return [];
+                return [ ['year', meteoHeaders[idx]], ...meteoArr.slice(1).map(row => [row[meteoYearIdx], row[idx]]) ];
+              }
             
               const combined = {
                 invasive: invasive?.properties?.cover ?? [],
@@ -347,7 +367,9 @@ export class AnalysisService {
                 pfg: extractBand(pfgIdx),
                 shr: extractBand(shrIdx),
                 tre: extractBand(treIdx),
-                bgr: extractBand(bgrIdx)
+                bgr: extractBand(bgrIdx),
+                annualprecip: extractPrecip(precipIdx),
+                // Add more bands as needed
               };
               this.results['combined_cover_10'].next(combined);
             },

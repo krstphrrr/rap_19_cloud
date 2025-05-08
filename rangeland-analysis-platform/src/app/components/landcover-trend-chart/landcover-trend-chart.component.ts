@@ -130,7 +130,8 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
         pfg: 'pfg',
         shr: 'shr',
         tre: 'tre',
-        bgr: 'bgr'
+        bgr: 'bgr',
+        annualprecip: 'annualprecip'
       };
   
       Object.entries(this.trend).forEach(([key, arr]) => {
@@ -148,7 +149,8 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
               marker: { color: series.color },
               visible: series.visible,
               showlegend: series.visibleInLegend,
-              hovertemplate: '%{x}: ' + (series.format?.prefix ?? '') + '%{y:.1f}' + (series.format?.suffix ?? '')
+              hovertemplate: '%{x}: ' + (series.format?.prefix ?? '') + '%{y:.1f}' + (series.format?.suffix ?? ''),
+              line: series.dash ? { color: series.color, dash: series.dash } : { color: series.color }
             });
           }
         }
