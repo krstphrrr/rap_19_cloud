@@ -49,6 +49,7 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
   show_fullscreen: boolean;
   initialized = false;
   mask = true;
+  @Input() defaultFilterValue: any;
 
   constructor(
     public analysis: AnalysisService,
@@ -60,6 +61,28 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
     if (dialog_data) {
       this.dialog_data = dialog_data;
     }
+  }
+
+  getExportFileName(): string {
+  // map trend_name to chart type
+    const typeMap = {
+      annual_cover: '30m',
+      combined_cover_10: '10m',
+      annual_biomass: 'annual',
+      biweekly_biomass: '16-day-biomass',
+    };
+    const chartType = typeMap[this.trend_name] || this.trend_name || 'export';
+    const now = new Date();
+    // format as YYYYMMDDHHmmss
+    const pad = (n: number) => n.toString().padStart(2, '0');
+    const timestamp = 
+      now.getFullYear().toString() +
+      pad(now.getMonth() + 1) +
+      pad(now.getDate()) +
+      pad(now.getHours()) +
+      pad(now.getMinutes()) +
+      pad(now.getSeconds());
+    return `RAP_${chartType}_${timestamp}`;
   }
 
   expandChart(): void {
@@ -116,7 +139,7 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
       typeof this.trend === 'object' &&
       !Array.isArray(this.trend)
     ) {
-      this.loaded = true;
+      // this.loaded = true;
       const traces = [];
       const configSeries = this.analysis.config[this.trend_name].series;
   
@@ -245,9 +268,19 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
         this.trend.slice(1).map(a => vals[a[idx + 1]] = true);
         this.filterValues = Object.keys(vals).sort().map(v => parseInt(v, 10)).reverse();
       }
+      // if (
+      //   this.filterValues &&
+      //   this.filterValues.length &&
+      //   (this.filterVal === undefined || this.filterVal === null)
+      // ) {
+      //   this.filterVal = this.filterValues[0];
+      // }
   
       return config;
     });
+
+    
+    console.log('FILTER VALUES:', this.filterValues, 'FILTERVAL:', this.filterVal);
     const allYValues = this.graph.data
       .flatMap(trace => Array.isArray(trace.y) ? trace.y : [])
       .filter(v => typeof v === 'number' && !isNaN(v));
@@ -362,7 +395,7 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
   downloadCsv() {
     const csv = this.formatData().map((r) => r.join(',')).join('\n'),
       blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
-    saveAs(blob, 'table-data.csv');
+    saveAs(blob, this.getExportFileName() + '.csv');
   }
 
   downloadExcel() {
@@ -370,7 +403,7 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
       workbook = XLSX.utils.book_new(),
       worksheet = XLSX.utils.aoa_to_sheet(data);
     XLSX.utils.book_append_sheet(workbook, worksheet, 'table-data');
-    XLSX.writeFile(workbook, 'table-data.xlsx');
+    XLSX.writeFile(workbook, this.getExportFileName() + '.xlsx');
   }
 
   ngOnInit() {
@@ -378,6 +411,10 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
       this.trend_name = this.dialog_data.trend;
       this.filterField = this.dialog_data.filterField;
     }
+    // console.log("DEFAULT FILTER VALUE", this.defaultFilterValue);
+    // if (this.defaultFilterValue !== undefined && this.defaultFilterValue !== null) {
+    //   this.filterVal = this.defaultFilterValue;
+    // }
     this.config = this.analysis.config[this.trend_name];
     this.graph = {
       divId: `${this.trend_name}-chart`,
@@ -403,6 +440,7 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
           }
         },
         xaxis: {
+          type: 'date',
           title: {
             text: this.analysis.config[this.trend_name].x_axis,
             standoff: 4
@@ -424,6 +462,7 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.analysis.results[this.trend_name].subscribe((d) => {
         this.initialized = false; this.loadData();
+        
         if (this.dialog_data) {
           this.updateFilterVal(this.dialog_data.filterVal);
           this.dialog_data.trace_toggles.forEach(t => this.updateTraceToggle(t.name, t.visible));
