@@ -50,7 +50,7 @@ public getTile = (tileCoord: google.maps.Point, zoom: number, ownerDocument: Doc
   tile.style.opacity = this.opacity.toString();
   img.onerror = (event) => { img.src = 'assets/blank.png' };
 
-  console.log('getTile', tileCoord, zoom, this.maxNativeZoom, this.minZoom, this.maxZoom);
+  // console.log('getTile', tileCoord, zoom, this.maxNativeZoom, this.minZoom, this.maxZoom);
   if (zoom > this.maxNativeZoom) {
     // Calculate which tile to use at maxNativeZoom
     const zDiff = zoom - this.maxNativeZoom;
@@ -282,8 +282,8 @@ export class MapComponent implements OnInit {
     (overlay.selected_type && overlay.selected_type.maxNativeZoom) ||
     overlay.maxnativezoom ||
     12;
-    console.log('setOverlay', overlay, overlayMaxNativeZoom);
-    console.log('Overlay maxnativezoom:', overlay.maxnativezoom, 'Selected type maxNativeZoom:', overlay.selected_type?.maxNativeZoom);
+    // console.log('setOverlay', overlay, overlayMaxNativeZoom);
+    // console.log('Overlay maxnativezoom:', overlay.maxnativezoom, 'Selected type maxNativeZoom:', overlay.selected_type?.maxNativeZoom);
     if (this.ready) {
       const overlayMapType = new OverlayMapType({
         maxNativeZoom: overlayMaxNativeZoom,

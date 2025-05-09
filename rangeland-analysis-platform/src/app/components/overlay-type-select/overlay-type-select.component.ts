@@ -38,7 +38,7 @@ export class OverlayTypeSelectComponent implements OnInit {
         (type: OverlayType) => type.id === queryParams[this.overlay.id + '_t']
       )
     }
-    console.log(this.overlay.selected_type); 
+    // console.log(this.overlay.selected_type); 
     if (this.overlay.selected_type) {
       this.setOverlayType(this.overlay.selected_type)
     }
