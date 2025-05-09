@@ -17,6 +17,7 @@ export interface OverlayType {
   name?: string;
   tileurl?: string;
   legend?: LegendOptions;
+  maxNativeZoom?: number;
 }
 
 export interface OverlayParameters {
@@ -42,8 +43,8 @@ export class Overlay  {
   public selected_type: OverlayType;
   public overlay_types: OverlayType[];
   public minzoom = 4;
-  public maxzoom = 20;
-  public maxnativezoom = 20;
+  public maxzoom = 16;
+  public maxnativezoom = 14;
   public data: google.maps.Data;
   public tile_params = [];
   public year = 2024;

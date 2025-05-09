@@ -165,7 +165,7 @@ const TREND_CONFIG = {
       { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
       
       { name: 'Invasive annual grass cover', id: 'iag', color: '#ff0000', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-      { name: 'PJ cover', id: 'pj', color: '#ff9900', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      { name: 'PJ cover', id: 'pj', color: '#d36029', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
       { name: 'Sagebrush cover', id: 'arte', color: '#0066cc', type: 'line', dash: 'dot', visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
       { name: 'Mean annual temp', id: 'annualtemp', color: '#ED44A1', opacity: 0, type: 'bar',  visibleInLegend: false,  format: { prefix: '',pattern: '#0', suffix: '°F' }, visible: false },
       { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }

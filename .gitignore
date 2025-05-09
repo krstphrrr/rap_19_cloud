@@ -84,3 +84,4 @@ rangeland-analysis-platform/Thumbs.db
 # Rap-node 
 landing-node/*.txt
 **/cloud-functions
+**/assets/config.json

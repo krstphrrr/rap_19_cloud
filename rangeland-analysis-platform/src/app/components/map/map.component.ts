@@ -7,7 +7,7 @@ import { MapStateService } from '../../services/map-state.service';
 
 
 import { RoutingService } from '../../services/routing.service';
-const globalMaxZoom = 20;
+const globalMaxZoom = 14;
 const globalMinZoom = 4;
 
 export interface OverlayMapTypeOptions {
@@ -39,40 +39,46 @@ export class OverlayMapType implements google.maps.MapType {
     this.tiles.map(t => t.style.opacity = opacity.toString())
   };
 
-  public getTile = (tileCoord: google.maps.Point, zoom: number, ownerDocument: Document): Element => {
-    let src: string;
-    const tile = document.createElement('div'),
-      img = document.createElement('img');
-    tile.style.overflow = 'hidden';
-    tile.style.position = 'absolute';
-    tile.style.width = this.tileSize.width.toString() + 'px';
-    tile.style.height = this.tileSize.height.toString() + 'px';
-    tile.style.opacity = this.opacity.toString();
-    img.onerror = (event) => {img.src = 'assets/blank.png'};
-    if (zoom > this.maxNativeZoom) {
+public getTile = (tileCoord: google.maps.Point, zoom: number, ownerDocument: Document): Element => {
+  let src: string;
+  const tile = document.createElement('div'),
+    img = document.createElement('img');
+  tile.style.overflow = 'hidden';
+  tile.style.position = 'absolute';
+  tile.style.width = this.tileSize.width.toString() + 'px';
+  tile.style.height = this.tileSize.height.toString() + 'px';
+  tile.style.opacity = this.opacity.toString();
+  img.onerror = (event) => { img.src = 'assets/blank.png' };
 
-      const ctx = this.getMaxNativeTileCtx(tileCoord, zoom, this.maxNativeZoom);
-      tileCoord = ctx.coords;
-      src = this.getTileUrl(tileCoord, this.maxNativeZoom);
-      if (src) {
-        img.src = src;
-        img.style.width = ctx.offset.width;
-        img.style.height = ctx.offset.height;
-        img.style.position = 'relative';
-        img.style.left = ctx.offset.left;
-        img.style.top = ctx.offset.top;
-      }
+  console.log('getTile', tileCoord, zoom, this.maxNativeZoom, this.minZoom, this.maxZoom);
+  if (zoom > this.maxNativeZoom) {
+    // Calculate which tile to use at maxNativeZoom
+    const zDiff = zoom - this.maxNativeZoom;
+    const factor = Math.pow(2, zDiff);
+    const mx = Math.floor(tileCoord.x / factor);
+    const my = Math.floor(tileCoord.y / factor);
 
-    } else {
-      src = this.getTileUrl(tileCoord, zoom);
-      if (src) {
-        img.src = src;
-      }
+    src = this.getTileUrl(new google.maps.Point(mx, my), this.maxNativeZoom);
+
+    // Stretch the tile to fill the higher zoom tile
+    img.style.width = (this.tileSize.width * factor) + 'px';
+    img.style.height = (this.tileSize.height * factor) + 'px';
+    img.style.position = 'absolute';
+    img.style.left = -((tileCoord.x % factor) * this.tileSize.width) + 'px';
+    img.style.top = -((tileCoord.y % factor) * this.tileSize.height) + 'px';
+    if (src) {
+      img.src = src;
     }
-    this.tiles.push(tile);
-    tile.appendChild(img);
-    return tile;
-  };
+  } else {
+    src = this.getTileUrl(tileCoord, zoom);
+    if (src) {
+      img.src = src;
+    }
+  }
+  this.tiles.push(tile);
+  tile.appendChild(img);
+  return tile;
+};
 
   private getMaxNativeTileCtx(tileCoord: google.maps.Point, currentZoom: number, maxNativeZoom: number) {
     const tx = tileCoord.x, ty = tileCoord.y,
@@ -272,10 +278,15 @@ export class MapComponent implements OnInit {
 
   setOverlay(overlay) {
     const self = this;
-
+    const overlayMaxNativeZoom =
+    (overlay.selected_type && overlay.selected_type.maxNativeZoom) ||
+    overlay.maxnativezoom ||
+    12;
+    console.log('setOverlay', overlay, overlayMaxNativeZoom);
+    console.log('Overlay maxnativezoom:', overlay.maxnativezoom, 'Selected type maxNativeZoom:', overlay.selected_type?.maxNativeZoom);
     if (this.ready) {
       const overlayMapType = new OverlayMapType({
-        maxNativeZoom: overlay.maxnativezoom,
+        maxNativeZoom: overlayMaxNativeZoom,
         opacity: (overlay.opacity >= 0) ? overlay.opacity : 0.8,
         minZoom: overlay.minzoom || globalMinZoom,
         maxZoom: overlay.maxzoom || globalMaxZoom,
