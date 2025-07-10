@@ -217,6 +217,42 @@ export class LandcoverControlComponent implements OnInit {
         ['#f7fbff', '#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b'],
         null)
     },
+    {
+      name: 'Gap 25-50',
+      id: 'g25-50',
+      tileurl: `${this.usda_rap_10m}/{mask}/g25-50/{year}/{z}/{x}/{y}.png`,
+      legend: new LegendOptions(
+        '', '0', '100%',
+        ['#f7fcf0', '#e0f3db', '#ccebc5', '#a8ddb5', '#7bccc4', '#4eb3d3', '#2b8cbe', '#08589e'],
+        null)
+    },
+    {
+      name: 'Gap 51-100',
+      id: 'g51-100',
+      tileurl: `${this.usda_rap_10m}/{mask}/g51-100/{year}/{z}/{x}/{y}.png`,
+      legend: new LegendOptions(
+        '', '0', '100%',
+        ['#fff7fb', '#ece7f2', '#d0d1e6', '#a6bddb', '#74a9cf', '#3690c0', '#0570b0', '#034e7b'],
+        null)
+    },
+    {
+      name: 'Gap 101-200',
+      id: 'g101-200',
+      tileurl: `${this.usda_rap_10m}/{mask}/g101-200/{year}/{z}/{x}/{y}.png`,
+      legend: new LegendOptions(
+        '', '0', '100%',
+        ['#ffffe5', '#f7fcb9', '#d9f0a3', '#addd8e', '#78c679', '#41ab5d', '#238443', '#005a32'],
+        null)
+    },
+    {
+      name: 'Gap 200+',
+      id: 'g200-plus',
+      tileurl: `${this.usda_rap_10m}/{mask}/g200-plus/{year}/{z}/{x}/{y}.png`,
+      legend: new LegendOptions(
+        '', '0', '100%',
+        ['#fff5eb', '#fee6ce', '#fdd0a2', '#fdae6b', '#fd8d3c', '#f16913', '#d94801', '#a63603'],
+        null)
+    },
   ],
   bounds: new google.maps.LatLngBounds(
     new google.maps.LatLng( 24.51406344243852 ,  -124.76975514486658 ),

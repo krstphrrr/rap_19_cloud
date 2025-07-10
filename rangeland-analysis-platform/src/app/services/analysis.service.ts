@@ -131,22 +131,22 @@ const TREND_CONFIG = {
       { name: 'Bare ground cover', id: 'bgr', type: 'line', color: '#fe9929',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
     ]
   }, 
-  // gap_cover_10: {
-  //   endpoint:`${usda_gapcover_10m}`,
-  //   propertyResult: 'cover',
-  //   title: '',
-  //   y_axis: 'Cover (%)',
-  //   series: [
-  //     // eslint-disable-next-line max-len
-  //     { name: 'gap 25-100', id: 'G25_50', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //     // eslint-disable-next-line max-len
-  //     { name: 'gap 51-100', id: 'G51_100', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //     // eslint-disable-next-line max-len
-  //     { name: 'gap 101-200', id: 'G101_200', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //     // eslint-disable-next-line max-len
-  //     { name: 'gap 200+', id: 'G200_plus', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
-  //   ]
-  // },
+  gap_cover_10: {
+    endpoint:`${usda_gapcover_10m}`,
+    propertyResult: 'cover',
+    title: '',
+    y_axis: 'Cover (%)',
+    series: [
+      // eslint-disable-next-line max-len
+      { name: 'gap 25-100', id: 'g25_50', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // eslint-disable-next-line max-len
+      { name: 'gap 51-100', id: 'g51_100', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // eslint-disable-next-line max-len
+      { name: 'gap 101-200', id: 'g101_200', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // eslint-disable-next-line max-len
+      { name: 'gap 200+', id: 'g200_plus', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+    ]
+  },
   combined_cover_10: {
     endpoint: null, // Not used, handled specially
     propertyResult: 'cover',
