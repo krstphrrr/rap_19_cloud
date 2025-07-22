@@ -132,6 +132,7 @@ export class MapComponent implements OnInit {
   private onDrawHandler: Function;
   private activeInfoWindow: google.maps.InfoWindow;
   private drawingManager: google.maps.drawing.DrawingManager;
+  
 
   @Input() lat;
   @Input() lng;
@@ -147,8 +148,9 @@ export class MapComponent implements OnInit {
     this.lng = this.lng || -110.4298;
     this.lat = this.lat || 38.8633;
   }
-
+    
   setDrawingMode(mode: google.maps.drawing.OverlayType[]) {
+    console.log('Sets drawing mode:', mode, this.map, this.drawingManager, this.data);
     if (this.map && this.drawingManager) {
       if (!mode) {
         this.drawingManager.setDrawingMode(null);
@@ -159,7 +161,7 @@ export class MapComponent implements OnInit {
         this.drawingManager.setOptions({
           drawingControl: true,
           drawingControlOptions: {
-            drawingModes: [mode[0]]
+            drawingModes: mode
           }
         });
         this.data.setMap(this.map);
@@ -442,6 +444,48 @@ export class MapComponent implements OnInit {
     input.style.padding = '5px';
     input.style.border = '1pt solid gray';
     input.style.borderRadius = '2px';
+
+    // // // NEW PLACE AUTOCOMPLETE (has to be enabled on Google Cloud Console for project 556840467482)
+    // const placeAutocomplete = document.createElement('gmp-place-autocomplete') as any;
+    // placeAutocomplete.setAttribute('placeholder', 'Search for a location');
+    // placeAutocomplete.setAttribute('autocomplete', 'off');
+    // placeAutocomplete.setAttribute('class', 'pac-target-input');
+    // placeAutocomplete.setAttribute('componentRestrictions', '{"country":"US"}');
+    // // //
+
+    // //
+    // placeAutocomplete.style.height = '34px';
+    // placeAutocomplete.style.fontSize = '14px';
+    // placeAutocomplete.style.boxSizing = 'border-box';
+    // placeAutocomplete.style.margin = '5px';
+    // placeAutocomplete.style.padding = '5px';
+    // placeAutocomplete.style.border = '1pt solid gray';
+    // placeAutocomplete.style.borderRadius = '2px';
+    // //
+
+    // // //
+    // placeAutocomplete.style.position = 'absolute';
+    // placeAutocomplete.style.left = '430px';
+    // placeAutocomplete.style.top = '0px';
+    // placeAutocomplete.style.minWidth = '250px';
+    // // //
+
+    // // //
+    // this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(placeAutocomplete);
+
+    // // Listen for place changes
+    // placeAutocomplete.addEventListener('gmp-placechange', (event: any) => {
+    //   const place = event.detail;
+    //   if (place && place.geometry && place.geometry.viewport) {
+    //     self.mapState.setBounds(place.geometry.viewport);
+    //   } else if (place && place.geometry && place.geometry.location) {
+    //     self.map.setCenter(place.geometry.location);
+    //     self.map.setZoom(12);
+    //   }
+    // });
+    // // //
+
+
     const autocomplete = new google.maps.places.Autocomplete(input, {
       types: ['(regions)'], componentRestrictions: {
         country: 'US'

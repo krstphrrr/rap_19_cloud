@@ -44,7 +44,9 @@ export class LandcoverControlComponent implements OnInit {
   usda_pj_cover_10m: string = 'https://storage.googleapis.com/pj-cover-10m';
   usda_sagebrush_cover_10m: string = 'https://storage.googleapis.com/sagebrush-cover-10m';
   usda_gap_cover_10m: string = 'https://storage.googleapis.com/gap-cover-10m';
-  
+  // ['fcfbfd', 'efedf5', 'dadaeb', 'bcbddc', '9e9ac8', '807dba', '6a51a3', '54278f', '3f007d']
+  gap_palette = ['#fcfbfd', '#efedf5', '#dadaeb', '#bcbddc', '#9e9ac8', '#807dba', '#6a51a3', '#54278f', '#3f007d'];
+
   year: number; // default year
   years = [];
   opacity: number;
@@ -223,7 +225,7 @@ export class LandcoverControlComponent implements OnInit {
       tileurl: `${this.usda_rap_10m}/{mask}/g25-50/{year}/{z}/{x}/{y}.png`,
       legend: new LegendOptions(
         '', '0', '100%',
-        ['#f7fcf0', '#e0f3db', '#ccebc5', '#a8ddb5', '#7bccc4', '#4eb3d3', '#2b8cbe', '#08589e'],
+        this.gap_palette,
         null)
     },
     {
@@ -232,7 +234,7 @@ export class LandcoverControlComponent implements OnInit {
       tileurl: `${this.usda_rap_10m}/{mask}/g51-100/{year}/{z}/{x}/{y}.png`,
       legend: new LegendOptions(
         '', '0', '100%',
-        ['#fff7fb', '#ece7f2', '#d0d1e6', '#a6bddb', '#74a9cf', '#3690c0', '#0570b0', '#034e7b'],
+        this.gap_palette,
         null)
     },
     {
@@ -241,7 +243,7 @@ export class LandcoverControlComponent implements OnInit {
       tileurl: `${this.usda_rap_10m}/{mask}/g101-200/{year}/{z}/{x}/{y}.png`,
       legend: new LegendOptions(
         '', '0', '100%',
-        ['#ffffe5', '#f7fcb9', '#d9f0a3', '#addd8e', '#78c679', '#41ab5d', '#238443', '#005a32'],
+        this.gap_palette,
         null)
     },
     {
@@ -250,7 +252,7 @@ export class LandcoverControlComponent implements OnInit {
       tileurl: `${this.usda_rap_10m}/{mask}/g200-plus/{year}/{z}/{x}/{y}.png`,
       legend: new LegendOptions(
         '', '0', '100%',
-        ['#fff5eb', '#fee6ce', '#fdd0a2', '#fdae6b', '#fd8d3c', '#f16913', '#d94801', '#a63603'],
+        this.gap_palette,
         null)
     },
   ],
