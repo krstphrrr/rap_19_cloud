@@ -147,6 +147,24 @@ const TREND_CONFIG = {
       { name: 'gap 200+', id: 'g200_plus', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
     ]
   },
+  gap_cover_10_combined: {
+    endpoint:null,
+    propertyResult: 'cover',
+    title: '',
+    y_axis: 'Cover (%)',
+    series: [
+      // eslint-disable-next-line max-len
+      { name: 'gap 25-100', id: 'g25_50', color: '#67000d', type: 'line',   format: {  prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // eslint-disable-next-line max-len
+      { name: 'gap 51-100', id: 'g51_100', color: '#00441b', type: 'line',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // eslint-disable-next-line max-len
+      { name: 'gap 101-200', id: 'g101_200', type: 'line', color: '#08306b',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      // eslint-disable-next-line max-len
+      { name: 'gap 200+', id: 'g200_plus', type: 'line', color: '#d36029',   format: { prefix: '', pattern: '#0', suffix: '%' }, visible: true },
+      { name: 'Mean annual temp', id: 'annualtemp', color: '#ED44A1', opacity: 0, type: 'bar',  visibleInLegend: false,  format: { prefix: '',pattern: '#0', suffix: '°F' }, visible: false },
+      { name: 'Annual precipitation', id: 'annualprecip', color: '#88A0EE', type: 'bar',   visibleInLegend: true, format: { prefix: '', pattern: '#0', suffix: ' inches' }, visible: true }
+    ]
+  },
   combined_cover_10: {
     endpoint: null, // Not used, handled specially
     propertyResult: 'cover',
@@ -267,6 +285,7 @@ export class AnalysisService {
   }
 
   calculateAnalysis(mask: boolean) {
+    console.log(this.geojson)
     if (this.geojson) {
       this.clear();
       this.analysis_running = true;
@@ -326,7 +345,7 @@ export class AnalysisService {
             this.http.post<any>(TREND_CONFIG['pj_cover_10'].endpoint, JSON.stringify(payload), options),
             this.http.post<any>(TREND_CONFIG['sagebrush_cover_10'].endpoint, JSON.stringify(payload), options),
             this.http.post<any>(TREND_CONFIG['cover_10'].endpoint, JSON.stringify(payload), options),
-            this.http.post<any>(TREND_CONFIG['meteo_10'].endpoint, JSON.stringify(payload), options), // Add new endpoint here
+            this.http.post<any>(TREND_CONFIG['meteo_10'].endpoint, JSON.stringify(payload), options), 
             // Add new endpoint here
           ]).subscribe({
             next: ([invasive, pj, sagebrush, cover10, meteo10]) => {
@@ -385,6 +404,70 @@ export class AnalysisService {
               console.error('HTTP ERROR for trend_type: combined_cover_10', error);
             }
           });
+        } else if (trend_type === 'gap_cover_10_combined') {
+          // Special handling for gap cover combined chart
+          
+          forkJoin([
+            this.http.post<any>(TREND_CONFIG['gap_cover_10'].endpoint, JSON.stringify(payload), options),
+            this.http.post<any>(TREND_CONFIG['meteo_10'].endpoint, JSON.stringify(payload), options)
+          ]).subscribe({
+            next: ([gapCover, meteo10]) => {
+              const gapCoverArr = gapCover?.properties?.cover ?? [];
+              const headers = gapCoverArr[0] || [];
+              const yearIdx = headers.indexOf('year');
+              const g25_50Idx = headers.indexOf('G25_50');
+              const g51_100Idx = headers.indexOf('G51_100');
+              const g101_200Idx = headers.indexOf('G101_200');
+              const g200_plusIdx = headers.indexOf('G200_plus');
+        
+              function extractBand(idx: number) {
+                if (idx < 0) return [];
+                return [ ['year', headers[idx]], ...gapCoverArr.slice(1).map(row => [row[yearIdx], row[idx]]) ];
+              }
+              console.log('gapCoverArr headers:', headers);
+        
+              // extract precipitation and temp data from meteo10
+              const meteoArr = meteo10?.properties?.cover ?? [];
+              const meteoHeaders = meteoArr[0] || [];
+              const meteoYearIdx = meteoHeaders.indexOf('year');
+              const precipIdx = meteoHeaders.indexOf('annualPrecip');
+              const annualTempIdx = meteoHeaders.indexOf('annualTemp');
+        
+              function extractPrecip(idx: number){
+                if (idx < 0) return [];
+                return [ ['year', meteoHeaders[idx]], ...meteoArr.slice(1).map(row => [row[meteoYearIdx], row[idx]]) ];
+              }
+        
+              function extractTemp(idx: number){
+                if (idx < 0) return [];
+                return [ ['year', meteoHeaders[idx]], ...meteoArr.slice(1).map(row => [row[meteoYearIdx], row[idx]]) ];
+              }
+        
+              const combined = {
+                g25_50: extractBand(g25_50Idx),
+                g51_100: extractBand(g51_100Idx),
+                g101_200: extractBand(g101_200Idx),
+                g200_plus: extractBand(g200_plusIdx),
+                annualtemp: extractTemp(annualTempIdx),
+                annualprecip: extractPrecip(precipIdx),
+              };
+
+              console.log('Extracted gap bands:', {
+                g25_50: extractBand(g25_50Idx),
+                g51_100: extractBand(g51_100Idx),
+                g101_200: extractBand(g101_200Idx),
+                g200_plus: extractBand(g200_plusIdx),
+              });
+        
+              this.results['gap_cover_10_combined'].next(combined);
+            },
+            error: (error) => {
+              this.results['gap_cover_10_combined'].next(null);
+              this.analysis_error_message = 'Analysis failed: ' + (error.message || error.statusText);
+              console.error('HTTP ERROR for trend_type: gap_cover_10_combined', error);
+            }
+          });
+        
         } else if (TREND_CONFIG[trend_type].endpoint) {
           // Only process if endpoint is defined
           this.http.post<any>(

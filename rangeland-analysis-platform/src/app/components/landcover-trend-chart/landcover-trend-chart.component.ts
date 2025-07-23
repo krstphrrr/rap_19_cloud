@@ -206,6 +206,70 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
   
       return; 
     }
+    if (
+      this.trend_name === 'gap_cover_10_combined' &&
+      typeof this.trend === 'object' &&
+      !Array.isArray(this.trend)
+    ) {
+      const traces = [];
+      const configSeries = this.analysis.config[this.trend_name].series;
+  
+      // Map keys to series IDs
+      const keyToId = {
+        g25_50: 'g25_50',
+        g51_100: 'g51_100',
+        g101_200: 'g101_200',
+        g200_plus: 'g200_plus',
+        annualtemp: 'annualtemp',
+        annualprecip: 'annualprecip'
+      };
+      const displayOrder = [
+        'g25_50', 'g51_100', 'g101_200', 'g200_plus',
+        'annualprecip'
+      ];
+  
+      const tracesByKey = {};
+  
+      Object.entries(this.trend).forEach(([key, arr]) => {
+        if (Array.isArray(arr) && arr.length > 1) {
+          const headers = arr[0];
+          const yearIdx = headers.indexOf('year');
+          const valueIdx = 1;
+          const seriesId = keyToId[key];
+          const series = configSeries.find(s => s.id === seriesId);
+  
+          if (series) {
+            tracesByKey[seriesId] = {
+              x: arr.slice(1).map(row => row[yearIdx]),
+              y: arr.slice(1).map(row => row[valueIdx]),
+              name: series.name,
+              type: series.type,
+              marker: { color: series.color },
+              visible: series.visible,
+              showlegend: series.visibleInLegend,
+              hovertemplate: '%{x}: ' + (series.format?.prefix ?? '') + '%{y:.1f}' + (series.format?.suffix ?? ''),
+              line: series && 'dash' in series ? { color: series.color, dash: (series as any).dash } : { color: series.color }            };
+          }
+        }
+      });
+  
+      displayOrder.forEach(id => {
+        if (tracesByKey[id]) {
+          traces.push(tracesByKey[id]);
+        }
+      });
+  
+      this.graph.data = traces;
+  
+      // Dynamically set y-axis max after data is built
+      const allYValues = this.graph.data
+        .flatMap(trace => Array.isArray(trace.y) ? trace.y : [])
+        .filter(v => typeof v === 'number' && !isNaN(v));
+      const maxY = allYValues.length ? Math.max(...allYValues) : 1;
+      this.graph.layout.yaxis.range = [0, Math.ceil(maxY * 1.1)];
+  
+      return;
+    }
   
     // --- Original logic for all other trend types below ---
     this.loaded = true;
@@ -373,6 +437,65 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
     : (val ?? '');
   })
 ]);
+
+    return [header, ...rows];
+  }
+
+  if (
+    this.trend_name === 'combined_cover_10' &&
+    typeof this.trend === 'object' &&
+    !Array.isArray(this.trend)
+  ) {
+    // ...existing combined_cover_10 logic...
+  }
+
+  // special handling for gap_cover_10_combined
+  if (
+    this.trend_name === 'gap_cover_10_combined' &&
+    typeof this.trend === 'object' &&
+    !Array.isArray(this.trend)
+  ) {
+    const configSeries = this.analysis.config[this.trend_name].series;
+    const seriesIds = configSeries.map(s => s.id);
+
+    // collect all years
+    const allYears = new Set<number>();
+    const seriesData = {};
+
+    // build a map for each series: year -> value
+    seriesIds.forEach(id => {
+      const arr = this.trend[id];
+      if (Array.isArray(arr) && arr.length > 1) {
+        const headers = arr[0];
+        const yearIdx = headers.indexOf('year');
+        const valueIdx = 1;
+        arr.slice(1).forEach(row => {
+          const year = row[yearIdx];
+          allYears.add(year);
+          if (!seriesData[id]) seriesData[id] = {};
+          seriesData[id][year] = row[valueIdx];
+        });
+      }
+    });
+
+    // sort years
+    const years = Array.from(allYears).sort();
+
+    // build header row: use band ids
+    const header = ['year', ...seriesIds];
+
+    // build data rows
+    const rows = years.map(year => [
+      year,
+      ...seriesIds.map(id => {
+        const val = seriesData[id]?.[year];
+        return (typeof val === 'number')
+          ? (val.toString().indexOf('.') >= 0
+              ? Math.round(val * 100) / 100
+              : val)
+          : (val ?? '');
+      })
+    ]);
 
     return [header, ...rows];
   }

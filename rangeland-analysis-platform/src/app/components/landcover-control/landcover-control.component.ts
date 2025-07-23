@@ -552,6 +552,7 @@ export class LandcoverControlComponent implements OnInit {
     ]);
     this.mapState.setDrawHandler((d: google.maps.Data) => {
       d.toGeoJson((g: GeoJSON.FeatureCollection) => {
+        
         this.analysis.geojson = g.features[0];
         this.mapState.setDrawingMode(null);
         this.analysis.calculateAnalysis(this.mask_toggle);
