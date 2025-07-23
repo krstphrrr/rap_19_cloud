@@ -285,7 +285,7 @@ export class AnalysisService {
   }
 
   calculateAnalysis(mask: boolean) {
-    console.log(this.geojson)
+    // console.log(this.geojson)
     if (this.geojson) {
       this.clear();
       this.analysis_running = true;
@@ -294,8 +294,8 @@ export class AnalysisService {
       const options = {
         headers: new HttpHeaders({'Content-Type': 'application/json; charset=UTF-8'}),
       };
-      console.log("GEOJSON PROPERTIES: ", this.geojson )
-      console.log("MASK: ", mask)
+      // console.log("GEOJSON PROPERTIES: ", this.geojson )
+      // console.log("MASK: ", mask)
 
       this.geojson['properties'] = {
         ...this.geojson['properties'],
@@ -371,7 +371,7 @@ export class AnalysisService {
               const precipIdx = meteoHeaders.indexOf('annualPrecip');
               const annualTempIdx = meteoHeaders.indexOf('annualTemp');
 
-              console.log("ANNUAL TEMP IDX: ", annualTempIdx)
+              // console.log("ANNUAL TEMP IDX: ", annualTempIdx)
 
               function extractPrecip(idx: number){
                 if (idx < 0) return [];
@@ -424,7 +424,7 @@ export class AnalysisService {
                 if (idx < 0) return [];
                 return [ ['year', headers[idx]], ...gapCoverArr.slice(1).map(row => [row[yearIdx], row[idx]]) ];
               }
-              console.log('gapCoverArr headers:', headers);
+              // console.log('gapCoverArr headers:', headers);
         
               // extract precipitation and temp data from meteo10
               const meteoArr = meteo10?.properties?.cover ?? [];
@@ -452,12 +452,12 @@ export class AnalysisService {
                 annualprecip: extractPrecip(precipIdx),
               };
 
-              console.log('Extracted gap bands:', {
-                g25_50: extractBand(g25_50Idx),
-                g51_100: extractBand(g51_100Idx),
-                g101_200: extractBand(g101_200Idx),
-                g200_plus: extractBand(g200_plusIdx),
-              });
+              // console.log('Extracted gap bands:', {
+              //   g25_50: extractBand(g25_50Idx),
+              //   g51_100: extractBand(g51_100Idx),
+              //   g101_200: extractBand(g101_200Idx),
+              //   g200_plus: extractBand(g200_plusIdx),
+              // });
         
               this.results['gap_cover_10_combined'].next(combined);
             },

@@ -574,8 +574,29 @@ export class MapComponent implements OnInit {
           properties: {}
         };
         this.data.addGeoJson(feature);
+      } else if (event.type === 'polyline') {
+        const path = event.overlay.getPath().getArray().map(latlng => [latlng.lng(), latlng.lat()]);
+        feature = {
+          type: 'Feature',
+          geometry: {
+            type: 'LineString',
+            coordinates: path
+          },
+          properties: {}
+        };
+        this.data.addGeoJson(feature);
+      } else if (event.type === 'marker') {
+        const position = event.overlay.getPosition();
+        feature = {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [position.lng(), position.lat()]
+          },
+          properties: {}
+        };
+        this.data.addGeoJson(feature);
       }
-      // Add similar logic for other types if needed
     
       // Show the data layer and set listeners
       this.data.setMap(this.map);
