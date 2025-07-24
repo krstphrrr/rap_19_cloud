@@ -8,12 +8,15 @@ import {MatSelectChange} from '@angular/material/select';
 import { AnalysisService } from 'app/services/analysis.service';
 import * as  XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
-import { PlotlyService } from 'angular-plotly.js';
+// import { PlotlyService } from 'angular-plotly.js';
 // import { MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-import { Plotly } from 'angular-plotly.js/lib/plotly.interface';
+// import { Plotly } from 'angular-plotly.js/lib/plotly.interface';
 
+import * as PlotlyJS from 'plotly.js-dist-min';
+
+import { ViewChild, ElementRef } from '@angular/core';
 
 
 @Component({
@@ -39,8 +42,8 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
   trend: any;
   config: any;
   filterValues: any[];
-
-  public graph: Plotly.Data;
+  @ViewChild('chart_container', { static: false }) chartContainer: ElementRef;
+  public graph: PlotlyJS.Data;
   data: { annual_landcover: any[], annual_biomass: any[], biweekly_biomass: any[], mask: boolean };
   clickHandler: any;
   selectHandler: any;
@@ -54,7 +57,7 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
   constructor(
     public analysis: AnalysisService,
     private dialog: MatDialog,
-    private plotly: PlotlyService,
+    // private plotly: PlotlyModule,
     @Optional() @Inject(MAT_DIALOG_DATA) public dialog_data: any
   ) {
 
@@ -103,12 +106,19 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
 
   }
 
+  // public async getImage(width: number, height: number): Promise<any> {
+  //   const graphDiv = this.plotly.getInstanceByDivId(this.graph.divId);
+  //   const plotly = await this.plotly.getPlotly()
+  //   return plotly.Image(
+  //     graphDiv, { format: 'png', width: width || 1280, height: height || 720, filename: this.trend_name });
+  // }
+
   public async getImage(width: number, height: number): Promise<any> {
-    const graphDiv = this.plotly.getInstanceByDivId(this.graph.divId);
-    const plotly = await this.plotly.getPlotly()
-    return plotly.Image(
-      graphDiv, { format: 'png', width: width || 1280, height: height || 720, filename: this.trend_name });
-  }
+  const graphDiv = this.chartContainer.nativeElement.querySelector('.js-plotly-plot');
+  return PlotlyJS.toImage(
+    graphDiv, { format: 'png', width: width || 1280, height: height || 720, filename: this.trend_name }
+  );
+}
 
 
   public updateFilterVal(event: MatSelectChange | number) {
@@ -353,31 +363,8 @@ export class LandcoverTrendChartComponent implements OnInit, AfterViewInit {
   }
 
   async print() {
-    const graphDiv = this.plotly.getInstanceByDivId(this.graph.divId),
-      iframe = document.createElement('IFRAME') as HTMLIFrameElement;
-    let plotly = await this.plotly.getPlotly()
-    plotly.toImage(
-      graphDiv, { format: 'png', width: 1280, height: 720, filename: this.trend_name }).then(
-        (img: string) => {
-          const html = `
-              <html>
-                <style type="text/css" media="print">
-                  @page { size: landscape; }
-                </style>
-                <body>
-                  <img src='${img}'>
-                </body>
-              </html>`;
-          iframe.width = '0';
-          iframe.height = '0';
-          iframe.id = 'printer';
-          document.body.appendChild(iframe);
-          iframe.contentWindow.onload = () => iframe.contentWindow.print();
-          iframe.contentWindow.document.write(html);
-          setTimeout(() => iframe.contentWindow.print(), 1000);
-
-        }
-      )
+    const graphDiv = this.chartContainer.nativeElement.querySelector('.js-plotly-plot');
+  const img = await PlotlyJS.toImage(graphDiv, { format: 'png', width: 1280, height: 720, filename: this.trend_name });
 
   }
 

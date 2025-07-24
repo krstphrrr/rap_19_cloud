@@ -58,9 +58,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 // import { MatLegacyTooltipModule as MatTooltipModule } from '@angular/material/legacy-tooltip';
 import {MatTooltipModule} from '@angular/material/tooltip';
 
-import * as PlotlyJS from 'plotly.js/dist/plotly.js';
 import { PlotlyModule } from 'angular-plotly.js';
-PlotlyModule.plotlyjs = PlotlyJS;
+import * as PlotlyJS from 'plotly.js-dist-min';
+// PlotlyModule.plotlyjs = PlotlyJS;
 
 
 import { AppComponent } from './components/root/app.component';
@@ -134,25 +134,33 @@ export function googleApisLoaderFactory(
     ],
     bootstrap: [AppComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    exports: [CommonModule], imports: [TourMatMenuModule,
-        CommonModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        RoutingModule,
-        ReactiveFormsModule,
-        MatMenuModule, MatDialogModule, MatSnackBarModule, MatCardModule,
-        MatSelectModule, MatSlideToggleModule, MatListModule, MatInputModule,
-        MatTooltipModule, MatButtonModule, MatProgressSpinnerModule,
-        MatSliderModule, MatButtonToggleModule, MatCheckboxModule,
-        MatAutocompleteModule, MatIconModule, MatTabsModule, MatProgressBarModule,
-        PlotlyModule], providers: [
+    exports: [CommonModule], 
+    imports: [
+      TourMatMenuModule,
+      CommonModule,
+      BrowserModule,
+      BrowserAnimationsModule,
+      FormsModule,
+      RoutingModule,
+      ReactiveFormsModule,
+      MatMenuModule, MatDialogModule, MatSnackBarModule, MatCardModule,
+      MatSelectModule, MatSlideToggleModule, MatListModule, MatInputModule,
+      MatTooltipModule, MatButtonModule, MatProgressSpinnerModule,
+      MatSliderModule, MatButtonToggleModule, MatCheckboxModule,
+      MatAutocompleteModule, MatIconModule, MatTabsModule, MatProgressBarModule,
+      PlotlyModule.forRoot(PlotlyJS)
+    ], 
+    providers: [
         GoogleMapsLoaderService,
         provideAppInitializer(() => {
-        const initializerFn = (googleApisLoaderFactory)(inject(GoogleMapsLoaderService));
-        return initializerFn();
-      }),
-        MapStateService, AnalysisStateService, AnalysisService, RoutingService,
+          const initializerFn = (googleApisLoaderFactory)(inject(GoogleMapsLoaderService));
+          return initializerFn();
+        }),
+        MapStateService, 
+        AnalysisStateService, 
+        AnalysisService, 
+        RoutingService,
+        { provide: 'Plotly', useValue: PlotlyJS },
         provideHttpClient(withInterceptorsFromDi(), withJsonpSupport())
     ] })
 export class AppModule {
