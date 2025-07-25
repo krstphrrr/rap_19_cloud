@@ -26,10 +26,10 @@
         </div>
         <div style="flex:1;display: flex; flex-direction: column">
                 <plotly-plot 
-                        [divId] = "graph.divId"
                         [data]="graph.data" 
                         [layout]="graph.layout"
-                        [config]="graph.config"></plotly-plot>
+                        [config]="graph.config">
+                </plotly-plot>
         </div>
         <div *ngIf="graph" class="filters">
                 <div *ngIf="filterField" class="filter">
