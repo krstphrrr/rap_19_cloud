@@ -4,6 +4,7 @@
     "module": "esnext",
     "outDir": "./dist/out-tsc",
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "baseUrl": "src",
     "sourceMap": true,
     "declaration": false,
