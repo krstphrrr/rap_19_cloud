@@ -58,6 +58,22 @@ export class MapStateService {
   private infoWindowSource = new Subject<google.maps.InfoWindow>();
   infoWindow = this.infoWindowSource.asObservable()
 
+  // Subject to cancel drawing test
+  private cancelDrawingSource = new Subject<void>();
+  cancelDrawing$ = this.cancelDrawingSource.asObservable();
+  private drawingCanceled = false;
+
+  cancelDrawing() {
+    this.drawingCanceled = true;
+    this.cancelDrawingSource.next();
+  }
+  
+  wasDrawingCanceled(): boolean {
+    const canceled = this.drawingCanceled;
+    this.drawingCanceled = false; // reset after check
+    return canceled;
+  }
+
   constructor(private styleConverter: GoogleStyleConverterService) {
     // populate overlays with available layers.
     // ensures only one overlay can be active at a time. Tracked by various

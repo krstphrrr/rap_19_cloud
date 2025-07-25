@@ -450,6 +450,8 @@ export class LandcoverControlComponent implements OnInit {
     this.analysis.resetAnalysis(true, true);
     this.mapState.removeDataLayer('upload');
     this.routing.updateUrlParams({fid: null});
+    this.mapState.cancelDrawing();
+
   }
 
   uploadShapefile() {

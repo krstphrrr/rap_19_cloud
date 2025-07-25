@@ -413,6 +413,12 @@ export class MapComponent implements OnInit {
       locator.onclick = this.setUserLocation.bind(this);
       this.map.controls[google.maps.ControlPosition.LEFT_TOP].push(locator);
     }
+    this.mapState.cancelDrawing$.subscribe(() => {
+      if (this.drawingManager) {
+        this.drawingManager.setDrawingMode(null);
+        this.drawingManager.setOptions({ drawingControl: false });
+      }
+    });
     
     // controlDiv.style.padding = '5px';
     // const logo_div = document.createElement('div')
@@ -556,10 +562,18 @@ export class MapComponent implements OnInit {
     this.drawingManager.addListener('overlaycomplete', (event) => {
       // Remove the drawn overlay from the DrawingManager
       event.overlay.setMap(null);
+      if (this.mapState.wasDrawingCanceled()) {
+        // Remove the overlay from the map if it exists
+        if (event.overlay && event.overlay.setMap) {
+          event.overlay.setMap(null);
+        }
+        return; // Do not process or submit the incomplete shape
+      }
     
       // Convert the overlay to GeoJSON and add to this.data
       let feature;
       if (event.type === 'polygon') {
+        event.overlay.setEditable(true);
         const path = event.overlay.getPath().getArray().map(latlng => [latlng.lng(), latlng.lat()]);
         // Close the polygon if not already closed
         if (path.length && (path[0][0] !== path[path.length - 1][0] || path[0][1] !== path[path.length - 1][1])) {
@@ -575,6 +589,7 @@ export class MapComponent implements OnInit {
         };
         this.data.addGeoJson(feature);
       } else if (event.type === 'polyline') {
+        event.overlay.setEditable(true);
         const path = event.overlay.getPath().getArray().map(latlng => [latlng.lng(), latlng.lat()]);
         feature = {
           type: 'Feature',
