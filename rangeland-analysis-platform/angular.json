@@ -42,6 +42,7 @@
                   "maximumWarning": "6kb"
                 }
               ],
+              "baseHref": "/rap/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
