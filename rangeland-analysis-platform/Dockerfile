@@ -1,17 +1,19 @@
 # Stage 1: Build Angular app
-FROM node:22-alpine3.21 AS build
+FROM node:22-alpine3.21 AS compile-image
 
-WORKDIR /app
-COPY package*.json ./
-COPY webpack-patch.js ./
-RUN npm install 
-COPY . .
-RUN npm run build --configuration=production
+WORKDIR /opt/ng
+COPY ./src ./src
+COPY ./package*.json ./tsconfig*.json /angular.json ./
 
-# Stage 2: Serve with Nginx (minimal)
-FROM nginx:alpine
+# COPY webpack-patch.js ./
+RUN npm ci && \
+    npm install -g @angular/cli && \ 
+    npm run build --configuration=production
 
-COPY --from=build /app/dist/rangeland-analysis-platform/browser /usr/share/nginx/html
+# Stage 2: Serve with Nginx 
+FROM nginx:latest
+
+COPY --from=compile-image /opt/ng/dist/rangeland-analysis-platform/browser /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80

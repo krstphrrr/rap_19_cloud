@@ -1,6 +1,6 @@
 services:
   app:
-    image: rap-map-cloud:latest
+    image: landscapedatacommons/rap-map-cloud:latest
     build:
       context: .
       dockerfile: Dockerfile
