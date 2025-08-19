@@ -18,6 +18,9 @@ export class LayoutComponent  {
   public leftToggle = true;
   public rightToggle = true;
   public tabIndex = 0;
+  public isMobile = false;
+  public showControls = false;
+  public showAnalysis = false;
 
   constructor(
     private router: Router,
@@ -32,6 +35,30 @@ export class LayoutComponent  {
       this.tabIndex = params['tab'];
     }
 
+    // Initialize mobile detection
+    this.checkScreenSize();
+    window.addEventListener('resize', () => this.checkScreenSize());
+  }
+
+  private checkScreenSize() {
+    const wasMobile = this.isMobile;
+    this.isMobile = window.innerWidth <= 768;
+    
+    // If switching from mobile to desktop, reset panel states
+    if (wasMobile && !this.isMobile) {
+      this.showControls = false;
+      this.showAnalysis = false;
+    }
+  }
+
+  toggleControls() {
+    this.showControls = !this.showControls;
+    this.showAnalysis = false; // Close analysis when opening controls
+  }
+
+  toggleAnalysis() {
+    this.showAnalysis = !this.showAnalysis;
+    this.showControls = false; // Close controls when opening analysis
   }
    tabIndexChanged(index) {
     this.mapState.clearMap();

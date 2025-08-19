@@ -132,6 +132,7 @@ export class MapComponent implements OnInit {
   private onDrawHandler: Function;
   private activeInfoWindow: google.maps.InfoWindow;
   private drawingManager: google.maps.drawing.DrawingManager;
+  private isMobile: boolean = false;
   
 
   @Input() lat;
@@ -147,6 +148,42 @@ export class MapComponent implements OnInit {
     this.zoom = this.zoom || 6;
     this.lng = this.lng || -110.4298;
     this.lat = this.lat || 38.8633;
+    
+    // Initialize mobile detection
+    this.checkScreenSize();
+    window.addEventListener('resize', () => this.checkScreenSize());
+  }
+  
+  private checkScreenSize() {
+    this.isMobile = window.innerWidth <= 768;
+    
+    // Update map controls if map is already initialized
+    if (this.map) {
+      this.updateMapControls();
+    }
+  }
+    private updateMapControls() {
+    if (!this.map) return;
+    
+    this.map.setOptions({
+      zoomControl: !this.isMobile,
+      mapTypeControl: true, // Enable basemap toggle
+      mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        position: this.isMobile ? 
+          google.maps.ControlPosition.TOP_RIGHT : 
+          google.maps.ControlPosition.TOP_LEFT
+      },
+      streetViewControl: false,
+      fullscreenControl: !this.isMobile,
+      scaleControl: !this.isMobile,
+      // Position remaining controls for mobile
+      zoomControlOptions: {
+        position: this.isMobile ? 
+          google.maps.ControlPosition.RIGHT_BOTTOM : 
+          google.maps.ControlPosition.LEFT_TOP
+      }
+    });
   }
     
   setDrawingMode(mode: google.maps.drawing.OverlayType[]) {
@@ -381,11 +418,12 @@ export class MapComponent implements OnInit {
         position: google.maps.ControlPosition.LEFT_TOP
       },
       controlSize: 24
-    };
-
-    this.map = new google.maps.Map(document.getElementById('map'), mapProp);
+    };    this.map = new google.maps.Map(document.getElementById('map'), mapProp);
     this.data = this.map.data;
     this.ready = true;
+
+    // Apply mobile-specific controls
+    this.updateMapControls();
 
     this.drawingManager = new google.maps.drawing.DrawingManager({
       drawingMode: null,

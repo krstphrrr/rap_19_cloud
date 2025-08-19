@@ -44,10 +44,13 @@ div.mat-form-field-infix {
 }
 
 .toggles {
-  margin-left: 35px;
-  padding:4px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 4px;
   text-align: left;
-  width: 535px;
+  width: auto; /* Allow flexible width instead of fixed 535px */
+  max-width: 100%; /* Prevent overflow */
+  overflow-x: auto; /* Allow horizontal scroll if absolutely necessary */
 }
 .opacity-container {
     width: 100%;
@@ -114,4 +117,70 @@ app-landcover-trend-chart {
 .legend-container {
   width: 100%;
   text-align: center;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  :host {
+    padding: 16px;
+    text-align: left;
+  }
+  
+  .toggles {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .toggles td {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  }
+  
+  .landcover-analysis-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 16px 0;
+  }
+  
+  .landcover-analysis-buttons button {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+  }
+  
+  /* Make form controls touch-friendly */
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .mat-slide-toggle {
+    margin-bottom: 16px;
+  }
+  
+  .year-select {
+    width: 100%;
+  }
+  
+  .overlay-switcher {
+    white-space: normal;
+  }
+  
+  .overlay-switcher mat-form-field {
+    width: 100%;
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  :host {
+    padding: 12px;
+  }
+  
+  .landcover-analysis-buttons button {
+    height: 52px; /* Larger touch targets on phones */
+    font-size: 18px;
+  }
 }

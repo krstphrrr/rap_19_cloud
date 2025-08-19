@@ -1,25 +1,133 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
-/* @import url('https://fonts.googleapis.com/css?family=Lato'); */
-/* @import url('https://fonts.googleapis.com/css?family=IM+Fell+English');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons'); */
 
-
+/* Remove fixed minimum width for mobile */
 html {
-    min-width: 1080px;
-    min-height: 640px
-}
- body {
-    height: 100%;
-    width: 100%;
-    margin: 0;    
+    /* min-width: 1080px; - Remove this */
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-.material-icons {
-    font-size: 36pt;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling on mobile */
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+    .material-icons {
+        font-size: 24pt; /* Smaller icons on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .material-icons {
+        font-size: 20pt; /* Even smaller on phones */
+    }
+}
+
 .mat-select-panel {
     max-height: 300px !important;
 }
+
 .mat-dialog-container {
     display: flex !important;
+}
+
+/* Mobile-friendly dialog sizing */
+@media (max-width: 768px) {
+    .mat-dialog-container {
+        width: 95vw !important;
+        max-width: 95vw !important;
+        height: 90vh !important;
+        max-height: 90vh !important;
+    }
+}
+
+/* Touch-friendly form controls */
+@media (max-width: 768px) {
+    .mat-form-field {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    
+    .mat-select {
+        min-height: 48px;
+        font-size: 16px;
+    }
+    
+    .mat-button, .mat-raised-button, .mat-flat-button {
+        min-height: 48px;
+        min-width: 64px;
+        font-size: 16px;
+        padding: 0 16px;
+    }
+    
+    .mat-slide-toggle {
+        margin: 8px 0;
+    }
+    
+    .mat-slider {
+        width: 100%;
+    }
+    
+    /* Improve tab navigation on mobile */
+    .mat-tab-group {
+        width: 100%;
+    }
+    
+    .mat-tab-label {
+        min-width: 0;
+        padding: 0 12px;
+        font-size: 14px;
+    }
+    
+    .mat-tab-body-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .mat-button, .mat-raised-button, .mat-flat-button {
+        min-height: 52px; /* Larger touch targets on phones */
+        font-size: 18px;
+    }
+    
+    .mat-select {
+        min-height: 52px;
+        font-size: 18px;
+    }
+    
+    .mat-tab-label {
+        font-size: 13px;
+        padding: 0 8px;
+    }
+}
+
+/* Prevent zoom on input focus on iOS */
+@media (max-width: 768px) {
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* Improve scrolling on mobile */
+@media (max-width: 768px) {
+    .mat-tab-body-content {
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Hide scrollbars but keep functionality */
+    .mat-tab-body-content::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
 }

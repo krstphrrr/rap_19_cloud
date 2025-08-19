@@ -1,39 +1,57 @@
 
-<div  class="left panel">
-  <span class="panel-title">Rangeland Analysis Platform</span> <app-control-panel-toggle
-    [(value)]="leftToggle"
-    position="inner-top-right"
-    type="collapse-up"
-    ></app-control-panel-toggle>
-  <div class="panelContent" [ngStyle]="{'max-height' : leftToggle ? 'calc(100vh - 70px)': '0px'}">
-    <mat-tab-group
-      [selectedIndex]="tabIndex"
-      (selectedIndexChange)="tabIndexChanged($event)">
-      <mat-tab label="Vegetation">
-        <ng-template matTabContent>
-          <app-landcover-control ></app-landcover-control>
-        </ng-template>
-      </mat-tab>
-      <!-- <mat-tab label="Sagebrush conservation">
-        <ng-template matTabContent>
-          <app-sagebrush-conservation></app-sagebrush-conservation>
-        </ng-template>
-      </mat-tab> -->
-      <!-- <mat-tab label="Great Plains conservation">
-        <ng-template matTabContent>
-          <app-great-plains-conservation></app-great-plains-conservation>
-        </ng-template>
-      </mat-tab> -->
-    </mat-tab-group>
+<div class="app-container">
+  <!-- Map Background -->
+  <div class="map-container">
+    <app-map
+        lat=39
+        lng=-98
+        zoom=5
+        basemap="terrain"></app-map>
   </div>
-</div>
-<div *ngIf="analysis.geojson && (analysis.analysis_complete || analysis.analysis_running)"
-  class="right panel">
-  <span class="panel-title"></span> <app-control-panel-toggle
-    [(value)]="rightToggle" position="inner-top-right"></app-control-panel-toggle>
-  <div class="panelContent" [ngStyle]="{
-    'max-height' : rightToggle ? 'calc(100vh - 70px)': '0px'
-  }">
+
+  <!-- Controls Panel -->
+  <div class="controls-panel" [class.mobile-hidden]="isMobile && !showControls" [class.mobile-visible]="isMobile && showControls">
+    <div class="panel-header">
+      <span class="panel-title">Rangeland Analysis Platform</span>
+      <app-control-panel-toggle
+        [(value)]="leftToggle"
+        position="inner-top-right"
+        type="collapse-up"
+        *ngIf="!isMobile">
+      </app-control-panel-toggle>
+      <button class="mobile-close-btn" *ngIf="isMobile" (click)="toggleControls()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div class="panelContent" [ngStyle]="{'max-height': (!isMobile && leftToggle) || (isMobile && showControls) ? 'calc(100vh - 120px)' : '0px'}">
+      <mat-tab-group
+        [selectedIndex]="tabIndex"
+        (selectedIndexChange)="tabIndexChanged($event)">
+        <mat-tab label="Vegetation">
+          <ng-template matTabContent>
+            <app-landcover-control></app-landcover-control>
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+  <!-- Analysis Panel -->
+  <div *ngIf="analysis.geojson && (analysis.analysis_complete || analysis.analysis_running)"
+    class="analysis-panel" [class.mobile-hidden]="isMobile && !showAnalysis" [class.mobile-visible]="isMobile && showAnalysis">
+    <div class="panel-header">
+      <span class="panel-title"></span>
+      <app-control-panel-toggle
+        [(value)]="rightToggle" 
+        position="inner-top-right"
+        *ngIf="!isMobile">
+      </app-control-panel-toggle>
+      <button class="mobile-close-btn" *ngIf="isMobile" (click)="toggleAnalysis()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div class="panelContent" [ngStyle]="{
+      'max-height': (!isMobile && rightToggle) || (isMobile && showAnalysis) ? 'calc(100vh - 120px)' : '0px'
+    }">
   <mat-tab-group>
     <mat-tab label="Cover 30m">
         <app-landcover-trend-chart
@@ -43,17 +61,15 @@
         showDownload="true"
         trend="annual_cover"
         ></app-landcover-trend-chart>
-    </mat-tab>
-    <!-- <mat-tab label="Cover 10m">
+    </mat-tab>    <!-- <mat-tab label="Cover 10m">
       <app-landcover-trend-chart
       width="400"
       showPopOut="true"
       showPrint="true"
       showDownload="true"
       trend="meteo_10"
-      ></app-landcover-trend-chart> -->
-    <!-- </mat-tab> -->
-    <!-- TEST -->
+      ></app-landcover-trend-chart>
+    </mat-tab> -->    <!-- TEST -->
     <mat-tab label="Cover 10m">
       <app-landcover-trend-chart
       width="400"
@@ -62,8 +78,8 @@
       showDownload="true"
       trend="combined_cover_10"
       ></app-landcover-trend-chart>
+    </mat-tab>
     <!-- TEST -->
-  </mat-tab>
     <mat-tab label="Annual biomass">
       <app-landcover-trend-chart
         width="400"
@@ -130,22 +146,24 @@
     showPrint="true"
     showDownload="true"
     trend="gap_cover_10_combined"
-    ></app-landcover-trend-chart> 
- </mat-tab> 
+    ></app-landcover-trend-chart>    </mat-tab> 
 
   </mat-tab-group>
-  
-
-
 
   </div>
 </div>
-<app-short-link tourAnchor="share-map"></app-short-link>
 
-<div class="background">
-  <app-map
-      lat=39
-      lng=-98
-      zoom=5
-      basemap="terrain"></app-map>
+  <!-- Mobile Control Buttons -->
+  <div class="mobile-controls" *ngIf="isMobile">
+    <button class="mobile-toggle-btn" (click)="toggleControls()">
+      <mat-icon>layers</mat-icon>
+    </button>
+    <button class="mobile-toggle-btn" 
+            *ngIf="analysis.geojson && (analysis.analysis_complete || analysis.analysis_running)"
+            (click)="toggleAnalysis()">
+      <mat-icon>analytics</mat-icon>
+    </button>
+  </div>
+
+  <app-short-link tourAnchor="share-map"></app-short-link>
 </div>

@@ -18,3 +18,114 @@ table {
 .legend-cell {
     text-align: center;
 }
+
+/* Layout switching */
+.mobile-layout {
+    display: none;
+}
+
+.desktop-layout {
+    display: block;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    :host { 
+        padding: 16px;
+    }
+    
+    table { 
+        width: 100%;
+        margin: 0;
+    }
+    
+    .control-cell {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 8px 0;
+        text-align: left;
+    }
+    
+    /* Stack overlay controls vertically on mobile */
+    .overlay-row {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 24px;
+        padding: 16px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background: #fafafa;
+    }
+    
+    .legend-cell {
+        margin-top: 12px;
+        padding: 12px;
+        background: white;
+        border-radius: 6px;
+    }
+    
+    /* Make form controls touch-friendly */
+    app-overlay-toggle-control {
+        order: 1;
+    }
+    
+    app-overlay-type-select {
+        order: 2;
+    }
+    
+    app-opacity-control {
+        order: 3;
+    }
+    
+    app-year-selector {
+        order: 4;
+    }
+
+    .desktop-layout {
+        display: none;
+    }
+    
+    .mobile-layout {
+        display: block;
+    }
+    
+    .overlay-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    
+    .overlay-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .overlay-name {
+        font-weight: 500;
+        font-size: 16px;
+    }
+    
+    .overlay-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .help-mobile {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    :host { 
+        padding: 12px;
+    }
+    
+    .overlay-row {
+        padding: 12px;
+    }
+}

@@ -1,17 +1,43 @@
-<table>
-    <ng-container *ngFor='let overlay of overlays'>
-      <tr>
-        <td class="control-cell"><app-popover *ngIf="overlay.help" class="help">
-            {{overlay.help}}
-            <a href="https://rangelands.app/products/">More information</a></app-popover></td>
-        <td class="control-cell"><app-overlay-toggle-control [overlay]="overlay"></app-overlay-toggle-control></td>
-        <td class="control-cell">{{overlay.name}}</td>
-        <td class="control-cell"><app-overlay-type-select [overlay]="overlay"></app-overlay-type-select></td>
-        <td class="control-cell"><app-opacity-control  [overlay]="overlay"></app-opacity-control></td>
-        <td class="year-cell"><app-year-selector   [overlay]="overlay"></app-year-selector></td>
-      </tr>
-      <tr *ngIf="overlay?.selected_type?.legend && overlay.visible">
-        <td colspan="6" class="legend-cell"><app-overlay-legend [overlay]="overlay"></app-overlay-legend></td>
-      </tr>
-    </ng-container>
-</table>
+<div class="desktop-layout">
+  <table>
+      <ng-container *ngFor='let overlay of overlays'>
+        <tr>
+          <td class="control-cell"><app-popover *ngIf="overlay.help" class="help">
+              {{overlay.help}}
+              <a href="https://rangelands.app/products/">More information</a></app-popover></td>
+          <td class="control-cell"><app-overlay-toggle-control [overlay]="overlay"></app-overlay-toggle-control></td>
+          <td class="control-cell">{{overlay.name}}</td>
+          <td class="control-cell"><app-overlay-type-select [overlay]="overlay"></app-overlay-type-select></td>
+          <td class="control-cell"><app-opacity-control  [overlay]="overlay"></app-opacity-control></td>
+          <td class="year-cell"><app-year-selector   [overlay]="overlay"></app-year-selector></td>
+        </tr>
+        <tr *ngIf="overlay?.selected_type?.legend && overlay.visible">
+          <td colspan="6" class="legend-cell"><app-overlay-legend [overlay]="overlay"></app-overlay-legend></td>
+        </tr>
+      </ng-container>
+  </table>
+</div>
+
+<div class="mobile-layout">
+  <div *ngFor='let overlay of overlays' class="overlay-row">
+    <div class="overlay-header">
+      <div class="overlay-title">
+        <app-overlay-toggle-control [overlay]="overlay"></app-overlay-toggle-control>
+        <span class="overlay-name">{{overlay.name}}</span>
+      </div>
+      <app-popover *ngIf="overlay.help" class="help-mobile">
+        {{overlay.help}}
+        <a href="https://rangelands.app/products/">More information</a>
+      </app-popover>
+    </div>
+    
+    <div class="overlay-controls" *ngIf="overlay.visible">
+      <app-overlay-type-select [overlay]="overlay"></app-overlay-type-select>
+      <app-opacity-control [overlay]="overlay"></app-opacity-control>
+      <app-year-selector [overlay]="overlay"></app-year-selector>
+    </div>    
+    <div *ngIf="overlay?.selected_type?.legend && overlay.visible" class="legend-cell">
+      <app-overlay-legend [overlay]="overlay"></app-overlay-legend>
+    </div>
+  </div>
+</div>

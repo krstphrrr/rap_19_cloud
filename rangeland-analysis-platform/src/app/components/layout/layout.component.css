@@ -1,55 +1,202 @@
 
 
-.background {
-    position: absolute;
-    left: 0; right: 0; top: 0; bottom: 0;
-    display: flex;
-    
-}
-
-.panel {
-    z-index: 1000;
-    position: absolute;
-    margin:35px;
-    margin-top: 60px;
-    max-height: calc(100vh - 70px); 
-    border-radius: 4pt;
-    border: 1pt solid gray;
-    background-color: white;
-    display: flex;
-    flex-flow: column;
-    max-width: calc(50vw - 70px); 
-    min-height: 38px;
-    min-width: 38px;
+/* Modern responsive layout - floating panels over full-screen map */
+.app-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
+.map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.controls-panel {
+    position: absolute;
+    top: 60px;
+    left: 35px;
+    width: 580px; /* Increased from 400px to accommodate landcover controls */
+    max-height: calc(100vh - 120px);
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.analysis-panel {
+    position: absolute;
+    top: 60px;
+    right: 35px;
+    width: 430px; /* Slightly increased for better chart display */
+    max-height: calc(100vh - 120px);
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+}
+
 .panel-title {
-    margin:10px;
     font-size: 18px;
+    font-weight: 500;
 }
 
 .panelContent {
     transition: max-height 0.5s ease;
     text-align: left;
     overflow: hidden;
+    flex: 1;
 }
 
-.right {
-   right: 0;
-   top: 0;
+.mobile-close-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.left {
-    left: 0;
-    top: 0;
-    min-width: 600px;
+.mobile-close-btn:hover {
+    background-color: rgba(0,0,0,0.05);
 }
 
-.tab-container {
-    width:500px;
+/* Mobile Controls */
+.mobile-controls {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1001;
 }
 
+.mobile-toggle-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #3f51b5;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-toggle-btn:hover {
+    transform: scale(1.1);
+    background: #303f9f;
+}
+
+.mobile-toggle-btn:active {
+    transform: scale(0.95);
+}
+
+/* Tablet Layout - smaller panels */
+@media (max-width: 1200px) {
+    .controls-panel {
+        width: 480px; /* Reduced but still sufficient for controls */
+        left: 20px;
+        top: 40px;
+    }
+    
+    .analysis-panel {
+        width: 380px;
+        right: 20px;
+        top: 40px;
+    }
+}
+
+/* Mobile Layout - full screen overlays */
+@media (max-width: 768px) {
+    .controls-panel,
+    .analysis-panel {
+        position: fixed;
+        top: 15vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        max-height: 85vh;
+        border-radius: 12px 12px 0 0;
+        transform: translateY(100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1500;
+        border: none;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+    }
+    
+    .controls-panel.mobile-visible,
+    .analysis-panel.mobile-visible {
+        transform: translateY(0);
+    }
+    
+    .controls-panel.mobile-hidden,
+    .analysis-panel.mobile-hidden {
+        transform: translateY(100%);
+    }    
+    .mobile-controls {
+        display: flex;
+    }
+    
+    .panel-header {
+        padding: 16px;
+    }
+    
+    .panel-title {
+        font-size: 20px;
+    }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+    .controls-panel,
+    .analysis-panel {
+        top: 10vh;
+        max-height: 90vh;
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .mobile-toggle-btn {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* Legacy support - hide old background class */
+.background {
+    display: none;
+}
+
+/* Short link positioning */
 app-short-link {
     z-index: 1000;
     position: fixed;
@@ -57,6 +204,21 @@ app-short-link {
     right: 50px;
 }
 
+@media (max-width: 768px) {
+    app-short-link {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+/* Tab content responsive */
 mat-tab-body {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    mat-tab-body {
+        max-width: 100%;
+    }
 }
