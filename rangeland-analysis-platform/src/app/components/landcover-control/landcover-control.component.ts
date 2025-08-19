@@ -130,13 +130,11 @@ export class LandcoverControlComponent implements OnInit {
     bounds: new google.maps.LatLngBounds(
       new google.maps.LatLng( 24.51406344243852 ,  -124.76975514486658 ),
       new google.maps.LatLng( 49.3935983693073 ,  -66.93652153957034 )),
-    years: Helpers.range(1986, 2025).reverse()
-  }), 
-  new Overlay({
+    years: Helpers.range(1986, 2025).reverse()  }),   new Overlay({
     id: 'landcover10m',
     name: 'Cover 10m',
     opacity: 1.0,
-    visible: true,
+    visible: false,
     help: 'Percent cover of annual forbs and grasses, perennial forbs and grasses, shrubs, trees, and bare ground. 10m resolution.',
   overlay_types: [
     {
@@ -344,13 +342,30 @@ export class LandcoverControlComponent implements OnInit {
   }
 
 
-
   updateOverlays() {
-    this.routing.updateUrlParams({
-      fire: (this.fire_toggle) ? 'show' : null,
-      year: this.year,
-      mask: (this.mask_toggle) ? 'apply' : 'hide'
-    });
+    // Only update URL params that were explicitly set by user interaction
+    const currentParams = this.router.parseUrl(this.router.url).queryParams;
+    const urlUpdates: any = {};
+    
+    // Only add fire params if fire feature is being used
+    if (this.fire_toggle) {
+      urlUpdates.fire = 'show';
+      urlUpdates.year = this.year;
+    } else if (currentParams['fire'] !== undefined) {
+      urlUpdates.fire = null;
+      urlUpdates.year = null;
+    }
+    
+    // Only add mask param if it was explicitly set or changed
+    if (currentParams['mask'] !== undefined) {
+      urlUpdates.mask = (this.mask_toggle) ? 'apply' : 'hide';
+    }
+
+    // Only update URL if we have params to change
+    if (Object.keys(urlUpdates).length > 0) {
+      this.routing.updateUrlParams(urlUpdates);
+    }
+    
     this.overlays.forEach(o => {
       if (o instanceof Overlay) {
         o.mask = this.mask_toggle
@@ -360,7 +375,6 @@ export class LandcoverControlComponent implements OnInit {
         }
       }
     })
-
 
     this.updateFireYear();
   }
@@ -561,13 +575,88 @@ export class LandcoverControlComponent implements OnInit {
       });
     });
   }
-
   ngOnInit() {
+    const queryParams = this.router.parseUrl(this.router.url).queryParams;
+    
+    // First, sync overlay visibility with URL parameters (or set defaults if no URL params)
+    this.syncOverlayVisibilityWithUrl(queryParams);
+    
+    // Process layer order from URL if present
+    if (queryParams['layer_order']) {
+      // Delay the reordering to ensure all overlays have been initialized
+      setTimeout(() => {
+        const layerOrder = queryParams['layer_order'].split(',');
+        this.mapState.reorderOverlays(layerOrder);
+      }, 100);
+    }
+    
     this.updateOverlays();
     this.file_input = document.createElement('input');
     this.file_input.type = 'file';
     this.file_input.accept = '.zip, application/zip, application/octet-stream';
     this.file_input.addEventListener(
       'change', this.processShapefile.bind(this));
+  }  private syncOverlayVisibilityWithUrl(queryParams: any) {
+    // Check if we have any overlay visibility parameters in URL
+    const hasOverlayParams = this.overlays.some(overlay => 
+      queryParams[overlay.id + '_v'] !== undefined
+    );
+
+    // Also check if we have any layer-specific parameters (type, opacity, year)
+    const hasAnyLayerParams = this.overlays.some(overlay =>
+      queryParams[overlay.id + '_v'] !== undefined ||
+      queryParams[overlay.id + '_t'] !== undefined ||
+      queryParams[overlay.id + '_o'] !== undefined ||
+      queryParams[overlay.id + '_y'] !== undefined
+    );
+
+    if (!hasOverlayParams && !hasAnyLayerParams) {
+      // No URL parameters at all - ensure defaults are applied and saved to URL
+      const urlUpdates = {};
+      let hasVisibleOverlays = false;
+      
+      this.overlays.forEach(overlay => {
+        if (overlay.visible) {
+          urlUpdates[overlay.id + '_v'] = true;
+          hasVisibleOverlays = true;
+          
+          // Only save other default parameters for visible overlays
+          if (overlay.selected_type) {
+            urlUpdates[overlay.id + '_t'] = overlay.selected_type.id;
+          }
+          if (overlay.opacity !== undefined) {
+            urlUpdates[overlay.id + '_o'] = overlay.opacity;
+          }
+        }
+      });
+
+      // Save initial layer order if we have visible overlays
+      if (hasVisibleOverlays) {
+        const visibleIds = this.overlays
+          .filter(o => o.visible)
+          .map(o => o.id);
+        if (visibleIds.length > 0) {
+          urlUpdates['layer_order'] = visibleIds.join(',');
+        }
+      }
+
+      if (Object.keys(urlUpdates).length > 0) {
+        this.routing.updateUrlParams(urlUpdates);
+      }
+    } else if (hasAnyLayerParams) {
+      // We have layer parameters - sync overlay visibility from URL before processing layer order
+      this.overlays.forEach(overlay => {
+        const hasLayerParams = queryParams[overlay.id + '_v'] !== undefined ||
+                              queryParams[overlay.id + '_t'] !== undefined ||
+                              queryParams[overlay.id + '_o'] !== undefined ||
+                              queryParams[overlay.id + '_y'] !== undefined;
+
+        if (hasLayerParams) {
+          // If there are layer-specific parameters, use explicit visibility or default to true
+          overlay.visible = queryParams[overlay.id + '_v'] === 'true' || 
+                           (queryParams[overlay.id + '_v'] === undefined);
+        }
+      });
+    }
   }
-}
+  }

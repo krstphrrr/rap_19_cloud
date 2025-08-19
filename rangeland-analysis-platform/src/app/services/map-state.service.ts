@@ -142,13 +142,14 @@ export class MapStateService {
   setOpacity(id: string, opacity: number) {
 
   }
-
   setOverlay(overlay: Overlay | DataLayer, idx?: number) {
     if (overlay && overlay instanceof Overlay) {
       const overlays = this.overlaysSource.getValue();
-      this.removeOverlay(overlay);
-      overlays.splice(idx ? idx : overlays.length, 0, overlay);
-      this.overlaysSource.next(overlays);
+      // Remove any existing instance of this overlay to prevent duplicates
+      const filteredOverlays = overlays.filter(o => o.id !== overlay.id);
+      // Add to specified position or end
+      filteredOverlays.splice(idx !== undefined ? idx : filteredOverlays.length, 0, overlay);
+      this.overlaysSource.next(filteredOverlays);
     }
     if (overlay && overlay instanceof DataLayer) {
       this.removeDataLayer(overlay.name)
@@ -184,6 +185,42 @@ export class MapStateService {
   setBounds(bounds: google.maps.LatLngBounds) { this.boundsSource.next(bounds); }
   setCenter(center: google.maps.LatLng) { this.centerSource.next(center); }
   setDrawingMode(mode: google.maps.drawing.OverlayType[]) { this.drawingModeSource.next(mode); }
+  
+  getVisibleOverlays(): Overlay[] {
+    return this.overlaysSource.getValue().filter(o => o.visible);
+  }
+  reorderOverlays(orderedIds: string[]) {
+    const currentOverlays = this.overlaysSource.getValue();
+    const reorderedOverlays: Overlay[] = [];
+    
+    // Remove duplicates from orderedIds
+    const uniqueOrderedIds = [...new Set(orderedIds)];
+    
+    // First, add overlays in the specified order (only if they exist and are visible)
+    uniqueOrderedIds.forEach(id => {
+      const overlay = currentOverlays.find(o => o.id === id && o.visible);
+      if (overlay) {
+        reorderedOverlays.push(overlay);
+      }
+    });
+    
+    // Then add any remaining visible overlays that weren't in the order list
+    currentOverlays.forEach(overlay => {
+      if (overlay.visible && !uniqueOrderedIds.includes(overlay.id)) {
+        reorderedOverlays.push(overlay);
+      }
+    });
+    
+    // Finally, add any non-visible overlays to maintain the full array
+    currentOverlays.forEach(overlay => {
+      if (!overlay.visible && !reorderedOverlays.find(o => o.id === overlay.id)) {
+        reorderedOverlays.push(overlay);
+      }
+    });
+    
+    this.overlaysSource.next(reorderedOverlays);
+  }
+  
   openWindow(window: google.maps.InfoWindow) {
     this.infoWindowSource.next(window)
   }

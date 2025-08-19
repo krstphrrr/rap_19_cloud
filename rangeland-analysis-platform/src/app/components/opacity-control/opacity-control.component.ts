@@ -30,12 +30,25 @@ export class OpacityControlComponent implements OnInit {
     }
   }
 
-
   ngOnInit() {
-    const params = this.router.parseUrl(this.router.url).queryParams
-    this.overlay.opacity = parseFloat(params[this.overlay.id + '_o']) || this.overlay.opacity || 0.6;
-    if (this.overlay.visible) {
-      this.mapState.setOverlay(this.overlay);
+    const params = this.router.parseUrl(this.router.url).queryParams;
+    
+    // Always read opacity from URL if available, otherwise use overlay default
+    const urlOpacity = parseFloat(params[this.overlay.id + '_o']);
+    if (!isNaN(urlOpacity)) {
+      this.overlay.opacity = urlOpacity;
+      
+      // If overlay is visible, update it on the map to apply the opacity
+      if (this.overlay.visible) {
+        // Use setTimeout to ensure this happens after all component initialization
+        setTimeout(() => {
+          this.mapState.removeOverlay(this.overlay);
+          this.mapState.setOverlay(this.overlay);
+        }, 0);
+      }
+    } else if (this.overlay.opacity === undefined) {
+      // Set default opacity if not already set
+      this.overlay.opacity = 0.6;
     }
   }
 
