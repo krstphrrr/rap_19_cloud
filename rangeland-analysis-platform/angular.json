@@ -55,11 +55,25 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ]
+            },
+            "development": {
+              "baseHref": "/rap/",
+              "optimization": false,
+              "outputHashing": "none",
+              "sourceMap": true,
+              "namedChunks": true,
+              "aot": false,
+              "extractLicenses": false,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": ""
-        },
-        "serve": {
+        },        "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "buildTarget": "rap:build"
@@ -67,6 +81,10 @@
           "configurations": {
             "production": {
               "buildTarget": "rap:build:production"
+            },
+            "development": {
+              "buildTarget": "rap:build:development",
+              "servePath": "/rap/"
             }
           }
         },
