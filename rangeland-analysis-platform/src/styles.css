@@ -22,13 +22,13 @@ body {
 /* Responsive breakpoints */
 @media (max-width: 768px) {
     .material-icons {
-        font-size: 24pt; /* Smaller icons on mobile */
+        font-size: 24px; /* Use px instead of pt for consistency */
     }
 }
 
 @media (max-width: 480px) {
     .material-icons {
-        font-size: 20pt; /* Even smaller on phones */
+        font-size: 20px; /* Use px instead of pt for consistency */
     }
 }
 
@@ -129,5 +129,145 @@ body {
     .mat-tab-body-content::-webkit-scrollbar {
         width: 0px;
         background: transparent;
+    }
+}
+
+/* Ensure dropdowns work properly in mobile overlay panels */
+@media (max-width: 768px) {
+    /* Ensure CDK overlay container has high z-index for mobile panels */
+    .cdk-overlay-container {
+        z-index: 3000 !important;
+        position: fixed !important;
+    }
+    
+    .cdk-overlay-backdrop {
+        z-index: 2500 !important;
+        pointer-events: none !important; /* Allow clicks through backdrop */
+    }
+    
+    /* Make sure dropdown panels appear above mobile overlays and are clickable */
+    .mat-select-panel {
+        z-index: 3100 !important;
+        max-height: 250px !important;
+        pointer-events: auto !important;
+        position: fixed !important;
+    }
+    
+    /* Ensure dropdown options are clickable */
+    .mat-option {
+        pointer-events: auto !important;
+        z-index: 3200 !important;
+        position: relative !important;
+    }
+    
+    /* Improve mobile overlay panel scrolling */
+    .controls-panel.mobile-visible,
+    .analysis-panel.mobile-visible {
+        overflow: hidden; /* Prevent body scroll */
+    }
+    
+    .controls-panel.mobile-visible .panelContent,
+    .analysis-panel.mobile-visible .panelContent {
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+        height: calc(85vh - 80px); /* Account for header */
+        padding-bottom: 40px; /* Extra space at bottom */
+        position: relative;
+        z-index: 1600; /* Lower than dropdowns */
+    }
+    
+    /* Make sure form fields don't interfere with dropdowns */
+    .mat-form-field {
+        position: relative;
+        z-index: 1700;
+    }
+    
+    /* Ensure select trigger is clickable */
+    .mat-select-trigger {
+        pointer-events: auto !important;
+        z-index: 1800 !important;
+    }
+}
+
+/* Critical fix for mobile dropdown interaction */
+@media (max-width: 768px) {
+  /* Prevent CDK backdrop from interfering with dropdown selection */
+  .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop {
+    pointer-events: none !important;
+  }
+  
+  /* Ensure all select-related elements are clickable */
+  .mat-select,
+  .mat-select-trigger,
+  .mat-select-value,
+  .mat-select-arrow,
+  .mat-select-panel,
+  .mat-option {
+    pointer-events: auto !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+  }
+  
+  /* Add visual feedback for touch */
+  .mat-option:active {
+    background-color: rgba(0,0,0,0.1) !important;
+  }
+}
+
+/* Fix Material Icons alignment issues in mobile buttons */
+@media (max-width: 768px) {
+  /* Ensure Material Icons are properly centered and sized */
+  .mat-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
+    line-height: 1 !important;
+  }
+  
+  /* Specific fixes for button icons */
+  button .mat-icon,
+  .mobile-toggle-btn .mat-icon,
+  .mobile-close-btn .mat-icon {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    transform: none !important;
+  }
+}
+
+/* Fix Material Tab scrolling conflicts in mobile overlays */
+@media (max-width: 768px) {
+    /* Prevent Angular Material tabs from creating their own scroll areas in mobile panels */
+    .controls-panel .mat-mdc-tab-body-content,
+    .analysis-panel .mat-mdc-tab-body-content,
+    .controls-panel .mat-tab-body-content,
+    .analysis-panel .mat-tab-body-content {
+        overflow: visible !important;
+        height: auto !important;
+        max-height: none !important;
+        padding: 16px 0 !important;
+    }
+    
+    /* Ensure proper height inheritance in mobile panels */
+    .controls-panel .mat-mdc-tab-group,
+    .analysis-panel .mat-mdc-tab-group,
+    .controls-panel .mat-tab-group,
+    .analysis-panel .mat-tab-group {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Make tab body wrapper flexible */
+    .controls-panel .mat-mdc-tab-body-wrapper,
+    .analysis-panel .mat-mdc-tab-body-wrapper,
+    .controls-panel .mat-tab-body-wrapper,
+    .analysis-panel .mat-tab-body-wrapper {
+        flex: 1 !important;
+        overflow: hidden !important;
     }
 }

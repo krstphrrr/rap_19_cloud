@@ -121,14 +121,29 @@ app-landcover-trend-chart {
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
+  /* Disable host scrolling - let parent panel handle it */
   :host {
     padding: 16px;
     text-align: left;
+    height: auto;
+    overflow: visible !important; /* Changed from hidden to visible */
+    display: block;
+    flex: 1;
   }
   
+  /* Ensure landcover control content doesn't create scroll */
   .toggles {
     width: 100%;
     margin-bottom: 16px;
+    overflow: visible !important;
+    height: auto;
+  }
+  
+  /* Make sure individual components don't scroll */
+  app-layer-group {
+    display: block;
+    margin-bottom: 20px;
+    overflow: visible !important;
   }
   
   .toggles td {
@@ -171,6 +186,47 @@ app-landcover-trend-chart {
   .overlay-switcher mat-form-field {
     width: 100%;
     margin: 8px 0;
+  }
+  
+  /* Ensure dropdowns work properly in mobile */
+  .mat-select-panel {
+    max-height: 300px !important;
+    z-index: 2001 !important;
+  }
+  
+  /* Improve spacing for expanded layer options */
+  app-layer-group {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  /* Ensure Material Select works properly in mobile overlays */
+  /* Force Material Select elements to be interactive */
+  .mat-select-trigger,
+  .mat-select-value,
+  .mat-select-arrow-wrapper {
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+  }
+  
+  /* Ensure the select panel is positioned properly and clickable */
+  .mat-select-panel {
+    z-index: 3100 !important;
+    pointer-events: auto !important;
+  }
+  
+  /* Make sure options are clickable */
+  .mat-option {
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    min-height: 48px; /* Larger touch targets */
+    line-height: 48px;
+    padding: 0 16px !important;
+  }
+  
+  /* Remove any conflicting overlay styles */
+  .mat-select-panel-wrap {
+    pointer-events: auto !important;
   }
 }
 

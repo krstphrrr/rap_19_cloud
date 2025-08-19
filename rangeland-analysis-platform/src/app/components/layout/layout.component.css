@@ -1,5 +1,3 @@
-
-
 /* Modern responsive layout - floating panels over full-screen map */
 .app-container {
     position: relative;
@@ -66,7 +64,8 @@
 .panelContent {
     transition: max-height 0.5s ease;
     text-align: left;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     flex: 1;
 }
 
@@ -79,6 +78,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 40px; /* Explicit width */
+    height: 40px; /* Explicit height */
+}
+
+.mobile-close-btn mat-icon {
+    font-size: 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .mobile-close-btn:hover {
@@ -109,6 +120,17 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    padding: 0; /* Remove any default padding */
+}
+
+.mobile-toggle-btn mat-icon {
+    font-size: 24px !important;
+    width: 24px !important;
+    height: 24px !important;
+    line-height: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .mobile-toggle-btn:hover {
@@ -158,21 +180,85 @@
     .analysis-panel.mobile-visible {
         transform: translateY(0);
     }
-    
-    .controls-panel.mobile-hidden,
+      .controls-panel.mobile-hidden,
     .analysis-panel.mobile-hidden {
         transform: translateY(100%);
-    }    
+        pointer-events: none; /* Disable pointer events when hidden */
+    }
+    
+    .controls-panel.mobile-visible,
+    .analysis-panel.mobile-visible {
+        transform: translateY(0);
+        pointer-events: auto; /* Enable pointer events when visible */
+    }
+    
     .mobile-controls {
         display: flex;
     }
-    
-    .panel-header {
+      .panel-header {
         padding: 16px;
+        pointer-events: auto; /* Ensure header is interactive */
+        position: relative;
+        z-index: 1600;
     }
     
     .panel-title {
         font-size: 20px;
+    }
+    
+    /* Enable proper scrolling in mobile panels */
+    .panelContent {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        padding-bottom: 20px; /* Add some bottom padding */
+        pointer-events: auto; /* Ensure content is interactive */
+        position: relative;
+        z-index: 1600; /* Lower than dropdowns */
+    }
+    
+    /* Ensure dropdowns can appear above content */
+    .cdk-overlay-container {
+        z-index: 2000 !important;
+    }
+    
+    /* Fix multiple scrollbar issue in mobile panels */
+    /* Disable scrolling on Material tab content to prevent multiple scrollbars */
+    .mat-mdc-tab-body-content,
+    .mat-tab-body-content {
+        overflow: hidden !important;
+        height: auto !important;
+        max-height: none !important;
+    }
+    
+    /* Ensure only the panel content scrolls */
+    .panelContent {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        height: calc(85vh - 100px) !important; /* Fixed height instead of max-height */
+        max-height: none !important;
+        padding-bottom: 20px;
+    }
+    
+    /* Make sure tab group doesn't create its own scroll area */
+    .mat-mdc-tab-group,
+    .mat-tab-group {
+        height: 100% !important;
+        overflow: hidden !important;
+    }
+    
+    /* Ensure tab body wrapper doesn't scroll */
+    .mat-mdc-tab-body-wrapper,
+    .mat-tab-body-wrapper {
+        height: 100% !important;
+        overflow: hidden !important;
+    }
+    
+    /* Make individual tab bodies fill space without scrolling */
+    .mat-mdc-tab-body,
+    .mat-tab-body {
+        height: 100% !important;
+        overflow: hidden !important;
     }
 }
 
@@ -188,6 +274,24 @@
     .mobile-toggle-btn {
         width: 48px;
         height: 48px;
+    }
+    
+    .mobile-toggle-btn mat-icon {
+        font-size: 20px !important;
+        width: 20px !important;
+        height: 20px !important;
+    }
+    
+    .mobile-close-btn {
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+    }
+    
+    .mobile-close-btn mat-icon {
+        font-size: 18px !important;
+        width: 18px !important;
+        height: 18px !important;
     }
 }
 
