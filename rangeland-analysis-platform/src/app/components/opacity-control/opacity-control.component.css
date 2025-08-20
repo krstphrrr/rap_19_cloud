@@ -2,6 +2,15 @@
     display: inline-block;
 }
 
+/* Target slider width specifically in desktop mode */
+.mat-slider {
+    width: 10px !important; /* Force specific width to prevent overflow */
+    /* max-width: 120px; */
+}
+.mat-mdc-slider{
+    /* width: 50px; */
+    min-width:100px !important;
+}
 /* Mobile responsive styles */
 @media (max-width: 768px) {
     :host {
@@ -10,6 +19,7 @@
     }
     
     .mat-slider {
-        width: 100%;
+        width: 100% !important; /* Override desktop constraint on mobile */
+        max-width: none;
     }
 }
