@@ -212,8 +212,7 @@
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
         padding-bottom: 20px; /* Add some bottom padding */
         pointer-events: auto; /* Ensure content is interactive */
-        position: relative;
-        z-index: 1600; /* Lower than dropdowns */
+        position: relative;        z-index: 1500; /* Lower than dropdowns */
     }
     
     /* Ensure dropdowns can appear above content */
@@ -253,13 +252,11 @@
         height: 100% !important;
         overflow: hidden !important;
     }
-    
-    /* Make individual tab bodies fill space without scrolling */
+      /* Make individual tab bodies fill space without scrolling */
     .mat-mdc-tab-body,
     .mat-tab-body {
         height: 100% !important;
-        overflow: hidden !important;
-    }
+        overflow: hidden !important;    }    
 }
 
 /* Small mobile phones */

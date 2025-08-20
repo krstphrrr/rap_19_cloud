@@ -187,46 +187,16 @@ app-landcover-trend-chart {
     width: 100%;
     margin: 8px 0;
   }
-  
-  /* Ensure dropdowns work properly in mobile */
-  .mat-select-panel {
-    max-height: 300px !important;
-    z-index: 2001 !important;
+    /* Touch-friendly controls for mobile */
+  .mat-select-trigger {
+    cursor: pointer !important;
+    min-height: 48px;
   }
   
-  /* Improve spacing for expanded layer options */
-  app-layer-group {
-    display: block;
-    margin-bottom: 20px;
-  }
-  
-  /* Ensure Material Select works properly in mobile overlays */
-  /* Force Material Select elements to be interactive */
-  .mat-select-trigger,
-  .mat-select-value,
-  .mat-select-arrow-wrapper {
-    pointer-events: auto !important;
-    touch-action: manipulation !important;
-  }
-  
-  /* Ensure the select panel is positioned properly and clickable */
-  .mat-select-panel {
-    z-index: 3100 !important;
-    pointer-events: auto !important;
-  }
-  
-  /* Make sure options are clickable */
   .mat-option {
-    pointer-events: auto !important;
-    touch-action: manipulation !important;
-    min-height: 48px; /* Larger touch targets */
-    line-height: 48px;
+    min-height: 48px !important;
+    cursor: pointer !important;
     padding: 0 16px !important;
-  }
-  
-  /* Remove any conflicting overlay styles */
-  .mat-select-panel-wrap {
-    pointer-events: auto !important;
   }
 }
 

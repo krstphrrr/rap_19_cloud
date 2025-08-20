@@ -10,3 +10,24 @@ mat-select {
 div.mat-form-field-infix {
     width: 60px !important;
 }
+
+/* Mobile responsive styles for year selector */
+@media (max-width: 768px) {
+  :host {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+  
+  .mat-form-field {
+    width: 100% !important;
+  }
+  
+  .mat-select {
+    width: 100% !important;
+    min-height: 48px;
+  }
+  
+  div.mat-form-field-infix {
+    width: 100% !important;
+  }
+}

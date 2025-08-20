@@ -1,0 +1,12 @@
+/* Mobile responsive styles for overlay type select */
+@media (max-width: 768px) {
+  :host {
+    display: block;
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    width: 100% !important;
+    margin-bottom: 8px;
+  }
+}

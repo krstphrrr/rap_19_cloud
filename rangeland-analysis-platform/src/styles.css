@@ -132,37 +132,12 @@ body {
     }
 }
 
-/* Ensure dropdowns work properly in mobile overlay panels */
+/* Simplified mobile dropdown handling - let Material handle its own events */
 @media (max-width: 768px) {
-    /* Ensure CDK overlay container has high z-index for mobile panels */
-    .cdk-overlay-container {
-        z-index: 3000 !important;
-        position: fixed !important;
-    }
-    
-    .cdk-overlay-backdrop {
-        z-index: 2500 !important;
-        pointer-events: none !important; /* Allow clicks through backdrop */
-    }
-    
-    /* Make sure dropdown panels appear above mobile overlays and are clickable */
-    .mat-select-panel {
-        z-index: 3100 !important;
-        max-height: 250px !important;
-        pointer-events: auto !important;
-        position: fixed !important;
-    }
-    
-    /* Ensure dropdown options are clickable */
-    .mat-option {
-        pointer-events: auto !important;
-        z-index: 3200 !important;
-        position: relative !important;
-    }
-    
-    /* Improve mobile overlay panel scrolling */
+    /* Base mobile panel z-index structure */
     .controls-panel.mobile-visible,
     .analysis-panel.mobile-visible {
+        z-index: 1500 !important;
         overflow: hidden; /* Prevent body scroll */
     }
     
@@ -170,47 +145,77 @@ body {
     .analysis-panel.mobile-visible .panelContent {
         overflow-y: auto !important;
         -webkit-overflow-scrolling: touch;
-        height: calc(85vh - 80px); /* Account for header */
-        padding-bottom: 40px; /* Extra space at bottom */
+        height: calc(85vh - 80px);
+        padding-bottom: 40px;
         position: relative;
-        z-index: 1600; /* Lower than dropdowns */
+        z-index: 1501 !important;
     }
     
-    /* Make sure form fields don't interfere with dropdowns */
+    /* Material Select dropdowns should be above mobile panels */
+    .cdk-overlay-container {
+        z-index: 2000 !important;
+        position: fixed !important;
+    }
+    
+    .cdk-overlay-backdrop {
+        z-index: 1999 !important;
+        background: rgba(0, 0, 0, 0.32) !important;
+    }
+    
+    .cdk-overlay-pane {
+        z-index: 2000 !important;
+    }
+    
+    .mat-select-panel {
+        z-index: 2001 !important;
+        max-height: 250px !important;
+        background: white !important;
+        border-radius: 4px !important;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2) !important;
+    }
+    
+    /* Touch-friendly option styling */
+    .mat-option {
+        min-height: 48px !important;
+        cursor: pointer !important;
+        padding: 0 16px !important;
+        line-height: 48px !important;
+        touch-action: manipulation !important;
+        -webkit-tap-highlight-color: rgba(0,0,0,0.1) !important;
+    }
+    
+    .mat-option:hover {
+        background-color: #f5f5f5 !important;
+    }
+    
+    .mat-option.mat-selected {
+        background-color: #e3f2fd !important;
+        color: #1976d2 !important;
+        font-weight: 500 !important;
+    }
+    
+    .mat-option.mat-option-disabled {
+        opacity: 0.6 !important;
+        cursor: not-allowed !important;
+    }
+    
+    /* Form field and trigger styling */
     .mat-form-field {
         position: relative;
-        z-index: 1700;
+        z-index: 1502;
     }
     
-    /* Ensure select trigger is clickable */
     .mat-select-trigger {
-        pointer-events: auto !important;
-        z-index: 1800 !important;
+        cursor: pointer !important;
+        min-height: 48px !important;
+        display: flex !important;
+        align-items: center !important;
     }
-}
-
-/* Critical fix for mobile dropdown interaction */
-@media (max-width: 768px) {
-  /* Prevent CDK backdrop from interfering with dropdown selection */
-  .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop {
-    pointer-events: none !important;
-  }
-  
-  /* Ensure all select-related elements are clickable */
-  .mat-select,
-  .mat-select-trigger,
-  .mat-select-value,
-  .mat-select-arrow,
-  .mat-select-panel,
-  .mat-option {
-    pointer-events: auto !important;
-    -webkit-tap-highlight-color: rgba(0,0,0,0.1);
-  }
-  
-  /* Add visual feedback for touch */
-  .mat-option:active {
-    background-color: rgba(0,0,0,0.1) !important;
-  }
+    
+    /* Hide dropdowns when mobile panels are not visible */
+    body:not(.mobile-panels-visible) .cdk-overlay-container .mat-select-panel {
+        display: none !important;
+    }
 }
 
 /* Fix Material Icons alignment issues in mobile buttons */
@@ -270,4 +275,24 @@ body {
         flex: 1 !important;
         overflow: hidden !important;
     }
+}
+
+/* Simple targeted fix for Material Select backdrop interference */
+.cdk-overlay-backdrop.cdk-overlay-transparent-backdrop {
+    pointer-events: none !important;
+    /* Disable backdrop pointer events entirely to allow clicks through */
+}
+
+/* Ensure mat-select options are always clickable */
+.mat-select-panel .mat-option {
+    pointer-events: auto !important;
+    z-index: 2002 !important;
+    position: relative !important;
+}
+
+/* Ensure the select panel itself is above the backdrop */
+.mat-select-panel {
+    z-index: 2001 !important;
+    position: relative !important;
+    pointer-events: auto !important;
 }
