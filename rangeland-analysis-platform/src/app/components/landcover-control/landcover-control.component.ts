@@ -135,7 +135,7 @@ export class LandcoverControlComponent implements OnInit {
     name: 'Cover 10m',
     opacity: 1.0,
     visible: false,
-    help: 'Percent cover of annual forbs and grasses, perennial forbs and grasses, shrubs, trees, and bare ground. 10m resolution.',
+    help: 'Percent cover of annual forbs and grasses, perennial forbs and grasses, shrubs, trees, and bare ground. 10m resolution. Western US only.',
   overlay_types: [
     {
       name: 'Perennial forb & grass',
