@@ -68,7 +68,7 @@ export class LandcoverControlComponent implements OnInit {
       id: 'landcover',
       name: 'Cover 30m',
       opacity: 1.0,
-      visible: false,
+      visible: true,
       help: 'Percent cover of annual forbs and grasses, perennial forbs and grasses, shrubs, trees, and bare ground. 30m resolution.',
     overlay_types: [
       {
@@ -611,7 +611,7 @@ export class LandcoverControlComponent implements OnInit {
     );
 
     if (!hasOverlayParams && !hasAnyLayerParams) {
-      // No URL parameters at all - ensure defaults are applied and saved to URL
+      // No URL parameters at all - use defaults and save them to URL
       const urlUpdates = {};
       let hasVisibleOverlays = false;
       
@@ -644,7 +644,7 @@ export class LandcoverControlComponent implements OnInit {
         this.routing.updateUrlParams(urlUpdates);
       }
     } else if (hasAnyLayerParams) {
-      // We have layer parameters - sync overlay visibility from URL before processing layer order
+      // URL parameters exist - ignore all defaults, only show layers specified in URL
       this.overlays.forEach(overlay => {
         const hasLayerParams = queryParams[overlay.id + '_v'] !== undefined ||
                               queryParams[overlay.id + '_t'] !== undefined ||
@@ -655,6 +655,9 @@ export class LandcoverControlComponent implements OnInit {
           // If there are layer-specific parameters, use explicit visibility or default to true
           overlay.visible = queryParams[overlay.id + '_v'] === 'true' || 
                            (queryParams[overlay.id + '_v'] === undefined);
+        } else {
+          // No parameters for this overlay - force it to be hidden (ignore defaults)
+          overlay.visible = false;
         }
       });
     }
